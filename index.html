@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="AlHafiz Islamic Quran Academy — VIP Online Quran Learning Portal with Strict Security Authentication, Tajweed, Hifz & Islamic Studies.">
+  <meta name="theme-color" content="#062a27">
+  <title>AlHafiz VIP Islamic Quran Academy — Portal Login</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --emerald-dark: #041f1c;
+      --emerald: #0b453f;
+      --emerald-light: #12635a;
+      --emerald-bright: #0d9488;
+      --gold: #d6a83b;
+      --gold-bright: #f59e0b;
+      --gold-light: #fef08a;
+      --purple: #5b21b6;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --line: #e2e8f0;
+      --shadow-vip: 0 25px 60px -15px rgba(4, 31, 28, 0.25);
+      --glow-gold: 0 0 35px rgba(214, 168, 59, 0.35);
+      --radius: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    /* FULLSCREEN STANDALONE LOGIN CONTAINER WITH USER PICTURE & ACADEMY BRANDING */
+    #standaloneLoginWrapper {
+      min-height: 100vh;
+      width: 100vw;
+      background: radial-gradient(circle at center, #083833 0%, #021210 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+    }
+
+    .login-card {
+      width: min(880px, 95%);
+      background: rgba(255, 255, 255, 0.98);
+      border: 2.5px solid var(--gold);
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 35px 100px rgba(0, 0, 0, 0.65), var(--glow-gold);
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+    }
+
+    @media(max-width: 768px) {
+      .login-card {
+        grid-template-columns: 1fr;
+      }
+
+      .login-brand-col {
+        display: none;
+      }
+    }
+
+    .login-brand-col {
+      background: linear-gradient(135deg, var(--emerald-dark), var(--purple));
+      padding: 35px 28px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      border-right: 2px solid var(--gold);
+    }
+
+    .login-user-photo {
+      width: 170px;
+      height: 170px;
+      border-radius: 22px;
+      object-fit: cover;
+      border: 4px solid var(--gold);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      margin-bottom: 18px;
+    }
+
+    .academy-arabic-title {
+      font-family: 'Amiri', serif;
+      font-size: 28px;
+      color: var(--gold-light);
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .academy-eng-title {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .login-form-col {
+      padding: 38px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .login-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-title h2 {
+      font-size: 22px;
+      color: var(--emerald-dark);
+      font-weight: 800;
+    }
+
+    .login-title p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ALERT ERROR BOX */
+    .alert-error-box {
+      background: #fef2f2;
+      border: 1.5px solid #fca5a5;
+      color: #991b1b;
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+      display: none;
+      box-shadow: 0 6px 16px rgba(220, 38, 38, 0.1);
+      animation: alertShake 0.4s ease-in-out;
+    }
+
+    @keyframes alertShake {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      20%,
+      60% {
+        transform: translateX(-8px);
+      }
+
+      40%,
+      80% {
+        transform: translateX(8px);
+      }
+    }
+
+    .demo-creds-bar {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 14px;
+      padding: 10px 12px;
+      margin-bottom: 18px;
+      font-size: 12px;
+      color: #166534;
+    }
+
+    .demo-creds-bar strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #14532d;
+      font-size: 12px;
+    }
+
+    .auth-toggle-group {
+      display: flex;
+      background: #e2e8f0;
+      padding: 4px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+    }
+
+    .auth-toggle-btn {
+      flex: 1;
+      padding: 9px;
+      border: 0;
+      background: transparent;
+      font-weight: 800;
+      font-size: 13px;
+      color: var(--muted);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .auth-toggle-btn.active {
+      background: var(--emerald-dark);
+      color: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+      text-align: left;
+      position: relative;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      width: 100%;
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 13px 15px;
+      outline: none;
+      background: #f8fafc;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: var(--emerald-bright);
+      box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.12);
+      background: #fff;
+    }
+
+    .btn-submit-login {
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--emerald-dark), var(--emerald-light));
+      color: var(--gold-light);
+      font-weight: 800;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(4, 31, 28, 0.3);
+      transition: 0.3s;
+      margin-top: 5px;
+    }
+
+    .btn-submit-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(4, 31, 28, 0.4);
+    }
+
+    /* MASKED INPUT WITH TOGGLE EYE */
+    .masked-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .toggle-eye-btn {
+      position: absolute;
+      right: 12px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: var(--muted);
+      padding: 4px;
+    }
+
+    /* MAIN ACADEMY CONTAINER (HIDDEN UNTIL AUTHENTICATED) */
+    #mainAcademyContainer {
+      display: none;
+    }
+
+    /* LAYOUT STYLES */
+    .container {
+      width: min(1220px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 95px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #7c3aed;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 99px;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 55px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--emerald-dark);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* TOP BAR */
+    .top-strip {
+      background: var(--emerald-dark);
+      color: #e2e8f0;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .top-inner {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .top-inner a {
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    @media(max-width:768px) {
+      .top-strip {
+        display: none;
+      }
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--emerald-dark), var(--purple));
+      border: 2px solid var(--gold);
+      box-shadow: 0 10px 25px rgba(4, 31, 28, 0.2);
+      overflow: hidden;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand h1 {
+      font-size: 18px;
+      color: var(--emerald-dark);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .brand small {
+      font-size: 11px;
+      color: var(--muted);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--emerald-bright);
+    }
+
+    .user-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #166534;
+    }
+
+    .btn-logout {
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 1px solid #fca5a5;
+      background: #fef2f2;
+      color: #dc2626;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-logout:hover {
+      background: #fee2e2;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      color: var(--emerald-dark);
+      cursor: pointer;
+      border: 0;
+      background: none;
+    }
+
+    @media(max-width:960px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px 5%;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow-vip);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+      }
+    }
+
+    /* VIP HERO SECTION WITH DUAL COLUMN & USER IMAGE */
+    .hero {
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+      background:
+        linear-gradient(110deg, rgba(4, 31, 28, 0.96) 0%, rgba(11, 69, 63, 0.88) 50%, rgba(91, 33, 182, 0.75) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+      padding: 75px 0;
+    }
+
+    @media(max-width:960px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .arabic-calligraphy {
+      font-family: 'Amiri', serif;
+      font-size: 44px;
+      color: var(--gold-light);
+      text-shadow: 0 0 25px rgba(214, 168, 59, 0.5);
+      margin-bottom: 18px;
+    }
+
+    .vip-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border: 1px solid rgba(214, 168, 59, 0.6);
+      background: rgba(214, 168, 59, 0.12);
+      border-radius: 999px;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h2 {
+      font-size: clamp(40px, 5vw, 65px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+      font-weight: 800;
+    }
+
+    .hero h2 span {
+      color: var(--gold-light);
+      text-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: #e2e8f0;
+      max-width: 680px;
+      margin-bottom: 35px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-vip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: none;
+      border-radius: 14px;
+      padding: 16px 26px;
+      font-weight: 800;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.35s;
+      text-decoration: none;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+      color: #041f1c;
+      box-shadow: 0 14px 35px rgba(214, 168, 59, 0.3);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(214, 168, 59, 0.45);
+    }
+
+    .btn-glass {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-glass:hover {
+      background: #fff;
+      color: var(--emerald-dark);
+      transform: translateY(-4px);
+    }
+
+    .hero-visual-card {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 3px solid var(--gold);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5), var(--glow-gold);
+    }
+
+    .hero-visual-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-visual-badge {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      background: rgba(4, 31, 28, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 12px 18px;
+      border-radius: 16px;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ABOUT SECTION WITH FEMALE TEACHER IMAGE */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-visual img {
+      width: 100%;
+      border-radius: 28px;
+      box-shadow: var(--shadow-vip);
+      border: 4px solid #fff;
+      object-fit: cover;
+    }
+
+    /* COURSES GRID */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .course-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: 0.35s;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-vip);
+      border-color: var(--emerald-bright);
+    }
+
+    .course-header {
+      background: linear-gradient(135deg, var(--emerald-dark), var(--purple));
+      padding: 30px 24px;
+      color: #fff;
+      position: relative;
+      text-align: center;
+    }
+
+    .course-icon {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    .course-card h3 {
+      font-size: 22px;
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .course-level {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(214, 168, 59, 0.2);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .course-body {
+      padding: 26px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .course-body p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    /* TEACHERS GRID WITH USER'S REAL PICTURES */
+    .teacher-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .teacher-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px 24px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.35s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .teacher-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--emerald-bright), var(--purple), var(--gold));
+    }
+
+    .teacher-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-vip);
+    }
+
+    .teacher-avatar-img {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #f0fdf4;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* CONTACT FORM */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 35px;
+      align-items: stretch;
+    }
+
+    .contact-box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 38px;
+      box-shadow: var(--shadow-vip);
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      outline: none;
+      background: #f8fafc;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--emerald-bright);
+      box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+      background: #fff;
+    }
+
+    .field textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    /* MODAL */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 31, 28, 0.8);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 20000;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(850px, 96%);
+      background: #fff;
+      border-radius: 28px;
+      padding: 32px;
+      position: relative;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 16px;
+      border: 0;
+      background: #f1f5f9;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--emerald-dark);
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      z-index: 999999;
+      display: none;
+    }
+
+    footer {
+      background: var(--emerald-dark);
+      color: #fff;
+      padding-top: 70px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 50px;
+    }
+
+    footer h3 {
+      color: var(--gold-light);
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    footer p,
+    footer a,
+    footer li {
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    footer li {
+      margin: 10px 0;
+      list-style: none;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 22px 0;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- STANDALONE LOGIN SCREEN (FIRST THING VISIBLE WITH ACADEMY PHOTO & BRANDING) -->
+  <div id="standaloneLoginWrapper">
+    <div class="login-card">
+
+      <!-- LEFT COLUMN: USER PICTURE & ACADEMY BRANDING -->
+      <div class="login-brand-col">
+        <img src="alhafiz_male_teacher.jpg" alt="AlHafiz Islamic Academy Founder" class="login-user-photo">
+        <div class="academy-arabic-title">الحافظ اسلامک اکیڈمی</div>
+        <div class="academy-eng-title">AL HAFIZ ISLAMIC ACADEMY</div>
+        <p style="font-size:12px; color:var(--gold-light); margin-top:8px; opacity:0.9;">Online Live Quran Teaching
+          Worldwide</p>
+      </div>
+
+      <!-- RIGHT COLUMN: LOGIN FORM -->
+      <div class="login-form-col">
+        <div class="login-title">
+          <h2>Member Security Login</h2>
+          <p>Enter your credentials to access the VIP portal</p>
+        </div>
+
+        <!-- RED ALERT ERROR BANNER (SHOWN ON INCORRECT CREDENTIALS) -->
+        <div class="alert-error-box" id="alertErrorBox">
+          🚨 الرٹ: آپ نے ای میل یا پاس ورڈ غلط ڈالا ہے! براہِ کرم درست معلومات درج کریں۔
+        </div>
+
+        <div class="demo-creds-bar">
+          <strong>🔑 Quick Demo Login (Click to Autofill):</strong>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:5px;">
+            <button type="button" onclick="fillCreds('student@alhafiz.com','quran123')"
+              style="border:0; background:#dcfce7; color:#166534; padding:5px 10px; border-radius:8px; font-weight:800; cursor:pointer; font-size:11px;">
+              🎓 Student: student@alhafiz.com
+            </button>
+            <button type="button" onclick="fillCreds('admin@alhafiz.com','admin123')"
+              style="border:0; background:#fef3c7; color:#92400e; padding:5px 10px; border-radius:8px; font-weight:800; cursor:pointer; font-size:11px;">
+              👑 Admin: admin@alhafiz.com
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-toggle-group">
+          <button class="auth-toggle-btn active" id="btnToggleLogin">Sign In</button>
+          <button class="auth-toggle-btn" id="btnToggleSignup">Register New Account</button>
+        </div>
+
+        <!-- SIGN IN FORM -->
+        <form id="formSignIn">
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" required placeholder="name@domain.com">
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <div class="masked-input-wrapper">
+              <input type="password" id="loginPassword" required placeholder="Enter password">
+              <button type="button" class="toggle-eye-btn"
+                onclick="togglePasswordVisibility('loginPassword', this)">👁️</button>
+            </div>
+          </div>
+          <button class="btn-submit-login" type="submit">Log In to Academy →</button>
+        </form>
+
+        <!-- SIGN UP FORM -->
+        <form id="formSignUp" style="display:none;">
+          <div class="form-group">
+            <label for="regName">Full Name</label>
+            <input type="text" id="regName" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email Address</label>
+            <input type="email" id="regEmail" required placeholder="name@domain.com">
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Create Password</label>
+            <div class="masked-input-wrapper">
+              <input type="password" id="regPassword" required placeholder="Create password">
+              <button type="button" class="toggle-eye-btn"
+                onclick="togglePasswordVisibility('regPassword', this)">👁️</button>
+            </div>
+          </div>
+          <button class="btn-submit-login" type="submit">Create Account & Enter →</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAIN ACADEMY WEBSITE (HIDDEN UNTIL VALID LOGIN) -->
+  <div id="mainAcademyContainer">
+
+    <!-- TOP BAR -->
+    <div class="top-strip">
+      <div class="container top-inner">
+        <span>📖 VIP Online Quran Academy • 1-on-1 Worldwide Live Classes</span>
+        <span>📞 <a href="tel:+923047809156">0304 7809156</a> &nbsp; | &nbsp; ✉️ <a
+            href="mailto:ranaallahditta7347@gmail.com">ranaallahditta7347@gmail.com</a></span>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#home">
+          <div class="brand-mark">
+            <img src="alhafiz_male_teacher.jpg" alt="AlHafiz Logo">
+          </div>
+          <div>
+            <h1>AlHafiz Quran Academy</h1>
+            <small>الحافظ اسلامک اکیڈمی</small>
+          </div>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#courses">Courses</a>
+          <a href="#teachers">Teachers</a>
+          <a href="#contact">Book Trial</a>
+          <a href="javascript:void(0)" id="openAdminBtn" style="color:#7c3aed; font-weight:800;">🔑 Admin Portal</a>
+          <span class="user-badge" id="userBadgeLabel">👤 Guest</span>
+          <button class="btn-logout" id="btnLogout">🔒 Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION WITH USER PICTURE CARD -->
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <div class="arabic-calligraphy">وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا</div>
+            <div class="vip-badge">✦ VIP AUTHENTIC QURAN ACADEMY</div>
+            <h2>Learn Quran with <span>Excellence & Tajweed</span></h2>
+            <p>
+              Experience premium one-on-one online Quran classes tailored for children and adults worldwide.
+              Learn Nazra, Tajweed, Hifz-ul-Quran, Noorani Qaida, and Islamic Studies with certified male & female
+              teachers.
+            </p>
+            <div class="hero-actions">
+              <a class="btn-vip btn-gold" href="#contact">📲 Book Free Trial Class</a>
+              <a class="btn-vip btn-glass" href="#courses">Explore Courses →</a>
+            </div>
+          </div>
+
+          <div class="hero-visual-card">
+            <img src="alhafiz_male_teacher.jpg" alt="AlHafiz Quran Academy Online Teaching">
+            <div class="hero-visual-badge">
+              <div>
+                <strong style="color:var(--gold-light); font-size:14px; display:block;">الحافظ اسلامک اکیڈمی</strong>
+                <small style="color:#e2e8f0; font-size:11px;">Certified Quran Teacher & Founder</small>
+              </div>
+              <span
+                style="background:var(--gold); color:#041f1c; font-weight:900; padding:4px 10px; border-radius:8px; font-size:11px;">LIVE
+                1-ON-1</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION WITH FEMALE QURAN TUTOR PICTURE -->
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div class="about-visual">
+            <img src="alhafiz_female_teacher.jpg" alt="Female Quran Teacher Online Teaching">
+          </div>
+          <div>
+            <div class="eyebrow">Why Choose AlHafiz Academy</div>
+            <h2
+              style="font-size:38px; color:var(--emerald-dark); font-weight:800; line-height:1.15; margin-bottom:16px;">
+              Personalized 1-on-1 Quran Classes for All Ages
+            </h2>
+            <p style="color:var(--muted); font-size:16px; margin-bottom:20px;">
+              We provide customized Quranic education tailored to the student's pace and schedule. Certified female
+              Quran tutors are available for sisters and young kids.
+            </p>
+            <ul style="display:grid; gap:12px; font-weight:700; color:#334155; list-style:none;">
+              <li>✓ Flexible Timings 24/7</li>
+              <li>✓ Certified Male & Female Hafiz Tutors</li>
+              <li>✓ Monthly Progress Reports & Evaluation</li>
+              <li>✓ 3 Days Free Trial Classes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- COURSES SECTION -->
+      <section class="section" style="background:#f1f5f9;" id="courses">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Our Specializations</div>
+            <h2>VIP Online Quran Courses</h2>
+            <p>Comprehensive Quranic and Islamic education structured for beginners to advanced learners.</p>
+          </div>
+
+          <div class="courses-grid">
+            <div class="course-card">
+              <div class="course-header">
+                <div class="course-icon">📖</div>
+                <h3>Quran With Tajweed</h3>
+                <span class="course-level">All Levels</span>
+              </div>
+              <div class="course-body">
+                <p>Master proper Arabic pronunciation (Makharij) and recitation rules with personalized guidance.</p>
+                <a class="btn-vip btn-gold" href="#contact">Enroll Now</a>
+              </div>
+            </div>
+
+            <div class="course-card">
+              <div class="course-header">
+                <div class="course-icon">🕌</div>
+                <h3>Hifz-ul-Quran</h3>
+                <span class="course-level">Advanced</span>
+              </div>
+              <div class="course-body">
+                <p>Structured Quran memorization program with systematic daily revision and monthly progress testing.
+                </p>
+                <a class="btn-vip btn-gold" href="#contact">Enroll Now</a>
+              </div>
+            </div>
+
+            <div class="course-card">
+              <div class="course-header">
+                <div class="course-icon">⭐</div>
+                <h3>Noorani Qaida</h3>
+                <span class="course-level">Beginner</span>
+              </div>
+              <div class="course-body">
+                <p>Perfect foundational course for kids and beginners to learn Arabic alphabets and word joining rules.
+                </p>
+                <a class="btn-vip btn-gold" href="#contact">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEACHERS SECTION WITH USER'S REAL PICTURES -->
+      <section class="section" id="teachers">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Expert Instructors</div>
+            <h2>Qualified Male & Female Teachers</h2>
+            <p>Our instructors are certified Hafiz-e-Quran and Tajweed experts with years of online teaching experience.
+            </p>
+          </div>
+
+          <div class="teacher-grid">
+            <div class="teacher-card">
+              <img src="alhafiz_male_teacher.jpg" alt="Hafiz Allah Ditta" class="teacher-avatar-img">
+              <h3>Hafiz Allah Ditta</h3>
+              <span
+                style="color:var(--emerald-bright); font-size:13px; font-weight:800; display:block; margin:4px 0 10px;">Senior
+                Quran & Tajweed Specialist</span>
+              <p>Over 8 years of experience teaching Hifz, Tajweed, and Qira'at to global students.</p>
+            </div>
+
+            <div class="teacher-card">
+              <img src="alhafiz_female_teacher.jpg" alt="Qaria Fatima" class="teacher-avatar-img">
+              <h3>Qaria Fatima</h3>
+              <span
+                style="color:var(--emerald-bright); font-size:13px; font-weight:800; display:block; margin:4px 0 10px;">Female
+                Tajweed Instructor</span>
+              <p>Specialized instructor for young children and female adult students with gentle methodology.</p>
+            </div>
+
+            <div class="teacher-card">
+              <img src="kids_learning.png" alt="Qari Muhammad Usama" class="teacher-avatar-img">
+              <h3>Qari Muhammad Usama</h3>
+              <span
+                style="color:var(--emerald-bright); font-size:13px; font-weight:800; display:block; margin:4px 0 10px;">Hifz
+                & Revision Master</span>
+              <p>Expert in Quranic phonetics, memorization schedules, and Islamic jurisprudence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT / BOOKING SECTION WITH MASKED NUMBER INPUT -->
+      <section class="section" style="background:#f8fafc;" id="contact">
+        <div class="container contact-grid">
+          <div style="padding: 20px 0;">
+            <div class="eyebrow">Book Free Trial</div>
+            <h2
+              style="font-size:38px; color:var(--emerald-dark); font-weight:800; line-height:1.15; margin-bottom:18px;">
+              Start Learning Today with 3 Days Free Trial</h2>
+            <p style="color:var(--muted); font-size:16px; margin-bottom:25px;">Fill out the form to register. Your
+              details are securely encrypted in Python database and connected to WhatsApp.</p>
+          </div>
+
+          <div class="contact-box">
+            <form id="registrationForm">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                <div class="field"><label for="studentName">Student Name</label><input id="studentName" required
+                    placeholder="Enter student name"></div>
+                <div class="field"><label for="age">Age</label><input id="age" type="number" min="3" max="100" required
+                    placeholder="Age"></div>
+              </div>
+
+              <div class="field">
+                <label for="phone">WhatsApp Number (Confidential & Masked)</label>
+                <div class="masked-input-wrapper">
+                  <input type="password" id="phone" required placeholder="03xx xxxxxxx">
+                  <button type="button" class="toggle-eye-btn"
+                    onclick="togglePasswordVisibility('phone', this)">👁️</button>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="course">Select Course</label>
+                <select id="course" required>
+                  <option value="">Choose a course</option>
+                  <option>Quran With Tajweed</option>
+                  <option>Hifz-ul-Quran</option>
+                  <option>Noorani Qaida</option>
+                  <option>Islamic Studies</option>
+                  <option>Quran Translation</option>
+                  <option>Kids Quran Classes</option>
+                </select>
+              </div>
+
+              <div class="field"><label for="message">Message / Preferred Time</label><textarea id="message"
+                  placeholder="Preferred timing or learning requirements..."></textarea></div>
+              <button class="btn-submit-login" type="submit">📲 Submit & Open WhatsApp Chat →</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <h3 style="font-size:22px;">AlHafiz Quran Academy</h3>
+          <p>Leading Online Quran Learning Institute providing authentic Tajweed, Hifz, and Islamic education worldwide.
+          </p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#teachers">Teachers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Courses</h3>
+          <ul>
+            <li>Tajweed</li>
+            <li>Hifz-ul-Quran</li>
+            <li>Noorani Qaida</li>
+            <li>Islamic Studies</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <ul>
+            <li>📞 <a href="tel:+923047809156">0304 7809156</a></li>
+            <li>✉️ <a href="mailto:ranaallahditta7347@gmail.com">ranaallahditta7347@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> AlHafiz Islamic Quran Academy. All Rights Reserved.</div>
+    </footer>
+
+  </div>
+
+  <!-- ADMIN MODAL -->
+  <div class="modal" id="adminModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close-modal" id="closeAdminModal">×</button>
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; border-bottom:1px solid var(--line); padding-bottom:15px;">
+        <div>
+          <h3 style="font-size:24px; color:var(--emerald-dark);">👑 Admin Registrations Dashboard</h3>
+          <span style="font-size:12px; color:var(--muted);">Python SQLite Database Live Records</span>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:20px;">
+        <div
+          style="background:#f8fafc; padding:15px; border-radius:14px; border:1px solid var(--line); text-align:center;">
+          <span style="font-size:12px; color:var(--muted);">Total Applications</span>
+          <strong id="statTotal" style="font-size:24px; color:var(--emerald-dark); display:block;">0</strong>
+        </div>
+        <div style="background:#fff7ed; padding:15px; border-radius:14px; border:1px solid #fed7aa; text-align:center;">
+          <span style="font-size:12px; color:#c2410c;">Pending Trials</span>
+          <strong id="statPending" style="font-size:24px; color:#c2410c; display:block;">0</strong>
+        </div>
+        <div style="background:#f0fdf4; padding:15px; border-radius:14px; border:1px solid #bbf7d0; text-align:center;">
+          <span style="font-size:12px; color:#15803d;">Enrolled Students</span>
+          <strong id="statEnrolled" style="font-size:24px; color:#15803d; display:block;">0</strong>
+        </div>
+      </div>
+
+      <div style="max-height:350px; overflow-y:auto; border:1px solid var(--line); border-radius:14px;">
+        <table style="width:100%; border-collapse:collapse; font-size:13px; text-align:left;">
+          <thead style="background:#f1f5f9; position:sticky; top:0;">
+            <tr>
+              <th style="padding:12px;">Student</th>
+              <th style="padding:12px;">Course</th>
+              <th style="padding:12px;">Contact</th>
+              <th style="padding:12px;">Status</th>
+              <th style="padding:12px;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="adminRegistrationsBody">
+            <tr>
+              <td colspan="5" style="text-align:center; padding:25px; color:var(--muted);">Loading registrations...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-msg" id="toast"></div>
+
+  <script>
+    const API_BASE = window.location.protocol.startsWith("http") ? "" : "http://localhost:5000";
+
+    function showToast(msg, duration = 3500) {
+      const toast = document.getElementById("toast");
+      toast.textContent = msg;
+      toast.style.display = "block";
+      setTimeout(() => { toast.style.display = "none"; }, duration);
+    }
+
+    function togglePasswordVisibility(inputId, btnEl) {
+      const input = document.getElementById(inputId);
+      if (input.type === "password") {
+        input.type = "text";
+        btnEl.textContent = "🔒";
+      } else {
+        input.type = "password";
+        btnEl.textContent = "👁️";
+      }
+    }
+
+    function fillCreds(email, pass) {
+      document.getElementById("loginEmail").value = email;
+      document.getElementById("loginPassword").value = pass;
+    }
+
+    // AUTH TOGGLES
+    const btnToggleLogin = document.getElementById("btnToggleLogin");
+    const btnToggleSignup = document.getElementById("btnToggleSignup");
+    const formSignIn = document.getElementById("formSignIn");
+    const formSignUp = document.getElementById("formSignUp");
+
+    btnToggleLogin.addEventListener("click", () => {
+      btnToggleLogin.classList.add("active");
+      btnToggleSignup.classList.remove("active");
+      formSignIn.style.display = "block";
+      formSignUp.style.display = "none";
+    });
+
+    btnToggleSignup.addEventListener("click", () => {
+      btnToggleSignup.classList.add("active");
+      btnToggleLogin.classList.remove("active");
+      formSignUp.style.display = "block";
+      formSignIn.style.display = "none";
+    });
+
+    // CHECK AUTH SESSION & SHOW/HIDE MAIN WEBSITE
+    function checkAuthSession() {
+      const userRaw = sessionStorage.getItem("alhafiz_user") || localStorage.getItem("alhafiz_user");
+      if (userRaw) {
+        try {
+          const user = JSON.parse(userRaw);
+          document.getElementById("standaloneLoginWrapper").style.display = "none";
+          document.getElementById("mainAcademyContainer").style.display = "block";
+          document.getElementById("userBadgeLabel").textContent = `👤 ${user.name} (${user.role})`;
+          return user;
+        } catch (e) { }
+      }
+      document.getElementById("standaloneLoginWrapper").style.display = "flex";
+      document.getElementById("mainAcademyContainer").style.display = "none";
+      return null;
+    }
+
+    // SIGN IN SUBMISSION WITH ERROR ALERT
+    formSignIn.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPassword").value.trim();
+      const alertErrorBox = document.getElementById("alertErrorBox");
+
+      alertErrorBox.style.display = "none";
+
+      try {
+        const res = await fetch(`${API_BASE}/api/auth/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+        if (res.ok && data.status === "success") {
+          sessionStorage.setItem("alhafiz_user", JSON.stringify(data.user));
+          checkAuthSession();
+          showToast(`✓ Login Successful! Welcome ${data.user.name}`);
+        } else {
+          alertErrorBox.textContent = `🚨 الرٹ: آپ نے ای میل یا پاس ورڈ غلط ڈالا ہے! (${data.message || 'Invalid credentials'})`;
+          alertErrorBox.style.display = "block";
+        }
+      } catch (err) {
+        if ((email === "student@alhafiz.com" && password === "quran123") || (email === "admin@alhafiz.com" && password === "admin123")) {
+          const role = email.includes("admin") ? "admin" : "student";
+          const mockUser = { name: email.split("@")[0], email: email, role: role };
+          sessionStorage.setItem("alhafiz_user", JSON.stringify(mockUser));
+          checkAuthSession();
+          showToast(`✓ Welcome ${mockUser.name}!`);
+        } else {
+          alertErrorBox.textContent = "🚨 الرٹ: آپ نے ای میل یا پاس ورڈ غلط ڈالا ہے! (Invalid Email or Password)";
+          alertErrorBox.style.display = "block";
+        }
+      }
+    });
+
+    // SIGN UP SUBMISSION
+    formSignUp.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("regName").value.trim();
+      const email = document.getElementById("regEmail").value.trim();
+      const password = document.getElementById("regPassword").value.trim();
+      const alertErrorBox = document.getElementById("alertErrorBox");
+
+      try {
+        const res = await fetch(`${API_BASE}/api/auth/register`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, password })
+        });
+        const data = await res.json();
+        if (res.ok && data.status === "success") {
+          const user = { name: name, email: email, role: "student" };
+          sessionStorage.setItem("alhafiz_user", JSON.stringify(user));
+          checkAuthSession();
+          showToast(`✓ Account created! Welcome ${name}`);
+        } else {
+          alertErrorBox.textContent = `🚨 الرٹ: ${data.message || 'Could not register account.'}`;
+          alertErrorBox.style.display = "block";
+        }
+      } catch (err) {
+        const user = { name: name, email: email, role: "student" };
+        sessionStorage.setItem("alhafiz_user", JSON.stringify(user));
+        checkAuthSession();
+        showToast(`✓ Welcome ${name}!`);
+      }
+    });
+
+    // LOGOUT
+    document.getElementById("btnLogout").addEventListener("click", () => {
+      sessionStorage.removeItem("alhafiz_user");
+      localStorage.removeItem("alhafiz_user");
+      checkAuthSession();
+      showToast("🔒 Portal Locked");
+    });
+
+    // INITIAL AUTH CHECK
+    checkAuthSession();
+
+    // REGISTRATION FORM SUBMISSION
+    document.getElementById("registrationForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const name = document.getElementById("studentName").value.trim();
+      const age = document.getElementById("age").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const course = document.getElementById("course").value;
+      const message = document.getElementById("message").value.trim();
+
+      try {
+        await fetch(`${API_BASE}/api/register`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, age, phone, course, message })
+        });
+        showToast("✓ Saved in Python Database! Opening WhatsApp...");
+      } catch (err) {
+        showToast("✓ Opening WhatsApp chat...");
+      }
+
+      const text = `Assalam-o-Alaikum AlHafiz Islamic Quran Academy,\n\nI want to book a Free Trial Class.\n\nStudent: ${name}\nAge: ${age}\nPhone: ${phone}\nCourse: ${course}\nMessage: ${message || 'None'}`;
+      setTimeout(() => {
+        window.open("https://wa.me/923047809156?text=" + encodeURIComponent(text), "_blank");
+      }, 600);
+    });
+
+    // ADMIN MODAL
+    const adminModal = document.getElementById("adminModal");
+    document.getElementById("openAdminBtn").addEventListener("click", () => {
+      const user = checkAuthSession();
+      if (user && user.role === "admin") {
+        adminModal.classList.add("show");
+        loadAdminStats();
+        loadAdminRegistrations();
+      } else {
+        alert("👑 Admin Access Required! Log in as admin@alhafiz.com");
+      }
+    });
+
+    document.getElementById("closeAdminModal").addEventListener("click", () => {
+      adminModal.classList.remove("show");
+    });
+
+    async function loadAdminStats() {
+      try {
+        const res = await fetch(`${API_BASE}/api/admin/stats`);
+        if (res.ok) {
+          const data = await res.json();
+          document.getElementById("statTotal").textContent = data.stats.total_registrations || 0;
+          document.getElementById("statPending").textContent = data.stats.pending_registrations || 0;
+          document.getElementById("statEnrolled").textContent = data.stats.enrolled_registrations || 0;
+        }
+      } catch (e) { }
+    }
+
+    async function loadAdminRegistrations() {
+      const body = document.getElementById("adminRegistrationsBody");
+      try {
+        const res = await fetch(`${API_BASE}/api/admin/registrations`);
+        if (res.ok) {
+          const data = await res.json();
+          const list = data.registrations || [];
+          if (list.length === 0) {
+            body.innerHTML = `<tr><td colspan="5" style="text-align:center; padding:20px; color:var(--muted);">No applications found.</td></tr>`;
+            return;
+          }
+          body.innerHTML = list.map(item => `
+            <tr style="border-bottom:1px solid var(--line);">
+              <td style="padding:10px;"><strong>${item.student_name}</strong><br><small style="color:var(--muted);">Age: ${item.age}</small></td>
+              <td style="padding:10px;">${item.course}</td>
+              <td style="padding:10px;"><a href="https://wa.me/${item.phone.replace(/[^0-9]/g, '')}" target="_blank" style="color:#16a34a; font-weight:700;">📲 Masked: ••••••••</a></td>
+              <td style="padding:10px;"><span style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:6px; font-weight:700; font-size:11px;">${item.status}</span></td>
+              <td style="padding:10px;"><button onclick="deleteRecord(${item.id})" style="border:0; background:none; cursor:pointer;">🗑️</button></td>
+            </tr>
+          `).join("");
+        }
+      } catch (e) {
+        body.innerHTML = `<tr><td colspan="5" style="text-align:center; color:#dc2626; padding:20px;">Python backend starting... Run start_server.bat</td></tr>`;
+      }
+    }
+
+    window.deleteRecord = async function (id) {
+      if (!confirm("Delete this student registration?")) return;
+      try {
+        await fetch(`${API_BASE}/api/admin/registrations/${id}`, { method: "DELETE" });
+        showToast("✓ Record deleted");
+        loadAdminRegistrations();
+      } catch (e) { }
+    };
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
