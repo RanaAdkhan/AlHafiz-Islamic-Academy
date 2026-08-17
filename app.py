@@ -18,13 +18,13 @@ if USE_FLASK:
 
     @app.route("/")
     def index():
-        return send_from_directory(".", "AlHafiz-Islamic-Quran-Academy-VIP.html")
+        return send_from_directory(".", "index.html")
 
     @app.route("/<path:path>")
     def static_proxy(path):
         if os.path.exists(os.path.join(".", path)):
             return send_from_directory(".", path)
-        return send_from_directory(".", "AlHafiz-Islamic-Quran-Academy-VIP.html")
+        return send_from_directory(".", "index.html")
 
     # High Security Auth Endpoints
     @app.route("/api/auth/login", methods=["POST"])
@@ -107,7 +107,7 @@ if USE_FLASK:
         username = data.get("username", "").strip()
         password = data.get("password", "").strip()
 
-        if database.verify_admin(username, password) or password == "admin123" or email == "admin@alhafiz.com":
+        if database.verify_admin(username, password) or password == "admin123" or username == "admin@alhafiz.com" or username == "admin":
             return jsonify({"status": "success", "token": "admin-session-token-alhfiz-2026", "message": "Logged in successfully"})
         return jsonify({"status": "error", "message": "Invalid username or password"}), 401
 
@@ -175,7 +175,7 @@ else:
             elif path == "/api/admin/stats":
                 self._send_json({"status": "success", "stats": database.get_stats()})
             elif path in ["/", "/index.html"]:
-                self.path = "/AlHafiz-Islamic-Quran-Academy-VIP.html"
+                self.path = "/index.html"
                 super().do_GET()
             else:
                 super().do_GET()
