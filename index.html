@@ -704,15 +704,42 @@
       100% { transform: translateY(-8px); }
     }
 
+    /* MOBILE & TABLET OPTIMIZATIONS */
+    @media (max-width: 768px) {
+      .app-login-card { grid-template-columns: 1fr; }
+      .app-login-banner { display: none; }
+      .faculty-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+      .demo-btn-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+      .modal-container-box { padding: 24px 16px !important; width: 100% !important; }
+      .app-login-form-area { padding: 24px 16px !important; }
+      .input-field-group input, .input-field-group select { font-size: 16px !important; min-height: 46px; }
+      .btn-app-primary { min-height: 48px; font-size: 14.5px; }
+      .floating-wa-btn { bottom: 74px !important; right: 16px !important; width: 52px !important; height: 52px !important; font-size: 26px !important; }
+    }
+
     @media (max-width: 640px) {
       .mobile-app-dock { display: flex; }
-      .course-grid, .search-filter-grid, .footer-grid-layout, .form-dual-row, .demo-btn-grid { grid-template-columns: 1fr; }
+      .course-grid, .search-filter-grid, .footer-grid-layout, .form-dual-row { grid-template-columns: 1fr; }
       .nav-menu { display: none; }
-      .hero-section { padding: 50px 0 70px; }
+      .hero-section { padding: 40px 0 60px; }
+      .hero-title { font-size: 28px !important; }
+      .bismillah-text { font-size: 32px !important; }
       .player-controls-wrapper { grid-template-columns: 1fr; text-align: center; }
       .btn-play-circle { margin: 0 auto; }
       .admin-metrics-grid { grid-template-columns: repeat(2, 1fr); }
-      .ai-voice-banner { max-width: 90%; right: 5%; top: 70px; }
+      .ai-voice-banner { max-width: 92%; right: 4%; top: 60px; padding: 8px 14px; font-size: 12px; }
+      .hero-btn-group { flex-direction: column; width: 100%; }
+      .hero-btn-group a { width: 100%; justify-content: center; text-align: center; }
+      .stats-dock { grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 12px; }
+      .dock-number { font-size: 20px; }
+      .dock-label { font-size: 9.5px; }
+    }
+
+    @media (max-width: 420px) {
+      .demo-btn-grid { grid-template-columns: 1fr 1fr !important; gap: 6px !important; }
+      .btn-demo-pill { font-size: 10px !important; padding: 8px 4px !important; }
+      .app-brand-text h1 { font-size: 14px !important; }
+      .app-brand-logo { width: 38px !important; height: 38px !important; font-size: 18px !important; }
     }
   </style>
 </head>
