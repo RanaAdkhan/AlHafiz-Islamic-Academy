@@ -66,36 +66,36 @@
     .arabic-font { font-family: 'Amiri', serif; }
     .urdu-font { font-family: 'Noto Nastaliq Urdu', serif; }
 
-    .container { width: min(1280px, 92%); margin: 0 auto; }
-    .section-padding { padding: 80px 0; }
+    .container { width: min(1320px, 94%); margin: 0 auto; }
+    .section-padding { padding: 75px 0; }
     .bg-light { background: #f8fafc; }
     .bg-white { background: #ffffff; }
     .bg-accent { background: #f0fdf9; }
     .bg-dark { background: var(--emerald-dark); color: #ffffff; }
 
     /* SECTION TITLES */
-    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header { text-align: center; margin-bottom: 45px; }
     .section-tag {
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(13, 92, 83, 0.1); color: var(--emerald-mid);
       border: 1px solid rgba(13, 92, 83, 0.2);
-      padding: 6px 16px; border-radius: 999px; font-size: 12px; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px;
+      padding: 5px 15px; border-radius: 999px; font-size: 12px; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 10px;
     }
     .section-tag.gold {
       background: rgba(245, 158, 11, 0.12); color: #b45309; border-color: rgba(245, 158, 11, 0.3);
     }
     .section-title {
-      font-size: 32px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 12px; line-height: 1.3;
+      font-size: 32px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 10px; line-height: 1.3;
     }
     .bg-dark .section-title { color: #ffffff; }
     .section-subtitle {
-      font-size: 16px; color: var(--muted); max-width: 680px; margin: 0 auto;
+      font-size: 15.5px; color: var(--muted); max-width: 680px; margin: 0 auto; line-height: 1.6;
     }
     .bg-dark .section-subtitle { color: #cbd5e1; }
     .title-underline {
       width: 70px; height: 4px; background: linear-gradient(90deg, var(--emerald-mid), var(--gold));
-      margin: 16px auto 0; border-radius: 999px;
+      margin: 14px auto 0; border-radius: 999px;
     }
 
     /* TOP CONTACT & ANNOUNCEMENT BAR */
@@ -106,8 +106,8 @@
     .top-bar-content {
       display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
     }
-    .top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-    .top-info-item { display: inline-flex; align-items: center; gap: 6px; color: #e2e8f0; transition: color 0.2s; }
+    .top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .top-info-item { display: inline-flex; align-items: center; gap: 6px; color: #e2e8f0; transition: color 0.2s; white-space: nowrap; }
     .top-info-item:hover { color: var(--gold-glow); }
     .top-info-item i { color: var(--gold); }
     .social-circle {
@@ -127,13 +127,13 @@
     }
     .marquee-track:hover { animation-play-state: paused; }
     @keyframes marqueeAnim { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .marquee-item { display: inline-flex; align-items: center; gap: 8px; color: #ffffff; }
+    .marquee-item { display: inline-flex; align-items: center; gap: 8px; color: #ffffff; white-space: nowrap; }
     .marquee-badge {
       background: rgba(251, 191, 36, 0.2); border: 1px solid #fbbf24; color: #fef08a;
       padding: 2px 10px; border-radius: 999px; font-size: 11px;
     }
 
-    /* MAIN NAVBAR */
+    /* MAIN NAVBAR (NO WORD WRAPPING BUG) */
     header.app-navbar {
       background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(16px);
       position: sticky; top: 0; z-index: 1000;
@@ -141,164 +141,204 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     }
     .nav-container {
-      display: flex; align-items: center; justify-content: space-between; height: 74px;
+      display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px;
     }
     .nav-brand {
-      display: flex; align-items: center; gap: 12px;
+      display: flex; align-items: center; gap: 10px; flex-shrink: 0;
     }
     .brand-logo {
-      width: 48px; height: 48px; border-radius: 12px;
+      width: 44px; height: 44px; border-radius: 12px;
       background: linear-gradient(135deg, #03201c, #0d5c53);
       border: 2px solid var(--gold); display: grid; place-items: center;
-      color: var(--gold-light); font-size: 22px; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+      color: var(--gold-light); font-size: 20px; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+      flex-shrink: 0;
     }
     .brand-text h1 {
-      font-size: 17px; font-weight: 800; color: var(--emerald-dark); line-height: 1.2;
+      font-size: 16px; font-weight: 800; color: var(--emerald-dark); line-height: 1.2; white-space: nowrap;
     }
     .brand-text p {
-      font-size: 11px; font-weight: 600; color: var(--gold-dark); letter-spacing: 0.5px;
+      font-size: 10.5px; font-weight: 700; color: var(--gold-dark); letter-spacing: 0.5px; white-space: nowrap;
     }
+    
+    /* NAV MENU WITH STRICT WHITE-SPACE NOWRAP */
     .nav-menu {
-      display: flex; align-items: center; gap: 6px; list-style: none;
+      display: flex; align-items: center; gap: 4px; list-style: none; flex-wrap: nowrap;
+    }
+    .nav-menu li {
+      white-space: nowrap; flex-shrink: 0;
     }
     .nav-menu a {
-      font-size: 13.5px; font-weight: 700; color: #334155; padding: 8px 12px;
-      border-radius: 8px; transition: all 0.2s ease;
+      font-size: 13px; font-weight: 700; color: #334155; padding: 7px 11px;
+      border-radius: 8px; transition: all 0.2s ease; display: inline-block; white-space: nowrap !important;
     }
     .nav-menu a:hover, .nav-menu a.active {
       color: var(--emerald-mid); background: #f0fdf4;
     }
+
     .nav-actions {
-      display: flex; align-items: center; gap: 10px;
+      display: flex; align-items: center; gap: 8px; flex-shrink: 0;
     }
     .btn-trial-nav {
       background: linear-gradient(135deg, #f59e0b, #d97706); color: #ffffff;
-      padding: 9px 18px; border-radius: 10px; font-size: 13px; font-weight: 800;
-      display: inline-flex; align-items: center; gap: 7px;
+      padding: 8px 16px; border-radius: 10px; font-size: 12.5px; font-weight: 800;
+      display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
       box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35); transition: all 0.2s;
     }
     .btn-trial-nav:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5); }
     .btn-login-nav {
       background: #03201c; color: #ffffff; border: 1px solid var(--gold);
-      padding: 8px 16px; border-radius: 10px; font-size: 13px; font-weight: 700;
-      display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s;
+      padding: 8px 14px; border-radius: 10px; font-size: 12.5px; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; transition: all 0.2s;
     }
     .btn-login-nav:hover { background: #063831; border-color: var(--gold-glow); }
     .user-auth-badge {
       background: #f0fdf4; border: 1.5px solid #86efac; color: #166534;
-      padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 800;
-      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 800;
+      display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+      max-width: 170px; overflow: hidden; text-overflow: ellipsis;
     }
 
-    /* HERO SLIDER SECTION */
-    .hero-slider-section {
-      position: relative; min-height: 580px; background: #021210; overflow: hidden;
-      display: flex; align-items: center;
+    /* HIGH-IMPACT HERO SECTION WITH KIDS QURAN SLIDER */
+    .hero-master-section {
+      background: radial-gradient(circle at 80% 20%, rgba(13, 92, 83, 0.6) 0%, rgba(3, 32, 28, 0.95) 50%, #020f0d 100%);
+      padding: 60px 0 70px; color: #ffffff; position: relative; overflow: hidden;
     }
-    .hero-slide {
-      position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-      display: flex; align-items: center;
+    .hero-master-grid {
+      display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center;
     }
-    .hero-slide.active {
-      opacity: 1; visibility: visible;
+    .hero-text-side {
+      position: relative; z-index: 2;
     }
-    .hero-bg-overlay {
-      position: absolute; inset: 0;
-      background: radial-gradient(circle at 70% 30%, rgba(13, 92, 83, 0.5) 0%, rgba(3, 32, 28, 0.92) 50%, rgba(2, 18, 16, 0.98) 100%);
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative; z-index: 2; color: #ffffff; padding: 60px 0; max-width: 780px;
-    }
-    .hero-bismillah {
-      font-size: 38px; color: var(--gold-light); text-shadow: 0 4px 20px rgba(245, 158, 11, 0.5);
+    .hero-bismillah-gold {
+      font-size: 40px; color: var(--gold-light); text-shadow: 0 4px 20px rgba(245, 158, 11, 0.6);
       margin-bottom: 8px;
     }
-    .hero-badge-row {
-      display: inline-flex; align-items: center; gap: 8px; background: rgba(245, 158, 11, 0.15);
+    .hero-badge-pill {
+      display: inline-flex; align-items: center; gap: 8px; background: rgba(245, 158, 11, 0.18);
       border: 1px solid var(--gold); color: #fef08a; padding: 6px 16px; border-radius: 999px;
       font-size: 12.5px; font-weight: 800; text-transform: uppercase; margin-bottom: 18px;
     }
-    .hero-main-title {
-      font-size: 42px; font-weight: 900; line-height: 1.2; margin-bottom: 16px; color: #ffffff;
+    .hero-main-heading {
+      font-size: 42px; font-weight: 900; line-height: 1.22; margin-bottom: 16px; color: #ffffff;
     }
-    .hero-main-title span { color: var(--gold-glow); }
-    .hero-desc {
-      font-size: 16.5px; color: #cbd5e1; line-height: 1.7; margin-bottom: 28px;
+    .hero-main-heading span { color: var(--gold-glow); }
+    .hero-main-desc {
+      font-size: 16px; color: #cbd5e1; line-height: 1.7; margin-bottom: 28px;
     }
-    .hero-btns {
-      display: flex; gap: 14px; flex-wrap: wrap; align-items: center;
+    .hero-btn-actions {
+      display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 24px;
     }
     .btn-hero-gold {
       background: linear-gradient(135deg, var(--gold), var(--gold-glow)); color: #021210;
-      padding: 14px 28px; border-radius: 12px; font-size: 15px; font-weight: 800;
-      display: inline-flex; align-items: center; gap: 10px;
-      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.45); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      padding: 13px 26px; border-radius: 12px; font-size: 14.5px; font-weight: 800;
+      display: inline-flex; align-items: center; gap: 9px;
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.45); transition: all 0.3s;
     }
     .btn-hero-gold:hover { transform: translateY(-3px); box-shadow: 0 14px 35px rgba(245, 158, 11, 0.6); }
     .btn-hero-glass {
       background: rgba(255, 255, 255, 0.1); border: 1.5px solid rgba(255, 255, 255, 0.25);
-      color: #ffffff; padding: 13px 24px; border-radius: 12px; font-size: 14.5px; font-weight: 700;
+      color: #ffffff; padding: 12px 22px; border-radius: 12px; font-size: 14px; font-weight: 700;
       display: inline-flex; align-items: center; gap: 8px; backdrop-filter: blur(10px); transition: all 0.2s;
     }
     .btn-hero-glass:hover { background: rgba(255, 255, 255, 0.2); border-color: var(--gold); }
-    .btn-google-reviews {
-      background: #ffffff; color: #1e293b; padding: 13px 22px; border-radius: 12px;
-      font-size: 14px; font-weight: 800; display: inline-flex; align-items: center; gap: 8px;
+    .btn-google-rating {
+      background: #ffffff; color: #1e293b; padding: 12px 20px; border-radius: 12px;
+      font-size: 13.5px; font-weight: 800; display: inline-flex; align-items: center; gap: 8px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); transition: all 0.2s;
     }
-    .btn-google-reviews:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); }
+    .btn-google-rating:hover { transform: translateY(-2px); }
 
-    /* SLIDER NAVIGATION CONTROLS */
-    .slider-dots {
-      position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 10;
-      display: flex; gap: 8px;
+    /* 6 KIDS QURAN PHOTOS CAROUSEL SLIDER IN HERO */
+    .kids-carousel-box {
+      position: relative; border-radius: var(--radius-xl); overflow: hidden;
+      border: 3px solid var(--gold); box-shadow: 0 25px 70px rgba(0,0,0,0.6), var(--glow-gold);
+      background: #062823;
     }
-    .slider-dot {
-      width: 12px; height: 12px; border-radius: 50%; background: rgba(255, 255, 255, 0.3);
-      cursor: pointer; transition: all 0.3s;
+    .kids-slider-stage {
+      position: relative; width: 100%; aspect-ratio: 16/10; min-height: 340px; overflow: hidden;
     }
-    .slider-dot.active {
-      width: 32px; border-radius: 999px; background: var(--gold);
+    .kid-slide-item {
+      position: absolute; inset: 0; opacity: 0; visibility: hidden;
+      transition: opacity 0.8s ease, transform 0.8s ease; transform: scale(1.04);
     }
-    .slider-arrow {
-      position: absolute; top: 50%; transform: translateY(-50%); z-index: 10;
-      width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 18px;
+    .kid-slide-item.active {
+      opacity: 1; visibility: visible; transform: scale(1);
+    }
+    .kid-slide-item img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .kids-slide-caption-bar {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(0deg, rgba(2, 18, 16, 0.95) 0%, rgba(2, 18, 16, 0.7) 70%, transparent 100%);
+      padding: 24px 20px 16px; color: #ffffff; display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .kid-caption-tag {
+      font-size: 11px; font-weight: 800; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.8px;
+      display: flex; align-items: center; gap: 6px; margin-bottom: 4px;
+    }
+    .kid-caption-title {
+      font-size: 16px; font-weight: 800; color: #ffffff; line-height: 1.3;
+    }
+    .live-badge-pulse {
+      background: #ef4444; color: #ffffff; padding: 4px 10px; border-radius: 999px;
+      font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 5px;
+      box-shadow: 0 0 12px rgba(239, 68, 68, 0.8);
+    }
+    .live-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: #ffffff; animation: pulseDot 1.4s infinite;
+    }
+    @keyframes pulseDot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.3); } }
+
+    /* CAROUSEL ARROWS & THUMB DOTS */
+    .kids-nav-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%); z-index: 5;
+      width: 40px; height: 40px; border-radius: 50%; background: rgba(3, 32, 28, 0.85);
+      border: 1.5px solid var(--gold); color: #ffffff; font-size: 16px;
       display: grid; place-items: center; cursor: pointer; transition: all 0.2s;
     }
-    .slider-arrow:hover { background: var(--gold); color: #021210; }
-    .slider-arrow.prev { left: 24px; }
-    .slider-arrow.next { right: 24px; }
+    .kids-nav-arrow:hover { background: var(--gold); color: #021210; }
+    .kids-nav-arrow.prev { left: 12px; }
+    .kids-nav-arrow.next { right: 12px; }
+    .kids-dots-bar {
+      position: absolute; top: 14px; right: 14px; z-index: 5;
+      display: flex; gap: 6px; background: rgba(0, 0, 0, 0.5); padding: 5px 10px; border-radius: 999px;
+    }
+    .kids-dot-pill {
+      width: 9px; height: 9px; border-radius: 50%; background: rgba(255, 255, 255, 0.4);
+      cursor: pointer; transition: all 0.3s;
+    }
+    .kids-dot-pill.active {
+      width: 22px; border-radius: 999px; background: var(--gold);
+    }
 
-    /* WELCOME INTRO & ABOUT GRID */
+    /* WELCOME INTRO & AUDIO LAB */
     .welcome-intro-card {
-      background: #ffffff; border-radius: var(--radius-xl); padding: 44px 40px;
+      background: #ffffff; border-radius: var(--radius-xl); padding: 40px;
       box-shadow: var(--shadow-lg); border: 1px solid var(--line);
-      display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: center;
     }
     .welcome-text h3 {
-      font-size: 26px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 16px;
+      font-size: 26px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 14px;
     }
     .welcome-text p {
-      color: #475569; font-size: 15px; margin-bottom: 16px; line-height: 1.75;
+      color: #475569; font-size: 15px; margin-bottom: 14px; line-height: 1.7;
     }
     .welcome-features-list {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px;
     }
     .welcome-feature-item {
-      display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700; color: #1e293b;
+      display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: #1e293b;
     }
-    .welcome-feature-item i { color: #10b981; font-size: 16px; }
+    .welcome-feature-item i { color: #10b981; font-size: 15px; }
     .welcome-media-box {
       border-radius: var(--radius-lg); overflow: hidden; position: relative;
       background: linear-gradient(135deg, #03201c, #063831); border: 2px solid var(--gold);
       padding: 24px; color: #ffffff; box-shadow: var(--shadow-md);
     }
 
-    /* FEATURED 9 COURSES GRID */
+    /* 9 FEATURED COURSES GRID */
     .courses-grid-9 {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
     }
     .course-card-modern {
       background: #ffffff; border-radius: var(--radius-lg); overflow: hidden;
@@ -306,7 +346,7 @@
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column;
     }
     .course-card-modern:hover {
-      transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--gold);
+      transform: translateY(-7px); box-shadow: var(--shadow-lg); border-color: var(--gold);
     }
     .course-card-header {
       background: linear-gradient(135deg, #03201c 0%, #0d5c53 100%);
@@ -323,7 +363,7 @@
       padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 800;
     }
     .course-card-header h3 {
-      font-size: 18px; font-weight: 800; line-height: 1.3; color: #ffffff;
+      font-size: 17.5px; font-weight: 800; line-height: 1.3; color: #ffffff;
     }
     .course-card-body {
       padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;
@@ -353,7 +393,7 @@
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
     }
     .feature-card-box {
-      background: #ffffff; border-radius: var(--radius-lg); padding: 30px 24px;
+      background: #ffffff; border-radius: var(--radius-lg); padding: 28px 22px;
       border: 1px solid var(--line); box-shadow: var(--shadow-sm); transition: all 0.3s;
       text-align: left;
     }
@@ -361,20 +401,20 @@
       transform: translateY(-5px); border-color: var(--emerald-mid); box-shadow: var(--shadow-md);
     }
     .feature-icon-circle {
-      width: 54px; height: 54px; border-radius: 14px;
+      width: 52px; height: 52px; border-radius: 14px;
       background: #f0fdf4; border: 1.5px solid #bbf7d0; color: var(--emerald-mid);
-      display: grid; place-items: center; font-size: 24px; margin-bottom: 16px;
+      display: grid; place-items: center; font-size: 22px; margin-bottom: 14px;
     }
     .feature-card-box h3 {
-      font-size: 18px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 8px;
+      font-size: 17.5px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 8px;
     }
     .feature-card-box p {
       font-size: 13.5px; color: #64748b; line-height: 1.6;
     }
 
-    /* 3 EASY STEPS SECTION */
+    /* 3 EASY STEPS */
     .steps-grid-3 {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
     }
     .step-card-modern {
       background: #ffffff; border-radius: var(--radius-lg); padding: 32px 24px;
@@ -391,20 +431,20 @@
       box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4); text-transform: uppercase;
     }
     .step-icon-wrap {
-      width: 60px; height: 60px; border-radius: 50%; background: #f0fdf9;
+      width: 58px; height: 58px; border-radius: 50%; background: #f0fdf9;
       border: 2px solid var(--emerald-light); color: var(--emerald-mid);
-      display: grid; place-items: center; font-size: 24px; margin: 12px auto 18px;
+      display: grid; place-items: center; font-size: 22px; margin: 12px auto 16px;
     }
     .step-card-modern h3 {
-      font-size: 19px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 10px;
+      font-size: 18px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 8px;
     }
     .step-card-modern p {
-      font-size: 14px; color: #64748b; line-height: 1.6; margin-bottom: 16px;
+      font-size: 13.5px; color: #64748b; line-height: 1.6; margin-bottom: 14px;
     }
 
-    /* INTERNATIONAL PRICING PLANS WITH CURRENCY SWITCHER */
+    /* MULTI-CURRENCY PRICING */
     .currency-switcher-wrap {
-      display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 36px;
+      display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 34px;
     }
     .btn-currency-pill {
       padding: 8px 18px; border-radius: 999px; font-size: 13px; font-weight: 800;
@@ -419,7 +459,7 @@
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
     }
     .pricing-card-box {
-      background: #ffffff; border-radius: var(--radius-xl); padding: 32px 24px;
+      background: #ffffff; border-radius: var(--radius-xl); padding: 30px 22px;
       border: 1.5px solid var(--line); box-shadow: var(--shadow-md); position: relative;
       display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s;
     }
@@ -434,57 +474,53 @@
       text-transform: uppercase; letter-spacing: 0.5px;
     }
     .pricing-plan-name {
-      font-size: 20px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 6px;
+      font-size: 19px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 5px;
     }
     .pricing-classes-count {
-      font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 18px;
+      font-size: 12.5px; color: var(--muted); font-weight: 600; margin-bottom: 16px;
     }
     .pricing-price-display {
-      font-size: 36px; font-weight: 900; color: var(--emerald-mid); margin-bottom: 4px; line-height: 1;
+      font-size: 34px; font-weight: 900; color: var(--emerald-mid); margin-bottom: 4px; line-height: 1;
     }
     .pricing-card-box.popular .pricing-price-display { color: #b45309; }
     .pricing-price-period {
-      font-size: 12px; color: #94a3b8; margin-bottom: 22px; font-weight: 600;
+      font-size: 12px; color: #94a3b8; margin-bottom: 20px; font-weight: 600;
     }
     .pricing-features-list {
-      list-style: none; margin-bottom: 24px; text-align: left;
+      list-style: none; margin-bottom: 22px; text-align: left;
     }
     .pricing-features-list li {
-      font-size: 13px; color: #334155; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: #334155; margin-bottom: 9px; display: flex; align-items: center; gap: 8px;
     }
     .pricing-features-list li i { color: #10b981; font-size: 14px; }
     .btn-select-plan {
-      width: 100%; padding: 12px; border-radius: 10px;
-      background: #03201c; color: #ffffff; font-weight: 800; font-size: 13.5px;
+      width: 100%; padding: 11px; border-radius: 10px;
+      background: #03201c; color: #ffffff; font-weight: 800; font-size: 13px;
       display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;
     }
     .pricing-card-box.popular .btn-select-plan {
       background: linear-gradient(135deg, var(--gold), var(--gold-glow)); color: #021210;
     }
-    .btn-select-plan:hover { transform: translateY(-2px); }
 
     /* IMPACT STATS COUNTER BAR */
     .stats-section-bar {
       background: linear-gradient(135deg, #021210 0%, #03201c 50%, #063831 100%);
-      padding: 60px 0; color: #ffffff; border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 55px 0; color: #ffffff; border-top: 1px solid rgba(255, 255, 255, 0.1);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .stats-grid-4 {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
     }
-    .stat-box-item {
-      padding: 20px 10px;
-    }
     .stat-number-text {
-      font-size: 44px; font-weight: 900; color: var(--gold-glow); margin-bottom: 4px; line-height: 1;
+      font-size: 42px; font-weight: 900; color: var(--gold-glow); margin-bottom: 4px; line-height: 1;
     }
     .stat-label-text {
-      font-size: 13px; font-weight: 800; text-transform: uppercase; color: #e2e8f0; letter-spacing: 0.8px;
+      font-size: 12.5px; font-weight: 800; text-transform: uppercase; color: #e2e8f0; letter-spacing: 0.8px;
     }
 
-    /* CERTIFIED FACULTY & KIDS LEARNING SHOWCASE */
+    /* FACULTY SHOWCASE */
     .faculty-grid-showcase {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-bottom: 36px;
     }
     .faculty-card-modern {
       background: #ffffff; border-radius: var(--radius-xl); overflow: hidden;
@@ -492,92 +528,76 @@
       display: grid; grid-template-columns: 1fr 1.3fr; transition: all 0.3s;
     }
     .faculty-card-modern:hover {
-      transform: translateY(-6px); border-color: var(--gold); box-shadow: var(--shadow-lg);
+      transform: translateY(-5px); border-color: var(--gold); box-shadow: var(--shadow-lg);
     }
     .faculty-img-wrapper {
-      height: 100%; min-height: 280px; position: relative; overflow: hidden;
+      height: 100%; min-height: 270px; position: relative; overflow: hidden;
     }
     .faculty-img-wrapper img {
       width: 100%; height: 100%; object-fit: cover;
     }
     .faculty-details {
-      padding: 24px 20px; display: flex; flex-direction: column; justify-content: space-between;
+      padding: 22px 18px; display: flex; flex-direction: column; justify-content: space-between;
     }
     .faculty-role-badge {
       display: inline-flex; align-items: center; gap: 6px;
       background: #f0fdf4; border: 1px solid #86efac; color: #166534;
-      padding: 4px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 800; margin-bottom: 8px;
+      padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; margin-bottom: 8px;
     }
     .faculty-name-title {
-      font-size: 20px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 4px;
+      font-size: 19px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 3px;
     }
     .faculty-qualification {
-      font-size: 13px; color: var(--gold-dark); font-weight: 700; margin-bottom: 12px;
+      font-size: 12.5px; color: var(--gold-dark); font-weight: 700; margin-bottom: 10px;
     }
     .faculty-bio-text {
-      font-size: 13px; color: #64748b; line-height: 1.6; margin-bottom: 16px;
+      font-size: 13px; color: #64748b; line-height: 1.6; margin-bottom: 14px;
     }
 
-    /* KIDS INTERACTIVE BANNER */
-    .kids-highlight-banner {
-      background: linear-gradient(135deg, #063831 0%, #0d5c53 100%);
-      border-radius: var(--radius-xl); padding: 36px 40px; color: #ffffff;
-      border: 2px solid var(--gold); box-shadow: var(--shadow-lg);
-      display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: center;
-    }
-
-    /* DUAS & RECITATION SECTION */
+    /* DUAS SECTION */
     .duas-grid-layout {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
     }
     .dua-card-box {
-      background: #ffffff; border-radius: var(--radius-lg); padding: 24px;
+      background: #ffffff; border-radius: var(--radius-lg); padding: 22px;
       border: 1px solid var(--line); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;
     }
     .dua-card-title {
-      font-size: 16px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 10px;
+      font-size: 15.5px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 10px;
     }
     .dua-arabic-text {
-      font-size: 22px; color: #064e3b; text-align: right; line-height: 1.8; margin-bottom: 12px;
+      font-size: 21px; color: #064e3b; text-align: right; line-height: 1.8; margin-bottom: 10px;
     }
     .dua-urdu-translation {
-      font-size: 13px; color: #475569; text-align: right; line-height: 1.7; margin-bottom: 16px;
+      font-size: 13px; color: #475569; text-align: right; line-height: 1.7; margin-bottom: 14px;
     }
     .btn-dua-listen {
       width: 100%; padding: 10px; border-radius: 8px; background: #f0fdf4;
-      border: 1px solid #86efac; color: #166534; font-size: 13px; font-weight: 700;
+      border: 1px solid #86efac; color: #166534; font-size: 12.5px; font-weight: 700;
       display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;
     }
     .btn-dua-listen:hover { background: #dcfce7; }
 
-    /* TESTIMONIALS 5-STAR GRID */
+    /* TESTIMONIALS */
     .testimonials-grid-3 {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
     }
     .testimonial-card {
-      background: #ffffff; border-radius: var(--radius-lg); padding: 28px 24px;
-      border: 1px solid var(--line); box-shadow: var(--shadow-md); position: relative;
+      background: #ffffff; border-radius: var(--radius-lg); padding: 26px 22px;
+      border: 1px solid var(--line); box-shadow: var(--shadow-md);
     }
-    .rating-stars-row {
-      color: #f59e0b; font-size: 15px; margin-bottom: 12px;
-    }
+    .rating-stars-row { color: #f59e0b; font-size: 15px; margin-bottom: 10px; }
     .testimonial-text {
-      font-size: 14px; color: #334155; line-height: 1.7; margin-bottom: 20px; font-style: italic;
+      font-size: 13.5px; color: #334155; line-height: 1.7; margin-bottom: 18px; font-style: italic;
     }
-    .testimonial-author-row {
-      display: flex; align-items: center; gap: 12px;
-    }
+    .testimonial-author-row { display: flex; align-items: center; gap: 12px; }
     .author-avatar-circle {
-      width: 44px; height: 44px; border-radius: 50%; background: #03201c;
+      width: 42px; height: 42px; border-radius: 50%; background: #03201c;
       border: 2px solid var(--gold); color: var(--gold-light); display: grid; place-items: center;
-      font-weight: 800; font-size: 16px;
+      font-weight: 800; font-size: 15px; flex-shrink: 0;
     }
-    .author-info-wrap h4 {
-      font-size: 14.5px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 2px;
-    }
-    .author-info-wrap p {
-      font-size: 12px; color: var(--muted); font-weight: 600;
-    }
+    .author-info-wrap h4 { font-size: 14px; font-weight: 800; color: var(--emerald-dark); margin-bottom: 2px; }
+    .author-info-wrap p { font-size: 11.5px; color: var(--muted); font-weight: 600; }
 
     /* FAQ ACCORDION */
     .faq-accordion-container {
@@ -593,62 +613,61 @@
     .faq-header-btn {
       width: 100%; padding: 18px 22px; background: transparent; text-align: left;
       display: flex; justify-content: space-between; align-items: center; gap: 16px;
-      font-size: 16px; font-weight: 800; color: var(--emerald-dark); cursor: pointer;
+      font-size: 15.5px; font-weight: 800; color: var(--emerald-dark); cursor: pointer;
     }
     .faq-arrow-icon {
       width: 28px; height: 28px; border-radius: 50%; background: #f1f5f9;
       display: grid; place-items: center; color: var(--emerald-mid); font-size: 13px; transition: transform 0.3s;
+      flex-shrink: 0;
     }
     .faq-item-card.active .faq-arrow-icon {
       transform: rotate(180deg); background: var(--emerald-mid); color: #ffffff;
     }
     .faq-body-content {
       max-height: 0; overflow: hidden; transition: max-height 0.35s ease;
-      padding: 0 22px; color: #475569; font-size: 14.5px; line-height: 1.7;
+      padding: 0 22px; color: #475569; font-size: 14px; line-height: 1.7;
     }
     .faq-item-card.active .faq-body-content {
-      max-height: 300px; padding-bottom: 20px;
+      max-height: 300px; padding-bottom: 18px;
     }
 
-    /* FREE TRIAL BOOKING & CONTACT FORM */
+    /* TRIAL BOOKING FORM */
     .trial-form-wrapper {
-      background: #ffffff; border-radius: var(--radius-xl); padding: 40px;
+      background: #ffffff; border-radius: var(--radius-xl); padding: 36px;
       border: 1.5px solid var(--line); box-shadow: var(--shadow-lg);
-      display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 36px;
     }
     .trial-info-panel {
       background: linear-gradient(135deg, #03201c 0%, #063831 60%, #0d5c53 100%);
-      border-radius: var(--radius-lg); padding: 32px; color: #ffffff; border: 2px solid var(--gold);
+      border-radius: var(--radius-lg); padding: 28px; color: #ffffff; border: 2px solid var(--gold);
       display: flex; flex-direction: column; justify-content: space-between;
     }
-
-    /* INPUT STYLES */
     .form-group-field {
-      display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; text-align: left;
+      display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; text-align: left;
     }
     .form-group-field label {
       font-size: 13px; font-weight: 700; color: var(--emerald-dark);
     }
-    .form-group-field input, .form-group-field select, .form-group-field textarea {
+    .form-group-field input, .form-group-field select {
       width: 100%; background: #f8fafc; border: 1.5px solid var(--line);
-      border-radius: var(--radius-md); padding: 12px 16px; font-size: 14px;
+      border-radius: var(--radius-md); padding: 11px 14px; font-size: 14px;
       color: var(--ink); transition: all 0.2s;
     }
-    .form-group-field input:focus, .form-group-field select:focus, .form-group-field textarea:focus {
+    .form-group-field input:focus, .form-group-field select:focus {
       background: #ffffff; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15);
     }
 
-    /* FOOTER */
+    /* ULTRA CLEAN & ORGANIZED FOOTER (NO DISJOINTED TEXT) */
     footer.app-footer {
-      background: #020f0d; color: #cbd5e1; padding: 70px 0 24px;
-      border-top: 2px solid rgba(245, 158, 11, 0.3);
+      background: #020f0d; color: #cbd5e1; padding: 65px 0 24px;
+      border-top: 2px solid rgba(245, 158, 11, 0.35);
     }
     .footer-grid-4 {
-      display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 36px; margin-bottom: 50px;
+      display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 32px; margin-bottom: 45px;
     }
     .footer-col h3 {
-      color: #ffffff; font-size: 16px; font-weight: 800; margin-bottom: 20px;
-      position: relative; padding-bottom: 8px;
+      color: #ffffff; font-size: 16px; font-weight: 800; margin-bottom: 18px;
+      position: relative; padding-bottom: 8px; line-height: 1.3;
     }
     .footer-col h3::after {
       content: ''; position: absolute; left: 0; bottom: 0; width: 36px; height: 2.5px;
@@ -657,14 +676,18 @@
     .footer-links-list {
       list-style: none; display: flex; flex-direction: column; gap: 10px;
     }
+    .footer-links-list li {
+      display: block; line-height: 1.4;
+    }
     .footer-links-list a {
       font-size: 13.5px; color: #94a3b8; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
+      white-space: normal;
     }
     .footer-links-list a:hover {
       color: var(--gold-light); transform: translateX(4px);
     }
     .footer-bottom-strip {
-      border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 22px;
       display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
       font-size: 12.5px; color: #64748b;
     }
@@ -768,31 +791,34 @@
     }
 
     /* RESPONSIVE BREAKPOINTS */
-    @media (max-width: 1150px) {
+    @media (max-width: 1200px) {
+      .nav-menu a { font-size: 12px; padding: 6px 8px; }
+      .hero-master-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+    }
+    @media (max-width: 1080px) {
+      .nav-menu { display: none; }
+      .hero-master-grid { grid-template-columns: 1fr; gap: 36px; }
+      .welcome-intro-card { grid-template-columns: 1fr; }
       .courses-grid-9, .features-grid-6 { grid-template-columns: repeat(2, 1fr); }
       .pricing-grid-4 { grid-template-columns: repeat(2, 1fr); }
       .footer-grid-4 { grid-template-columns: repeat(2, 1fr); }
       .faculty-grid-showcase, .trial-form-wrapper { grid-template-columns: 1fr; }
     }
-    @media (max-width: 992px) {
-      .nav-menu { display: none; }
-      .welcome-intro-card, .kids-highlight-banner { grid-template-columns: 1fr; }
-      .faculty-card-modern { grid-template-columns: 1fr; }
-      .faculty-img-wrapper { min-height: 220px; }
-      .app-login-card { grid-template-columns: 1fr; }
-      .app-login-banner { display: none; }
-    }
     @media (max-width: 768px) {
       .mobile-app-dock { display: flex; }
-      .section-padding { padding: 50px 0; }
-      .section-title { font-size: 26px; }
-      .hero-main-title { font-size: 28px; }
-      .hero-desc { font-size: 14.5px; }
+      .section-padding { padding: 45px 0; }
+      .section-title { font-size: 25px; }
+      .hero-main-heading { font-size: 28px; }
+      .hero-main-desc { font-size: 14.5px; }
       .courses-grid-9, .features-grid-6, .steps-grid-3, .pricing-grid-4, .duas-grid-layout, .testimonials-grid-3, .footer-grid-4 {
         grid-template-columns: 1fr;
       }
       .stats-grid-4 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
       .stat-number-text { font-size: 32px; }
+      .faculty-card-modern { grid-template-columns: 1fr; }
+      .faculty-img-wrapper { min-height: 220px; }
+      .app-login-card { grid-template-columns: 1fr; }
+      .app-login-banner { display: none; }
       .demo-btn-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
       .floating-wa-btn { bottom: 72px; right: 16px; width: 50px; height: 50px; font-size: 26px; }
       .ai-voice-banner { max-width: 92%; right: 4%; top: 60px; }
@@ -1018,7 +1044,7 @@
           </a>
         </div>
         <div class="top-bar-right">
-          <span style="color:#94a3b8; font-size:11.5px;"><i class="fa-solid fa-globe" style="color:var(--gold);"></i> Serving Worldwide: USA, UK, Canada, Australia, UAE & Europe</span>
+          <span style="color:#94a3b8; font-size:11.5px; white-space:nowrap;"><i class="fa-solid fa-globe" style="color:var(--gold);"></i> Serving USA, UK, Canada, Australia, UAE & Europe</span>
           <div style="display:flex; gap:6px;">
             <a href="https://wa.me/923047809156" target="_blank" class="social-circle" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="mailto:ranaallahditta7347@gmail.com" class="social-circle" title="Email"><i class="fa-solid fa-envelope"></i></a>
@@ -1031,13 +1057,13 @@
     <div class="marquee-strip">
       <div class="marquee-track">
         <div class="marquee-item"><span class="marquee-badge">3-DAY FREE TRIAL</span> 🎁 Book your complimentary 1-on-1 trial class today with certified male and female Quran instructors!</div>
-        <div class="marquee-item"><span class="marquee-badge">AI VOICE ASSISTANT</span> 🎙️ Urdu Voice guidance active with verified privacy protection!</div>
+        <div class="marquee-item"><span class="marquee-badge">KIDS QURAN CLASSES</span> 👶 Interactive Noorani Qaida, Tajweed & Hifz with fun visual methods!</div>
         <div class="marquee-item"><span class="marquee-badge">WORLDWIDE ADMISSION OPEN</span> 🌍 Join students from USA, UK, Canada, Australia, Saudi Arabia, UAE, and Pakistan!</div>
-        <div class="marquee-item"><span class="marquee-badge">CERTIFIED FACULTY</span> ⭐ Learn Nazra, Tajweed, Hifz, Noorani Qaida & Islamic Studies from home!</div>
+        <div class="marquee-item"><span class="marquee-badge">CERTIFIED FACULTY</span> ⭐ Learn with certified Qaris and Alimas with 24/7 flexible scheduling!</div>
       </div>
     </div>
 
-    <!-- MAIN NAVBAR -->
+    <!-- MAIN NAVBAR (WITH NO WEIRD TEXT WRAPPING) -->
     <header class="app-navbar">
       <div class="container nav-container">
         <a href="#" class="nav-brand">
@@ -1045,22 +1071,20 @@
             <i class="fa-solid fa-mosque"></i>
           </div>
           <div class="brand-text">
-            <h1>AlHafiz International Quran Academy</h1>
-            <p>ONLINE & HOME QURAN EDUCATION WORLDWIDE</p>
+            <h1>AlHafiz International Academy</h1>
+            <p>ONLINE & HOME QURAN EDUCATION</p>
           </div>
         </a>
 
         <ul class="nav-menu">
           <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
           <li><a href="#courses">Courses</a></li>
+          <li><a href="#pricing">Fee Plans</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#howItWorks">How It Works</a></li>
-          <li><a href="#pricing">Fee Plans</a></li>
           <li><a href="#faculty">Faculty</a></li>
           <li><a href="#duas">Duas & Audio</a></li>
           <li><a href="#faqs">FAQs</a></li>
-          <li><a href="#trial">Book Trial</a></li>
         </ul>
 
         <div class="nav-actions">
@@ -1071,100 +1095,145 @@
             <i class="fa-solid fa-lock"></i> <span>Sign In</span>
           </button>
           <div id="userBadgeLabel" class="user-auth-badge" style="display:none;"></div>
-          <button type="button" id="btnLogout" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; padding:6px 12px; border-radius:8px; font-size:12px; font-weight:800; display:none; cursor:pointer;">
+          <button type="button" id="btnLogout" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; padding:6px 12px; border-radius:8px; font-size:12px; font-weight:800; display:none; cursor:pointer; white-space:nowrap;">
             <i class="fa-solid fa-power-off"></i> Logout
           </button>
         </div>
       </div>
     </header>
 
-    <!-- HERO SLIDER SECTION -->
-    <section class="hero-slider-section" id="home">
-      <div class="hero-bg-overlay"></div>
-
-      <!-- SLIDE 1 -->
-      <div class="hero-slide active" id="heroSlide1">
-        <div class="container">
-          <div class="hero-content">
-            <div class="arabic-font hero-bismillah">&#65021;</div>
-            <div class="hero-badge-row">
-              <i class="fa-solid fa-star"></i> Online Quran Academy Worldwide
-            </div>
-            <h1 class="hero-main-title">Learn Holy Quran Online with <span>Certified Expert Tutors</span></h1>
-            <p class="hero-desc">
-              Join AlHafiz International Online Quran Academy to learn Quran with live 1-on-1 classes, Tajweed mastery, Noorani Qaida, Hifz, and Islamic Studies from certified male and female teachers.
-            </p>
-            <div class="hero-btns">
-              <a href="#trial" class="btn-hero-gold">
-                <span>BOOK 3-DAY FREE TRIAL</span> <i class="fa-solid fa-arrow-right"></i>
-              </a>
-              <a href="#courses" class="btn-hero-glass">
-                <i class="fa-solid fa-book-open"></i> BROWSE COURSES
-              </a>
-              <a href="https://wa.me/923047809156" target="_blank" class="btn-google-reviews">
-                <i class="fa-brands fa-google" style="color:#ea4335;"></i>
-                <span>⭐ Google Reviews 4.9/5</span>
-              </a>
-            </div>
+    <!-- HERO SECTION WITH KIDS RECITING QURAN IMAGE CAROUSEL SLIDER (5+ PHOTOS) -->
+    <section class="hero-master-section" id="home">
+      <div class="container hero-master-grid">
+        
+        <!-- LEFT TEXT COLUMN -->
+        <div class="hero-text-side">
+          <div class="arabic-font hero-bismillah-gold">&#65021;</div>
+          <div class="hero-badge-row" style="display:inline-flex; align-items:center; gap:8px; background:rgba(245,158,11,0.18); border:1px solid var(--gold); color:#fef08a; padding:6px 16px; border-radius:999px; font-size:12px; font-weight:800; text-transform:uppercase; margin-bottom:16px;">
+            <i class="fa-solid fa-star"></i> Worldwide Online Quran Academy
+          </div>
+          <h1 class="hero-main-heading">
+            Learn Holy Quran Online with <span>Certified Expert Tutors</span>
+          </h1>
+          <p class="hero-main-desc">
+            Inspiring Muslim children & adults worldwide. One-to-one live interactive classes for <strong>Noorani Qaida, Tajweed, Nazra, Hifz & Islamic Studies</strong> with certified male and female teachers across USA, UK, Canada, Australia, UAE & Pakistan.
+          </p>
+          <div class="hero-btn-actions">
+            <a href="#trial" class="btn-hero-gold">
+              <span>BOOK 3-DAY FREE TRIAL</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#courses" class="btn-hero-glass">
+              <i class="fa-solid fa-book-open"></i> BROWSE COURSES
+            </a>
+            <a href="https://wa.me/923047809156" target="_blank" class="btn-google-rating">
+              <i class="fa-brands fa-google" style="color:#ea4335;"></i>
+              <span>⭐ 4.9/5 Rating</span>
+            </a>
+          </div>
+          <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap; font-size:12.5px; color:#cbd5e1;">
+            <span><i class="fa-solid fa-circle-check" style="color:#10b981;"></i> 1-on-1 Live Class</span>
+            <span><i class="fa-solid fa-circle-check" style="color:#10b981;"></i> Male & Female Tutors</span>
+            <span><i class="fa-solid fa-circle-check" style="color:#10b981;"></i> 24/7 Flexible Timings</span>
           </div>
         </div>
-      </div>
 
-      <!-- SLIDE 2 -->
-      <div class="hero-slide" id="heroSlide2">
-        <div class="container">
-          <div class="hero-content">
-            <div class="arabic-font hero-bismillah">&#65021;</div>
-            <div class="hero-badge-row">
-              <i class="fa-solid fa-chalkboard-user"></i> One-to-One Interactive Classes
+        <!-- RIGHT KIDS QURAN PHOTO CAROUSEL (6 HIGH RESOLUTION PHOTOS) -->
+        <div>
+          <div class="kids-carousel-box">
+            
+            <!-- DOTS INDICATORS -->
+            <div class="kids-dots-bar">
+              <div class="kids-dot-pill active" onclick="jumpToKidSlide(0)"></div>
+              <div class="kids-dot-pill" onclick="jumpToKidSlide(1)"></div>
+              <div class="kids-dot-pill" onclick="jumpToKidSlide(2)"></div>
+              <div class="kids-dot-pill" onclick="jumpToKidSlide(3)"></div>
+              <div class="kids-dot-pill" onclick="jumpToKidSlide(4)"></div>
+              <div class="kids-dot-pill" onclick="jumpToKidSlide(5)"></div>
             </div>
-            <h2 class="hero-main-title">One-to-One Live Classes with <span>Male & Female Instructors</span></h2>
-            <p class="hero-desc">
-              Dedicated, compassionate, and certified Hafiz and Alima tutors for your children and sisters. Master Nazra, Tajweed, and Quran memorization at your comfortable schedule.
-            </p>
-            <div class="hero-btns">
-              <a href="#trial" class="btn-hero-gold">
-                <span>START FREE TRIAL</span> <i class="fa-solid fa-arrow-right"></i>
-              </a>
-              <a href="#pricing" class="btn-hero-glass">
-                <i class="fa-solid fa-tags"></i> VIEW FEE PLANS
-              </a>
+
+            <!-- SLIDER STAGE -->
+            <div class="kids-slider-stage" id="kidsSliderStage">
+              
+              <!-- PHOTO 1: BROTHER & SISTER RECITING ON REHAL -->
+              <div class="kid-slide-item active" id="kidSlide0">
+                <img src="quran_kid_1.jpg" alt="Muslim Brother and Sister Reciting Holy Quran on Wooden Rehal">
+                <div class="kids-slide-caption-bar">
+                  <div>
+                    <div class="kid-caption-tag"><i class="fa-solid fa-book-quran"></i> Live Tajweed & Nazra Class</div>
+                    <div class="kid-caption-title">Brother & Sister Mastering Quran Recitation Together</div>
+                  </div>
+                  <span class="live-badge-pulse"><span class="live-dot"></span> LIVE 1-ON-1</span>
+                </div>
+              </div>
+
+              <!-- PHOTO 2: SMILING BOY RECITING WITH JOY -->
+              <div class="kid-slide-item" id="kidSlide1">
+                <img src="quran_kid_2.jpg" alt="Smiling Young Muslim Boy Reciting Quran with Devotion">
+                <div class="kids-slide-caption-bar">
+                  <div>
+                    <div class="kid-caption-tag"><i class="fa-solid fa-star"></i> Noorani Qaida & Basic Tajweed</div>
+                    <div class="kid-caption-title">Joyful & Engaging Learning for Young Children</div>
+                  </div>
+                  <span class="live-badge-pulse"><span class="live-dot"></span> LIVE 1-ON-1</span>
+                </div>
+              </div>
+
+              <!-- PHOTO 3: CUTE GIRL IN HIJAB READING QURAN -->
+              <div class="kid-slide-item" id="kidSlide2">
+                <img src="quran_kid_3.jpg" alt="Young Muslim Girl in Hijab Peacefully Memorizing Quran">
+                <div class="kids-slide-caption-bar">
+                  <div>
+                    <div class="kid-caption-tag"><i class="fa-solid fa-crown"></i> Female Quran Teacher Support</div>
+                    <div class="kid-caption-title">Dedicated Classes for Young Girls & Sisters</div>
+                  </div>
+                  <span class="live-badge-pulse"><span class="live-dot"></span> LIVE 1-ON-1</span>
+                </div>
+              </div>
+
+              <!-- PHOTO 4: SIBLINGS IN ONLINE CLASS ON LAPTOP -->
+              <div class="kid-slide-item" id="kidSlide3">
+                <img src="quran_kid_4.jpg" alt="Kids Attending Online Quran Class on Laptop with Teacher">
+                <div class="kids-slide-caption-bar">
+                  <div>
+                    <div class="kid-caption-tag"><i class="fa-solid fa-laptop-code"></i> Interactive Screen Sharing</div>
+                    <div class="kid-caption-title">Interactive Zoom & Google Meet Digital Lessons</div>
+                  </div>
+                  <span class="live-badge-pulse"><span class="live-dot"></span> LIVE 1-ON-1</span>
+                </div>
+              </div>
+
+              <!-- PHOTO 5: GROUP OF KIDS LEARNING TOGETHER IN CLASS -->
+              <div class="kid-slide-item" id="kidSlide4">
+                <img src="quran_kid_5.jpg" alt="Group of Diverse Muslim Kids in Quran Class">
+                <div class="kids-slide-caption-bar">
+                  <div>
+                    <div class="kid-caption-tag"><i class="fa-solid fa-users"></i> Global Muslim Community</div>
+                    <div class="kid-caption-title">Nurturing the Next Generation of Huffaz & Qaris</div>
+                  </div>
+                  <span class="live-badge-pulse"><span class="live-dot"></span> LIVE 1-ON-1</span>
+                </div>
+              </div>
+
+              <!-- PHOTO 6: KIDS LEARNING SHOWCASE -->
+              <div class="kid-slide-item" id="kidSlide5">
+                <img src="kids_learning.png" alt="Interactive Kids Quran Learning Session">
+                <div class="kids-slide-caption-bar">
+                  <div>
+                    <div class="kid-caption-tag"><i class="fa-solid fa-award"></i> 3-Day Free Trial Available</div>
+                    <div class="kid-caption-title">Patient, Certified and Friendly Quran Tutors</div>
+                  </div>
+                  <span class="live-badge-pulse"><span class="live-dot"></span> LIVE 1-ON-1</span>
+                </div>
+              </div>
+
             </div>
+
+            <!-- ARROW CONTROLS -->
+            <button type="button" class="kids-nav-arrow prev" onclick="prevKidSlide()" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="kids-nav-arrow next" onclick="nextKidSlide()" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
           </div>
         </div>
-      </div>
 
-      <!-- SLIDE 3 -->
-      <div class="hero-slide" id="heroSlide3">
-        <div class="container">
-          <div class="hero-content">
-            <div class="arabic-font hero-bismillah">&#65021;</div>
-            <div class="hero-badge-row">
-              <i class="fa-solid fa-globe"></i> Global Reach Across 30+ Countries
-            </div>
-            <h2 class="hero-main-title">Worldwide Online Academy – <span>Learn from Anywhere</span></h2>
-            <p class="hero-desc">
-              Serving Muslim families across USA, UK, Canada, Australia, Pakistan, Saudi Arabia, and Europe with flexible 24/7 time-slot options via Zoom and Google Meet.
-            </p>
-            <div class="hero-btns">
-              <a href="#trial" class="btn-hero-gold">
-                <span>BOOK FREE TRIAL NOW</span> <i class="fa-solid fa-arrow-right"></i>
-              </a>
-              <a href="#faculty" class="btn-hero-glass">
-                <i class="fa-solid fa-user-graduate"></i> MEET OUR FACULTY
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDER CONTROLS -->
-      <div class="slider-arrow prev" onclick="prevHeroSlide()"><i class="fa-solid fa-chevron-left"></i></div>
-      <div class="slider-arrow next" onclick="nextHeroSlide()"><i class="fa-solid fa-chevron-right"></i></div>
-      <div class="slider-dots">
-        <div class="slider-dot active" onclick="goToHeroSlide(0)"></div>
-        <div class="slider-dot" onclick="goToHeroSlide(1)"></div>
-        <div class="slider-dot" onclick="goToHeroSlide(2)"></div>
       </div>
     </section>
 
@@ -1604,12 +1673,12 @@
       </div>
     </section>
 
-    <!-- CERTIFIED FACULTY & KIDS LEARNING SHOWCASE -->
+    <!-- CERTIFIED FACULTY SHOWCASE -->
     <section class="section-padding bg-white" id="faculty">
       <div class="container">
         <div class="section-header">
           <span class="section-tag gold">Meet Our Leadership</span>
-          <h2 class="section-title">Certified Faculty & Interactive Learning</h2>
+          <h2 class="section-title">Certified Faculty & Leadership</h2>
           <p class="section-subtitle">Dedicated, certified Islamic scholars, Qaris, and Alimas committed to inspiring Quran learners.</p>
           <div class="title-underline"></div>
         </div>
@@ -1649,27 +1718,6 @@
                 <i class="fa-brands fa-whatsapp"></i> Book with Qaria Fatima →
               </a>
             </div>
-          </div>
-        </div>
-
-        <!-- KIDS LEARNING HIGHLIGHT BANNER -->
-        <div class="kids-highlight-banner">
-          <div>
-            <div style="font-size:12px; font-weight:800; color:var(--gold-light); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">
-              🌟 Specially Tailored For Children
-            </div>
-            <h3 style="font-size:26px; font-weight:900; margin-bottom:12px; line-height:1.3;">Interactive & Fun Quran Learning for Kids</h3>
-            <p style="font-size:14.5px; color:#e2e8f0; line-height:1.7; margin-bottom:20px;">
-              We use colorful digital Noorani Qaida flashcards, interactive screen drawing, audio exercises, and rewarding encouragement so your kids look forward to every Quran lesson.
-            </p>
-            <div style="display:flex; gap:12px; flex-wrap:wrap;">
-              <a href="#trial" class="btn-hero-gold" style="padding:11px 22px; font-size:13.5px;">
-                <span>Book Kids Free Trial</span> <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div style="border-radius:16px; overflow:hidden; border:2px solid rgba(245, 158, 11, 0.4); box-shadow:0 10px 30px rgba(0,0,0,0.4);">
-            <img src="kids_learning.png" alt="Kids Online Quran Class" style="width:100%; height:220px; object-fit:cover;">
           </div>
         </div>
       </div>
@@ -1864,36 +1912,36 @@
               <div style="font-size:12px; font-weight:800; color:var(--gold-light); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">
                 🎁 3 Days Complimentary Trial
               </div>
-              <h3 style="font-size:28px; font-weight:900; margin-bottom:14px; line-height:1.2;">Start Your Quran Learning Journey Today</h3>
-              <p style="font-size:14px; color:#cbd5e1; line-height:1.7; margin-bottom:24px;">
+              <h3 style="font-size:26px; font-weight:900; margin-bottom:12px; line-height:1.2;">Start Your Quran Learning Journey Today</h3>
+              <p style="font-size:13.5px; color:#cbd5e1; line-height:1.7; margin-bottom:20px;">
                 Fill out the registration form to schedule your 3-day complimentary trial class. Our academic coordinator will contact you on WhatsApp to confirm your preferred timing.
               </p>
               
-              <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
-                <div style="display:flex; align-items:center; gap:10px; font-size:13.5px;">
+              <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px;">
                   <i class="fa-solid fa-circle-check" style="color:var(--gold);"></i> <span>No Credit Card Required</span>
                 </div>
-                <div style="display:flex; align-items:center; gap:10px; font-size:13.5px;">
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px;">
                   <i class="fa-solid fa-circle-check" style="color:var(--gold);"></i> <span>Choose Male or Female Teacher</span>
                 </div>
-                <div style="display:flex; align-items:center; gap:10px; font-size:13.5px;">
+                <div style="display:flex; align-items:center; gap:8px; font-size:13px;">
                   <i class="fa-solid fa-circle-check" style="color:var(--gold);"></i> <span>24/7 Global Timezone Support</span>
                 </div>
               </div>
             </div>
 
-            <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:14px; padding:16px;">
-              <div style="font-size:12px; color:var(--gold-light); font-weight:700; margin-bottom:4px;">Direct WhatsApp Support:</div>
-              <a href="https://wa.me/923047809156" target="_blank" style="color:#ffffff; font-weight:800; font-size:16px; display:inline-flex; align-items:center; gap:6px;">
-                <i class="fa-brands fa-whatsapp" style="color:#25d366; font-size:20px;"></i> +92 304 7809156
+            <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:14px; padding:14px;">
+              <div style="font-size:11.5px; color:var(--gold-light); font-weight:700; margin-bottom:3px;">Direct WhatsApp Support:</div>
+              <a href="https://wa.me/923047809156" target="_blank" style="color:#ffffff; font-weight:800; font-size:15px; display:inline-flex; align-items:center; gap:6px;">
+                <i class="fa-brands fa-whatsapp" style="color:#25d366; font-size:18px;"></i> +92 304 7809156
               </a>
             </div>
           </div>
 
           <div>
-            <div style="margin-bottom:20px;">
-              <h3 style="font-size:22px; font-weight:800; color:var(--emerald-dark); margin-bottom:4px;">Book 3-Day Free Trial</h3>
-              <p style="font-size:13px; color:var(--muted);">Please provide the student details below:</p>
+            <div style="margin-bottom:18px;">
+              <h3 style="font-size:20px; font-weight:800; color:var(--emerald-dark); margin-bottom:3px;">Book 3-Day Free Trial</h3>
+              <p style="font-size:12.5px; color:var(--muted);">Please provide the student details below:</p>
             </div>
 
             <form id="formBookTrial" onsubmit="handleTrialSubmit(event)">
@@ -1921,7 +1969,7 @@
                 </select>
               </div>
 
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
                 <div class="form-group-field">
                   <label for="trialTeacherPref">Teacher Preference</label>
                   <select id="trialTeacherPref">
@@ -1936,7 +1984,7 @@
                 </div>
               </div>
 
-              <button type="submit" class="btn-app-primary" style="padding:14px; font-size:15px; margin-top:8px;">
+              <button type="submit" class="btn-app-primary" style="padding:13px; font-size:14.5px; margin-top:6px;">
                 <span>Submit & Book Free Trial</span> <i class="fa-solid fa-paper-plane"></i>
               </button>
             </form>
@@ -1945,22 +1993,23 @@
       </div>
     </section>
 
-    <!-- MAIN FOOTER -->
+    <!-- MAIN FOOTER (CLEAN, POLISHED & WELL ALIGNED) -->
     <footer class="app-footer">
       <div class="container">
         <div class="footer-grid-4">
-          <!-- COL 1 -->
+          
+          <!-- COL 1: ABOUT ACADEMY -->
           <div class="footer-col">
             <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-              <div style="width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, #03201c, #0d5c53); border:1.5px solid var(--gold); display:grid; place-items:center; color:var(--gold-light); font-size:18px;">
+              <div style="width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg, #03201c, #0d5c53); border:1.5px solid var(--gold); display:grid; place-items:center; color:var(--gold-light); font-size:18px; flex-shrink:0;">
                 <i class="fa-solid fa-mosque"></i>
               </div>
               <div>
-                <strong style="color:#fff; font-size:15px; display:block;">AlHafiz International Academy</strong>
-                <span style="font-size:11px; color:var(--gold);">Online Quran Education Worldwide</span>
+                <strong style="color:#fff; font-size:15px; display:block; line-height:1.2;">AlHafiz International Academy</strong>
+                <span style="font-size:11px; color:var(--gold); display:block;">Online Quran Education Worldwide</span>
               </div>
             </div>
-            <p style="font-size:13px; color:#94a3b8; line-height:1.7; margin-bottom:18px;">
+            <p style="font-size:13px; color:#94a3b8; line-height:1.65; margin-bottom:16px;">
               Dedicated online Quran academy offering authentic live 1-on-1 Quran, Tajweed, and Islamic studies with certified tutors for students across USA, UK, Canada, Australia, UAE & Pakistan.
             </p>
             <div style="display:flex; gap:8px;">
@@ -1969,9 +2018,9 @@
             </div>
           </div>
 
-          <!-- COL 2 -->
+          <!-- COL 2: OUR COURSES -->
           <div class="footer-col">
-            <h3>Our Quran Courses</h3>
+            <h3>Quran Courses</h3>
             <ul class="footer-links-list">
               <li><a href="#courses"><i class="fa-solid fa-chevron-right" style="font-size:10px; color:var(--gold);"></i> Noorani Qaida for Kids</a></li>
               <li><a href="#courses"><i class="fa-solid fa-chevron-right" style="font-size:10px; color:var(--gold);"></i> Nazra Quran with Tajweed</a></li>
@@ -1982,7 +2031,7 @@
             </ul>
           </div>
 
-          <!-- COL 3 -->
+          <!-- COL 3: QUICK LINKS -->
           <div class="footer-col">
             <h3>Quick Links</h3>
             <ul class="footer-links-list">
@@ -1995,15 +2044,15 @@
             </ul>
           </div>
 
-          <!-- COL 4 -->
+          <!-- COL 4: CONTACT & WORLDWIDE SUPPORT -->
           <div class="footer-col">
-            <h3>Contact Info</h3>
-            <div style="display:flex; flex-direction:column; gap:12px; font-size:13px; color:#cbd5e1;">
-              <p><i class="fa-solid fa-phone" style="color:var(--gold); margin-right:8px;"></i> +92 304 7809156</p>
-              <p><i class="fa-brands fa-whatsapp" style="color:#25d366; margin-right:8px;"></i> +92 304 7809156</p>
-              <p><i class="fa-solid fa-envelope" style="color:var(--gold); margin-right:8px;"></i> ranaallahditta7347@gmail.com</p>
-              <p><i class="fa-solid fa-clock" style="color:var(--gold); margin-right:8px;"></i> 24/7 Global Student Support</p>
-              <p><i class="fa-solid fa-location-dot" style="color:var(--gold); margin-right:8px;"></i> Pakistan, USA, UK, UAE & Worldwide</p>
+            <h3>Contact Us</h3>
+            <div style="display:flex; flex-direction:column; gap:11px; font-size:13px; color:#cbd5e1;">
+              <p style="margin:0; display:flex; align-items:center; gap:8px;"><i class="fa-solid fa-phone" style="color:var(--gold);"></i> +92 304 7809156</p>
+              <p style="margin:0; display:flex; align-items:center; gap:8px;"><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> +92 304 7809156</p>
+              <p style="margin:0; display:flex; align-items:center; gap:8px; word-break:break-all;"><i class="fa-solid fa-envelope" style="color:var(--gold);"></i> ranaallahditta7347@gmail.com</p>
+              <p style="margin:0; display:flex; align-items:center; gap:8px;"><i class="fa-solid fa-clock" style="color:var(--gold);"></i> 24/7 Global Student Support</p>
+              <p style="margin:0; display:flex; align-items:center; gap:8px;"><i class="fa-solid fa-globe" style="color:var(--gold);"></i> USA, UK, Canada, UAE & Worldwide</p>
             </div>
           </div>
         </div>
@@ -2120,39 +2169,52 @@
       document.getElementById("pricePlan4").textContent = rates.symbol + rates.p4;
     }
 
-    // HERO SLIDER LOGIC
-    var currentHeroSlide = 0;
-    var heroSlides = ["heroSlide1", "heroSlide2", "heroSlide3"];
+    // 6 KIDS QURAN PHOTO CAROUSEL LOGIC
+    var currentKidSlide = 0;
+    var totalKidSlides = 6;
+    var kidSlideTimer = null;
 
-    function updateHeroSlide() {
-      heroSlides.forEach(function(id, idx) {
-        var el = document.getElementById(id);
-        if (el) {
-          if (idx === currentHeroSlide) el.classList.add("active");
-          else el.classList.remove("active");
+    function renderKidSlide() {
+      for (var i = 0; i < totalKidSlides; i++) {
+        var slideEl = document.getElementById("kidSlide" + i);
+        if (slideEl) {
+          if (i === currentKidSlide) slideEl.classList.add("active");
+          else slideEl.classList.remove("active");
         }
-      });
-      var dots = document.querySelectorAll(".slider-dot");
+      }
+      var dots = document.querySelectorAll(".kids-dot-pill");
       dots.forEach(function(d, idx) {
-        if (idx === currentHeroSlide) d.classList.add("active");
+        if (idx === currentKidSlide) d.classList.add("active");
         else d.classList.remove("active");
       });
     }
 
-    function nextHeroSlide() {
-      currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-      updateHeroSlide();
-    }
-    function prevHeroSlide() {
-      currentHeroSlide = (currentHeroSlide - 1 + heroSlides.length) % heroSlides.length;
-      updateHeroSlide();
-    }
-    function goToHeroSlide(idx) {
-      currentHeroSlide = idx;
-      updateHeroSlide();
+    function nextKidSlide() {
+      currentKidSlide = (currentKidSlide + 1) % totalKidSlides;
+      renderKidSlide();
+      resetKidSlideTimer();
     }
 
-    setInterval(nextHeroSlide, 6500);
+    function prevKidSlide() {
+      currentKidSlide = (currentKidSlide - 1 + totalKidSlides) % totalKidSlides;
+      renderKidSlide();
+      resetKidSlideTimer();
+    }
+
+    function jumpToKidSlide(idx) {
+      currentKidSlide = idx;
+      renderKidSlide();
+      resetKidSlideTimer();
+    }
+
+    function resetKidSlideTimer() {
+      if (kidSlideTimer) clearInterval(kidSlideTimer);
+      kidSlideTimer = setInterval(function() {
+        currentKidSlide = (currentKidSlide + 1) % totalKidSlides;
+        renderKidSlide();
+      }, 4500);
+    }
+    resetKidSlideTimer();
 
     // FAQ ACCORDION TOGGLE
     function toggleFaq(btn) {
