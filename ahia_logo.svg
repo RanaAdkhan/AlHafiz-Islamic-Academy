@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Royal Gold Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="30%" stop-color="#f59e0b" />
+      <stop offset="70%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <linearGradient id="goldLightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#fef08a" />
+      <stop offset="80%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <radialGradient id="emeraldDarkGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#0d5c53" />
+      <stop offset="50%" stop-color="#032621" />
+      <stop offset="100%" stop-color="#011210" />
+    </radialGradient>
+    <!-- Drop Shadows & Glows -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Base Shield / Medallion -->
+  <circle cx="250" cy="250" r="240" fill="url(#emeraldDarkGrad)" />
+  
+  <!-- Outer Ornate Gold Star Polygon Ring -->
+  <circle cx="250" cy="250" r="236" fill="none" stroke="url(#goldGrad)" stroke-width="4" />
+  <circle cx="250" cy="250" r="226" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="6,4" />
+  
+  <!-- Inner Golden Border -->
+  <circle cx="250" cy="250" r="216" fill="none" stroke="url(#goldGrad)" stroke-width="3" filter="url(#shadowFilter)" />
+  
+  <!-- Top Crescent & Star + Open Quran -->
+  <g transform="translate(250, 95)" filter="url(#shadowFilter)">
+    <!-- Crescent Moon -->
+    <path d="M 0,-42 A 28,28 0 1,0 24,-10 A 22,22 0 1,1 0,-42 Z" fill="url(#goldLightGrad)" />
+    <!-- 8-point Star -->
+    <polygon points="0,-26 4,-18 12,-18 6,-13 8,-5 0,-10 -8,-5 -6,-13 -12,-18 -4,-18" fill="#ffffff" />
+    <!-- Mini Quran Stand & Book -->
+    <g transform="translate(0, 16) scale(0.85)">
+      <!-- Left Page -->
+      <path d="M -2,-4 C -12,-12 -28,-10 -38,-6 L -38,14 C -28,10 -12,8 -2,16 Z" fill="url(#goldLightGrad)" stroke="#78350f" stroke-width="1.5" />
+      <!-- Right Page -->
+      <path d="M 2,-4 C 12,-12 28,-10 38,-6 L 38,14 C 28,10 12,8 2,16 Z" fill="url(#goldLightGrad)" stroke="#78350f" stroke-width="1.5" />
+      <!-- Stand (Rehal) -->
+      <path d="M -16,14 L 16,30 M 16,14 L -16,30" stroke="url(#goldGrad)" stroke-width="3.5" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Central Monogram: AHIA -->
+  <!-- Backing Glow & Emboss -->
+  <text x="250" y="295" 
+        font-family="'Cinzel', 'Plus Jakarta Sans', serif" 
+        font-size="106" 
+        font-weight="900" 
+        text-anchor="middle" 
+        letter-spacing="5" 
+        fill="#021210" 
+        stroke="#000000" 
+        stroke-width="10" 
+        opacity="0.7">AHIA</text>
+        
+  <text x="250" y="290" 
+        font-family="'Cinzel', 'Plus Jakarta Sans', serif" 
+        font-size="106" 
+        font-weight="900" 
+        text-anchor="middle" 
+        letter-spacing="5" 
+        fill="url(#goldLightGrad)" 
+        stroke="url(#goldGrad)" 
+        stroke-width="3" 
+        filter="url(#shadowFilter)">AHIA</text>
+
+  <!-- Bottom Elegant Ribbon Banner -->
+  <g transform="translate(250, 395)" filter="url(#shadowFilter)">
+    <!-- Ribbon background shape -->
+    <path d="M -195,0 L -215,-18 L -195,-36 L 195,-36 L 215,-18 L 195,0 Z" fill="url(#goldGrad)" />
+    <path d="M -185,-6 L 185,-6 L 185,-30 L -185,-30 Z" fill="#03201c" />
+    <!-- Academy Text on Ribbon -->
+    <text x="0" y="-14" 
+          font-family="'Plus Jakarta Sans', 'Inter', sans-serif" 
+          font-size="16" 
+          font-weight="900" 
+          letter-spacing="2" 
+          text-anchor="middle" 
+          fill="url(#goldLightGrad)">ALHAFIZ INTER ACADEMY</text>
+  </g>
+
+  <!-- Laurel Leaves Ornaments on Sides -->
+  <g stroke="url(#goldGrad)" stroke-width="2" fill="none">
+    <!-- Left Leaves -->
+    <path d="M 60,250 C 60,170 100,120 140,90" />
+    <circle cx="70" cy="210" r="4" fill="url(#goldGrad)" />
+    <circle cx="85" cy="170" r="4" fill="url(#goldGrad)" />
+    <circle cx="110" cy="135" r="4" fill="url(#goldGrad)" />
+    <!-- Right Leaves -->
+    <path d="M 440,250 C 440,170 400,120 360,90" />
+    <circle cx="430" cy="210" r="4" fill="url(#goldGrad)" />
+    <circle cx="415" cy="170" r="4" fill="url(#goldGrad)" />
+    <circle cx="390" cy="135" r="4" fill="url(#goldGrad)" />
+  </g>
+</svg>
