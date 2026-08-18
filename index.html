@@ -131,6 +131,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;700;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="islamic_data.js"></script>
 
   <style>
     /* DYNAMIC COLOR PALETTES (DEFAULT: ROYAL NAVY SAPPHIRE & RADIANT GOLD) */
@@ -763,21 +764,117 @@
     .faculty-qualification { font-size: 13px; color: var(--gold-dark); font-weight: 800; margin-bottom: 12px; }
     .faculty-bio-text { font-size: 13.5px; font-weight: 600; color: #334155; line-height: 1.65; margin-bottom: 16px; }
 
-    /* DUAS SECTION */
-    .duas-grid-layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    /* ISLAMIC DUAS & 40 AHADITH LIBRARY SECTION */
+    .islamic-lib-main-tabs {
+      display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+    }
+    .btn-lib-tab {
+      padding: 12px 28px; border-radius: 999px; font-size: 15px; font-weight: 900;
+      background: #ffffff; border: 2px solid var(--line); color: var(--primary-dark);
+      cursor: pointer; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex; align-items: center; gap: 9px; box-shadow: var(--shadow-sm);
+    }
+    .btn-lib-tab:hover { border-color: var(--gold-glow); transform: translateY(-2px); }
+    .btn-lib-tab.active {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-deep) 60%, var(--primary-mid) 100%);
+      border-color: var(--gold-glow); color: #ffffff; box-shadow: 0 8px 25px rgba(6, 18, 36, 0.25), var(--glow-gold);
+    }
+    .btn-lib-tab.active i { color: var(--gold-bright); }
+
+    .lib-search-filter-wrap {
+      max-width: 800px; margin: 0 auto 28px; display: flex; flex-direction: column; gap: 14px;
+    }
+    .lib-search-input-box {
+      position: relative; width: 100%;
+    }
+    .lib-search-input-box input {
+      width: 100%; background: #ffffff; border: 2px solid var(--line); border-radius: var(--radius-lg);
+      padding: 14px 48px 14px 18px; font-size: 14.5px; font-weight: 600; color: var(--ink);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: all 0.2s;
+    }
+    .lib-search-input-box input:focus {
+      border-color: var(--gold-glow); box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+    }
+    .lib-search-icon {
+      position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+      color: var(--muted); font-size: 17px; pointer-events: none;
+    }
+
+    .dua-categories-pills {
+      display: flex; justify-content: center; gap: 7px; flex-wrap: wrap;
+    }
+    .dua-cat-pill {
+      background: #ffffff; border: 1.5px solid var(--line); color: var(--ink);
+      padding: 6px 14px; border-radius: 999px; font-size: 12.5px; font-weight: 800;
+      cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
+    }
+    .dua-cat-pill:hover, .dua-cat-pill.active {
+      background: var(--primary-subtle); border-color: var(--primary-mid); color: var(--primary-mid);
+    }
+    .dua-cat-pill.active { background: var(--primary-mid); color: #ffffff; border-color: var(--primary-mid); }
+
+    .duas-grid-layout {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
     .dua-card-box {
-      background: #ffffff; border-radius: var(--radius-lg); padding: 24px;
-      border: 2px solid var(--line); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;
+      background: #ffffff; border-radius: var(--radius-xl); padding: 26px 22px;
+      border: 2px solid var(--line); box-shadow: var(--shadow-md);
+      display: flex; flex-direction: column; justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative;
     }
-    .dua-card-title { font-size: 16px; font-weight: 900; color: var(--primary-dark); margin-bottom: 12px; }
-    .dua-arabic-text { font-size: 22px; font-weight: 700; color: var(--primary-mid); text-align: right; line-height: 1.8; margin-bottom: 10px; }
-    .dua-urdu-translation { font-size: 14px; font-weight: 600; color: #334155; text-align: right; line-height: 1.7; margin-bottom: 16px; }
+    .dua-card-box:hover {
+      border-color: var(--gold-glow); transform: translateY(-5px); box-shadow: var(--shadow-lg);
+    }
+    .dua-card-header {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;
+      border-bottom: 1px dashed var(--line); padding-bottom: 10px;
+    }
+    .dua-id-badge {
+      background: var(--primary-subtle); border: 1px solid var(--line); color: var(--primary-mid);
+      padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 900;
+    }
+    .dua-card-title {
+      font-size: 16px; font-weight: 900; color: var(--primary-dark); margin-bottom: 6px; line-height: 1.35;
+    }
+    .dua-en-title {
+      font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 14px;
+    }
+    .dua-arabic-text {
+      font-size: 23px; font-weight: 700; color: var(--primary-mid); text-align: right;
+      line-height: 1.85; margin-bottom: 14px; background: #f8fafc; padding: 14px;
+      border-radius: var(--radius-md); border-right: 3.5px solid var(--gold-glow);
+    }
+    .dua-urdu-translation {
+      font-size: 14.5px; font-weight: 700; color: #1e293b; text-align: right;
+      line-height: 1.8; margin-bottom: 16px; font-family: 'Noto Nastaliq Urdu', serif;
+    }
+    .dua-footer-row {
+      display: flex; justify-content: space-between; align-items: center; gap: 8px;
+      border-top: 1px solid #f1f5f9; padding-top: 14px;
+    }
+    .dua-ref-tag {
+      font-size: 11.5px; font-weight: 800; color: var(--gold-dark); background: rgba(245, 158, 11, 0.12);
+      padding: 3px 8px; border-radius: 6px; white-space: nowrap;
+    }
     .btn-dua-listen {
-      width: 100%; padding: 11px; border-radius: 8px; background: var(--primary-subtle);
-      border: 1.5px solid var(--line); color: var(--primary-mid); font-size: 13px; font-weight: 800;
-      display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;
+      padding: 9px 14px; border-radius: 8px; background: var(--primary-subtle);
+      border: 1.5px solid var(--line); color: var(--primary-mid); font-size: 12.5px; font-weight: 900;
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;
     }
-    .btn-dua-listen:hover { background: #dbeafe; }
+    .btn-dua-listen:hover { background: var(--primary-mid); color: #ffffff; border-color: var(--primary-mid); }
+    .btn-dua-copy {
+      padding: 9px 11px; border-radius: 8px; background: #f8fafc; border: 1.5px solid var(--line);
+      color: #64748b; font-size: 13px; font-weight: 800; cursor: pointer; transition: all 0.2s;
+    }
+    .btn-dua-copy:hover { background: #e2e8f0; color: var(--ink); }
+
+    .btn-view-all-duas {
+      background: linear-gradient(135deg, var(--gold-glow), #d97706); color: #021210;
+      padding: 14px 34px; border-radius: 999px; font-size: 15px; font-weight: 900;
+      display: inline-flex; align-items: center; gap: 10px; margin: 36px auto 0;
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.45); cursor: pointer; transition: all 0.3s;
+    }
+    .btn-view-all-duas:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(245, 158, 11, 0.6); }
 
     /* TESTIMONIALS */
     .testimonials-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -1955,53 +2052,62 @@
       </div>
     </section>
 
-    <!-- MASNOON DUAS WITH AI AUDIO RECITER -->
+    <!-- ISLAMIC DUAS & 40 AHADITH LIBRARY (100+ DUAS & 40 HADITHS WITH AUDIO) -->
     <section class="section-padding bg-light" id="duas">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Audio Recitation</span>
-          <h2 class="section-title">Daily Masnoon Duas with Audio Pronunciation</h2>
-          <p class="section-subtitle">Listen to and practice essential daily Islamic supplications with clear Arabic recitation and Urdu translations.</p>
+          <span class="section-tag gold"><i class="fa-solid fa-book-quran"></i> Islamic Audio Library</span>
+          <h2 class="section-title">100+ مسنون دعائیں و 40 احادیثِ مبارکہ</h2>
+          <p class="section-subtitle">
+            Authentic collection of 100+ Quranic & Masnoon Duas and 40 Selected Hadith-e-Mubarakah with Tashkeel, Urdu translation, audio recitation, and authentic book references.
+          </p>
           <div class="title-underline"></div>
         </div>
 
-        <div class="duas-grid-layout">
-          <!-- DUA 1 -->
-          <div class="dua-card-box">
-            <div>
-              <h4 class="dua-card-title"><i class="fa-solid fa-bed" style="color:var(--gold-glow);"></i> سوتے وقت کی دعا (Before Sleeping)</h4>
-              <div class="arabic-font dua-arabic-text">اَللّٰهُمَّ بِاسْمِكَ أَمُوْتُ وَأَحْيَا</div>
-              <div class="urdu-font dua-urdu-translation">ترجمہ: اے اللہ! میں تیرے ہی نام کے ساتھ مرتا (سوتا) ہوں اور جیتا (جاگتا) ہوں۔</div>
-            </div>
-            <button type="button" class="btn-dua-listen" onclick="playDuaSpeech('اَللّٰهُمَّ بِاسْمِكَ أَمُوْتُ وَأَحْيَا', 'اے اللہ! میں تیرے ہی نام کے ساتھ مرتا ہوں اور جیتا ہوں۔')">
-              <i class="fa-solid fa-volume-high"></i> دعا سنیں (Listen Audio)
-            </button>
+        <!-- MAIN TABS: DUAS VS 40 HADITHS -->
+        <div class="islamic-lib-main-tabs">
+          <button type="button" class="btn-lib-tab active" id="tabShowDuas" onclick="switchIslamicTab('duas')">
+            <i class="fa-solid fa-hands-praying"></i> <span>مسنون و قرآنی دعائیں (100+ Duas)</span>
+          </button>
+          <button type="button" class="btn-lib-tab" id="tabShowHadiths" onclick="switchIslamicTab('hadiths')">
+            <i class="fa-solid fa-scroll"></i> <span>40 منتخب احادیثِ مبارکہ (40 Hadiths)</span>
+          </button>
+        </div>
+
+        <!-- SEARCH & FILTER BAR -->
+        <div class="lib-search-filter-wrap">
+          <div class="lib-search-input-box">
+            <input type="text" id="libSearchInput" oninput="handleLibrarySearch()" placeholder="🔍 دعا یا حدیث کا نام یا ترجمہ تلاش کریں (Search in Urdu or English)...">
+            <i class="fa-solid fa-magnifying-glass lib-search-icon"></i>
           </div>
 
-          <!-- DUA 2 -->
-          <div class="dua-card-box">
-            <div>
-              <h4 class="dua-card-title"><i class="fa-solid fa-sun" style="color:var(--gold-glow);"></i> بیدار ہونے کی دعا (Waking Up)</h4>
-              <div class="arabic-font dua-arabic-text">اَلْحَمْدُ لِلّٰهِ الَّذِيْ أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُوْرُ</div>
-              <div class="urdu-font dua-urdu-translation">ترجمہ: تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں مارنے کے بعد زندہ کیا اور اسی کی طرف اٹھنا ہے۔</div>
-            </div>
-            <button type="button" class="btn-dua-listen" onclick="playDuaSpeech('اَلْحَمْدُ لِلّٰهِ الَّذِيْ أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُوْرُ', 'تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں مارنے کے بعد زندہ کیا اور اسی کی طرف اٹھنا ہے۔')">
-              <i class="fa-solid fa-volume-high"></i> دعا سنیں (Listen Audio)
-            </button>
-          </div>
-
-          <!-- DUA 3 -->
-          <div class="dua-card-box">
-            <div>
-              <h4 class="dua-card-title"><i class="fa-solid fa-graduation-cap" style="color:var(--gold-glow);"></i> علم میں اضافے کی دعا (For Knowledge)</h4>
-              <div class="arabic-font dua-arabic-text">رَبِّ زِدْنِيْ عِلْمًا</div>
-              <div class="urdu-font dua-urdu-translation">ترجمہ: اے میرے رب! میرے علم میں اضافہ فرما۔</div>
-            </div>
-            <button type="button" class="btn-dua-listen" onclick="playDuaSpeech('رَبِّ زِدْنِيْ عِلْمًا', 'اے میرے رب! میرے علم میں اضافہ فرما۔')">
-              <i class="fa-solid fa-volume-high"></i> دعا سنیں (Listen Audio)
-            </button>
+          <!-- DUA CATEGORY PILLS (ONLY VISIBLE IN DUAS MODE) -->
+          <div class="dua-categories-pills" id="duaCategoriesRow">
+            <button type="button" class="dua-cat-pill active" onclick="filterDuaCategory('all')">🌟 تمام (All)</button>
+            <button type="button" class="dua-cat-pill" onclick="filterDuaCategory('daily')">🏠 روزمرہ (Daily)</button>
+            <button type="button" class="dua-cat-pill" onclick="filterDuaCategory('food')">🍽️ کھانا پینا (Food)</button>
+            <button type="button" class="dua-cat-pill" onclick="filterDuaCategory('morning_evening')">🌅 صبح و شام (Adhkar)</button>
+            <button type="button" class="dua-cat-pill" onclick="filterDuaCategory('masjid')">🕌 مسجد و نماز (Salah & Wudu)</button>
+            <button type="button" class="dua-cat-pill" onclick="filterDuaCategory('travel')">🚗 سفر و سواری (Travel)</button>
+            <button type="button" class="dua-cat-pill" onclick="filterDuaCategory('protection')">🛡️ حفاظت و پناہ (Protection)</button>
+            <button type="button" class="dua-cat-pill" onclick="filterDuaCategory('relief')">🤲 پریشانی و شفاء (Relief & Health)</button>
+            <button type="button" class="dua-cat-pill" onclick="filterDuaCategory('quranic')">📖 قرآنی ربّنا دعائیں (Quranic Duas)</button>
           </div>
         </div>
+
+        <!-- CARDS GRID CONTAINER (DYNAMICALLY POPULATED) -->
+        <div class="duas-grid-layout" id="islamicCardsGrid">
+          <!-- Populated dynamically by JavaScript from ISLAMIC_LIBRARY -->
+        </div>
+
+        <!-- EXPAND / SHOW MORE BUTTON -->
+        <div style="text-align: center;">
+          <button type="button" class="btn-view-all-duas" id="btnToggleExpandLib" onclick="toggleLibraryExpand()">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span id="expandLibBtnText">📖 تمام دعائیں اور 40 احادیث دیکھیں (View All 100+ Duas & 40 Hadiths)</span>
+          </button>
+        </div>
+
       </div>
     </section>
 
@@ -2558,16 +2664,162 @@
       speakAiWelcomeUrdu(name);
     }
 
-    function playDuaSpeech(arabicDua, urduTranslation) {
+    // ISLAMIC DUAS & 40 AHADITH DYNAMIC CONTROLLER
+    var currentIslamicTab = 'duas'; // 'duas' or 'hadiths'
+    var currentDuaCategory = 'all';
+    var isLibExpanded = false;
+    var libSearchQuery = '';
+
+    function switchIslamicTab(tabType) {
+      currentIslamicTab = tabType;
+      var btnDuas = document.getElementById("tabShowDuas");
+      var btnHadiths = document.getElementById("tabShowHadiths");
+      var catRow = document.getElementById("duaCategoriesRow");
+
+      if (tabType === 'duas') {
+        if (btnDuas) btnDuas.classList.add("active");
+        if (btnHadiths) btnHadiths.classList.remove("active");
+        if (catRow) catRow.style.display = "flex";
+      } else {
+        if (btnHadiths) btnHadiths.classList.add("active");
+        if (btnDuas) btnDuas.classList.remove("active");
+        if (catRow) catRow.style.display = "none";
+      }
+      renderIslamicLibrary();
+    }
+
+    function filterDuaCategory(catKey) {
+      currentDuaCategory = catKey;
+      document.querySelectorAll(".dua-cat-pill").forEach(function(pill) {
+        pill.classList.remove("active");
+        if (pill.getAttribute("onclick") && pill.getAttribute("onclick").includes("'" + catKey + "'")) {
+          pill.classList.add("active");
+        }
+      });
+      renderIslamicLibrary();
+    }
+
+    function handleLibrarySearch() {
+      var input = document.getElementById("libSearchInput");
+      libSearchQuery = input ? input.value.trim().toLowerCase() : '';
+      renderIslamicLibrary();
+    }
+
+    function toggleLibraryExpand() {
+      isLibExpanded = !isLibExpanded;
+      var btnText = document.getElementById("expandLibBtnText");
+      if (btnText) {
+        if (isLibExpanded) {
+          btnText.innerHTML = "▲ مختصر فہرست دکھائیں (Show Less)";
+        } else {
+          btnText.innerHTML = "📖 تمام " + (currentIslamicTab === 'duas' ? "100+ دعائیں" : "40 احادیث") + " دیکھیں (View All Collection)";
+        }
+      }
+      renderIslamicLibrary();
+      if (!isLibExpanded) {
+        var sec = document.getElementById("duas");
+        if (sec) sec.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    function playIslamicAudio(arabicText, urduText) {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
-        var fullSpeech = arabicDua + ". " + urduTranslation;
+        var fullSpeech = arabicText + ". " + urduText;
         var utterance = new SpeechSynthesisUtterance(fullSpeech);
         utterance.lang = 'ur-PK';
         utterance.rate = 0.85;
         window.speechSynthesis.speak(utterance);
-        showToast("Playing Dua audio...");
+        showToast("🔊 تلاوت و ترجمہ چل رہا ہے (Playing Audio)...");
       }
+    }
+
+    function copyIslamicItem(encodedText) {
+      var text = decodeURIComponent(encodedText);
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() {
+          showToast("📋 متن کاپی ہو گیا! (Copied to Clipboard)");
+        });
+      } else {
+        var tempInput = document.createElement("textarea");
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        showToast("📋 متن کاپی ہو گیا! (Copied to Clipboard)");
+      }
+    }
+
+    function renderIslamicLibrary() {
+      var grid = document.getElementById("islamicCardsGrid");
+      if (!grid) return;
+
+      var dataList = [];
+      if (window.ISLAMIC_LIBRARY) {
+        if (currentIslamicTab === 'duas') {
+          dataList = window.ISLAMIC_LIBRARY.duas || [];
+        } else {
+          dataList = window.ISLAMIC_LIBRARY.hadiths || [];
+        }
+      }
+
+      // Filter by category if in Duas mode
+      if (currentIslamicTab === 'duas' && currentDuaCategory !== 'all') {
+        dataList = dataList.filter(function(item) {
+          return item.category === currentDuaCategory;
+        });
+      }
+
+      // Filter by search keyword
+      if (libSearchQuery) {
+        dataList = dataList.filter(function(item) {
+          var matchTitleUrdu = item.titleUrdu && item.titleUrdu.toLowerCase().includes(libSearchQuery);
+          var matchTitleEn = item.titleEn && item.titleEn.toLowerCase().includes(libSearchQuery);
+          var matchArabic = item.arabic && item.arabic.includes(libSearchQuery);
+          var matchUrdu = item.urdu && item.urdu.toLowerCase().includes(libSearchQuery);
+          var matchTopic = item.topic && item.topic.toLowerCase().includes(libSearchQuery);
+          return matchTitleUrdu || matchTitleEn || matchArabic || matchUrdu || matchTopic;
+        });
+      }
+
+      if (dataList.length === 0) {
+        grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:40px; background:#fff; border-radius:16px; border:2px solid var(--line); color:var(--muted);"><i class="fa-solid fa-magnifying-glass" style="font-size:32px; color:var(--gold-glow); margin-bottom:10px;"></i><h3 style="font-size:18px; font-weight:800; color:var(--primary-dark);">کوئی نتیجہ نہیں ملا</h3><p style="font-size:14px;">براہِ کرم کوئی دوسرا لفظ تلاش کریں یا کیٹیگری تبدیل کریں۔</p></div>';
+        return;
+      }
+
+      var itemsToRender = isLibExpanded ? dataList : dataList.slice(0, 6);
+      var html = "";
+
+      itemsToRender.forEach(function(item) {
+        var copyPayload = encodeURIComponent(item.titleUrdu + "\n\n" + item.arabic + "\n\nترجمہ: " + item.urdu + "\n(حوالہ: " + item.reference + " - ALHAFIZ INTER ACADEMY)");
+        var iconClass = item.icon || "fa-book-quran";
+
+        html += '<div class="dua-card-box">';
+        html += '  <div>';
+        html += '    <div class="dua-card-header">';
+        html += '      <span class="dua-id-badge"><i class="fa-solid ' + iconClass + '" style="color:var(--gold-glow); margin-right:4px;"></i> #' + item.id + ' ' + (currentIslamicTab === 'duas' ? 'Dua' : 'Hadith') + '</span>';
+        html += '      <button type="button" class="btn-dua-copy" title="Copy Text" onclick="copyIslamicItem(\'' + copyPayload + '\')"><i class="fa-regular fa-copy"></i> کاپی</button>';
+        html += '    </div>';
+        html += '    <h3 class="dua-card-title">' + item.titleUrdu + '</h3>';
+        html += '    <div class="dua-en-title">' + (item.titleEn || '') + '</div>';
+        html += '    <div class="arabic-font dua-arabic-text">' + item.arabic + '</div>';
+        html += '    <div class="urdu-font dua-urdu-translation"><strong>ترجمہ:</strong> ' + item.urdu + '</div>';
+        html += '  </div>';
+        html += '  <div class="dua-footer-row">';
+        html += '    <span class="dua-ref-tag"><i class="fa-solid fa-bookmark" style="font-size:10px;"></i> ' + item.reference + '</span>';
+        html += '    <button type="button" class="btn-dua-listen" onclick="playIslamicAudio(\'' + item.arabic.replace(/'/g, "\\'") + '\', \'' + item.urdu.replace(/'/g, "\\'") + '\')">';
+        html += '      <i class="fa-solid fa-volume-high"></i> <span>' + (currentIslamicTab === 'duas' ? 'دعا سنیں' : 'حدیث سنیں') + '</span>';
+        html += '    </button>';
+        html += '  </div>';
+        html += '</div>';
+      });
+
+      grid.innerHTML = html;
+    }
+
+    function playDuaSpeech(arabicDua, urduTranslation) {
+      playIslamicAudio(arabicDua, urduTranslation);
     }
 
     function togglePassword(inputId, btn) {
@@ -2743,6 +2995,7 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     setCurrency('USD');
     initStatsCounterObserver();
+    renderIslamicLibrary();
     checkAuthSession(false);
   </script>
 </body>
