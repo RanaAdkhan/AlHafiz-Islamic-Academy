@@ -1,4 +1,4 @@
-// 100+ AUTHENTIC MASNOON & QURANIC DUAS AND 40 AUTHENTIC AHADITH
+// 100+ AUTHENTIC MASNOON & QURANIC DUAS AND 40 AUTHENTIC AHADITH WITH TOPIC IMAGES
 window.ISLAMIC_LIBRARY = {
   duas: [
     // 1-10: DAILY ROUTINE (سونا، جاگنا، کھانا، پینا، لباس، وغیرہ)
@@ -8,6 +8,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "سوتے وقت کی دعا",
       titleEn: "Before Sleeping",
       icon: "fa-bed",
+      topic: "Sleep & Rest",
+      image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ بِاسْمِكَ أَمُوْتُ وَأَحْيَا",
       urdu: "اے اللہ! میں تیرے ہی نام کے ساتھ مرتا (سوتا) ہوں اور جیتا (جاگتا) ہوں۔",
       reference: "صحیح بخاری: 6324"
@@ -18,6 +20,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "نیند سے بیدار ہونے کی دعا",
       titleEn: "Waking Up from Sleep",
       icon: "fa-sun",
+      topic: "Morning Wakeup",
+      image: "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?w=600&auto=format&fit=crop&q=80",
       arabic: "اَلْحَمْدُ لِلّٰهِ الَّذِيْ أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُوْرُ",
       urdu: "تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں مارنے (سلانے) کے بعد زندہ کیا اور اسی کی طرف اٹھنا ہے۔",
       reference: "صحیح بخاری: 6312"
@@ -28,6 +32,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "کھانا شروع کرنے کی دعا",
       titleEn: "Before Eating",
       icon: "fa-utensils",
+      topic: "Food & Sustenance",
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80",
       arabic: "بِسْمِ اللّٰهِ وَعَلَى بَرَكَةِ اللّٰهِ",
       urdu: "اللہ کے نام سے اور اللہ کی برکت پر شروع کرتا ہوں۔",
       reference: "المستدرک للحاکم: 7084"
@@ -38,6 +44,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "کھانے کے شروع میں بسم اللہ بھول جانے پر",
       titleEn: "If Forgot Bismillah Before Eating",
       icon: "fa-utensils",
+      topic: "Remembrance in Eating",
+      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop&q=80",
       arabic: "بِسْمِ اللّٰهِ أَوَّلَهُ وَآخِرَهُ",
       urdu: "اللہ کے نام سے اس کے اول اور آخر میں۔",
       reference: "سنن ابو داؤد: 3767"
@@ -48,6 +56,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "کھانے سے فارغ ہونے کی دعا",
       titleEn: "After Finishing Meal",
       icon: "fa-bowl-food",
+      topic: "Gratitude for Food",
+      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&auto=format&fit=crop&q=80",
       arabic: "اَلْحَمْدُ لِلّٰهِ الَّذِيْ أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ الْمُسْلِمِيْنَ",
       urdu: "تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں کھلایا، پلایا اور مسلمانوں میں سے بنایا۔",
       reference: "سنن ترمذی: 3457"
@@ -58,6 +68,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "دودھ پینے کے بعد کی دعا",
       titleEn: "After Drinking Milk",
       icon: "fa-mug-hot",
+      topic: "Milk & Nourishment",
+      image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ بَارِكْ لَنَا فِيْهِ وَزِدْنَا مِنْهُ",
       urdu: "اے اللہ! ہمارے لیے اس میں برکت عطا فرما اور ہمیں اس سے زیادہ عطا فرما۔",
       reference: "سنن ترمذی: 3455"
@@ -68,6 +80,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "بیت الخلاء میں داخل ہونے کی دعا",
       titleEn: "Entering the Washroom",
       icon: "fa-door-open",
+      topic: "Purity & Refuge",
+      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ إِنِّيْ أَعُوْذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
       urdu: "اے اللہ! میں خبیث جنوں (نر و مادہ) کی شرارت سے تیری پناہ مانگتا ہوں۔",
       reference: "صحیح بخاری: 142"
@@ -78,6 +92,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "بیت الخلاء سے نکلنے کی دعا",
       titleEn: "Leaving the Washroom",
       icon: "fa-door-closed",
+      topic: "Forgiveness & Relief",
+      image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&auto=format&fit=crop&q=80",
       arabic: "غُفْرَانَكَ ، اَلْحَمْدُ لِلّٰهِ الَّذِيْ أَذْهَبَ عَنِّي الْأَذَى وَعَافَانِيْ",
       urdu: "اے اللہ! میں تیری بخشش چاہتا ہوں۔ تمام تعریفیں اللہ کے لیے ہیں جس نے مجھ سے تکلیف دور کی اور مجھے عافیت بخشی۔",
       reference: "سنن ابو داؤد: 17، ابن ماجہ: 301"
@@ -88,6 +104,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "نیا لباس پہنتے وقت کی دعا",
       titleEn: "Wearing New Clothes",
       icon: "fa-shirt",
+      topic: "Clothing & Modesty",
+      image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&auto=format&fit=crop&q=80",
       arabic: "اَلْحَمْدُ لِلّٰهِ الَّذِيْ كَسَانِيْ هٰذَا الثَّوْبَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّيْ وَلَا قُوَّةٍ",
       urdu: "تمام تعریفیں اللہ کے لیے ہیں جس نے مجھے یہ لباس پہنایا اور میری طاقت و قوت کے بغیر مجھے عطا کیا۔",
       reference: "سنن ابو داؤد: 4023"
@@ -98,6 +116,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "آئینہ دیکھنے کی دعا",
       titleEn: "Looking into the Mirror",
       icon: "fa-wand-magic-sparkles",
+      topic: "Beauty & Good Character",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ أَنْتَ حَسَّنْتَ خَلْقِيْ فَحَسِّنْ خُلُقِيْ",
       urdu: "اے اللہ! جس طرح تو نے میری صورت اچھی بنائی ہے، اسی طرح میرے اخلاق بھی اچھے بنا دے۔",
       reference: "مسند احمد: 24392"
@@ -110,6 +130,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "گھر سے نکلتے وقت کی دعا",
       titleEn: "Leaving the House",
       icon: "fa-house-chimney-user",
+      topic: "Tawakkul on Allah",
+      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&auto=format&fit=crop&q=80",
       arabic: "بِسْمِ اللّٰهِ تَوَكَّلْتُ عَلَى اللّٰهِ ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ",
       urdu: "اللہ کے نام کے ساتھ، میں نے اللہ پر بھروسا کیا، گناہوں سے بچنے اور نیکی کرنے کی طاقت صرف اللہ کی طرف سے ہے۔",
       reference: "سنن ابو داؤد: 5095"
@@ -120,6 +142,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "گھر میں داخل ہوتے وقت کی دعا",
       titleEn: "Entering the House",
       icon: "fa-house",
+      topic: "Home Blessing & Peace",
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ إِنِّيْ أَسْأَلُكَ خَيْرَ الْمَوْلِجِ وَخَيْرَ الْمَخْرَجِ ، بِسْمِ اللّٰهِ وَلَجْنَا وَبِسْمِ اللّٰهِ خَرَجْنَا وَعَلَى اللّٰهِ رَبِّنَا تَوَكَّلْنَا",
       urdu: "اے اللہ! میں تجھ سے داخل ہونے اور نکلنے کی بھلائی مانگتا ہوں۔ اللہ کے نام سے ہم داخل ہوئے اور اللہ کے نام سے نکلے اور اپنے رب پر ہم نے بھروسا کیا۔",
       reference: "سنن ابو داؤد: 5096"
@@ -130,6 +154,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "مسجد جانے کی دعا",
       titleEn: "Going to the Mosque",
       icon: "fa-mosque",
+      topic: "Divine Light in Mosque",
+      image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ اجْعَلْ فِيْ قَلْبِيْ نُوْرًا وَفِيْ لِسَانِيْ نُوْرًا وَفِيْ بَصَرِيْ نُوْرًا وَفِيْ سَمْعِيْ نُوْرًا",
       urdu: "اے اللہ! میرے دل میں نور، میری زبان میں نور، میری آنکھوں میں نور اور میرے کانوں میں نور پیدا فرما۔",
       reference: "صحیح مسلم: 763"
@@ -140,6 +166,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "مسجد میں داخل ہونے کی دعا",
       titleEn: "Entering the Mosque",
       icon: "fa-mosque",
+      topic: "Doors of Mercy",
+      image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ افْتَحْ لِيْ أَبْوَابَ رَحْمَتِكَ",
       urdu: "اے اللہ! میرے لیے اپنی رحمت کے دروازے کھول دے۔",
       reference: "صحیح مسلم: 713"
@@ -150,6 +178,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "مسجد سے نکلنے کی دعا",
       titleEn: "Leaving the Mosque",
       icon: "fa-person-walking",
+      topic: "Seeking Allah's Bounty",
+      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ إِنِّيْ أَسْأَلُكَ مِنْ فَضْلِكَ",
       urdu: "اے اللہ! میں تجھ سے تیرے فضل کا سوال کرتا ہوں۔",
       reference: "صحیح مسلم: 713"
@@ -160,6 +190,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "اذان کے بعد کی دعا",
       titleEn: "After Adhan (Call to Prayer)",
       icon: "fa-bullhorn",
+      topic: "Call to Prayer & Wasilah",
+      image: "https://images.unsplash.com/photo-1590076215667-875d4ef2d7ee?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ رَبَّ هٰذِهِ الدَّعْوَةِ التَّامَّةِ وَالصَّلَاةِ الْقَائِمَةِ ، آتِ مُحَمَّدَنِ الْوَسِيْلَةَ وَالْفَضِيْلَةَ وَابْعَثْهُ مَقَامًا مَّحْمُوْدَنِ الَّذِيْ وَعَدْتَّهُ",
       urdu: "اے اللہ! اس کامل پکار اور قائم ہونے والی نماز کے رب! محمد ﷺ کو وسیلہ اور فضیلت عطا فرما اور انہیں اس مقامِ محمود پر فائز فرما جس کا تو نے وعدہ فرمایا ہے۔",
       reference: "صحیح بخاری: 614"
@@ -170,6 +202,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "وضو شروع کرنے کی دعا",
       titleEn: "Before Wudu (Ablution)",
       icon: "fa-hands-bubbles",
+      topic: "Ablution & Cleanliness",
+      image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&auto=format&fit=crop&q=80",
       arabic: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
       urdu: "اللہ کے نام سے شروع جو بڑا مہربان نہایت رحم والا ہے۔",
       reference: "سنن ابو داؤد: 101"
@@ -180,6 +214,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "وضو کے بعد کی دعا",
       titleEn: "After Finishing Wudu",
       icon: "fa-hand-sparkles",
+      topic: "Spiritual & Physical Purity",
+      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&auto=format&fit=crop&q=80",
       arabic: "أَشْهَدُ أَنْ لَّا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيْكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ ، اَللّٰهُمَّ اجْعَلْنِيْ مِنَ التَّوَّابِيْنَ وَاجْعَلْنِيْ مِنَ الْمُتَطَهِّرِيْنَ",
       urdu: "میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے اس کا کوئی شریک نہیں، اور میں گواہی دیتا ہوں کہ محمد ﷺ اس کے بندے اور رسول ہیں۔ اے اللہ! مجھے توبہ کرنے والوں اور پاکیزہ رہنے والوں میں شامل فرما۔",
       reference: "صحیح مسلم: 234، سنن ترمذی: 55"
@@ -190,6 +226,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "سواری پر بیٹھنے کی دعا",
       titleEn: "Mounting / Boarding Vehicle",
       icon: "fa-car",
+      topic: "Safe Vehicle Ride",
+      image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&auto=format&fit=crop&q=80",
       arabic: "سُبْحَانَ الَّذِيْ سَخَّرَ لَنَا هٰذَا وَمَا كُنَّا لَهُ مُقْرِنِيْنَ ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُوْنَ",
       urdu: "پاک ہے وہ ذات جس نے اس (سواری) کو ہمارے تابع کیا حالانکہ ہم اس پر قابو پانے والے نہ تھے، اور بے شک ہم اپنے رب ہی کی طرف لوٹنے والے ہیں۔",
       reference: "سورۃ الزخرف: 13-14"
@@ -200,6 +238,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "سفر کی مسنون دعا",
       titleEn: "Dua for Journey / Travel",
       icon: "fa-plane-departure",
+      topic: "Protection on Journey",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ إِنَّا نَسْأَلُكَ فِيْ سَفَرِنَا هٰذَا الْبِرَّ وَالتَّقْوٰى وَمِنَ الْعَمَلِ مَا تَرْضٰى ، اَللّٰهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هٰذَا وَاطْوِ عَنَّا بُعْدَهُ",
       urdu: "اے اللہ! ہم اپنے اس سفر میں نیکی، پرہیزگاری اور ایسے عمل کا سوال کرتے ہیں جس سے تو راضی ہو۔ اے اللہ! ہمارے اس سفر کو آسان بنا اور اس کی مسافت کو لپیٹ دے۔",
       reference: "صحیح مسلم: 1342"
@@ -212,6 +252,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "سید الاستغفار (بخشش کی عظیم دعا)",
       titleEn: "Sayyid al-Istighfar (Supreme Supplication for Forgiveness)",
       icon: "fa-heart",
+      topic: "Supreme Forgiveness",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ أَنْتَ رَبِّيْ لَا إِلٰهَ إِلَّا أَنْتَ ، خَلَقْتَنِيْ وَأَنَا عَبْدُكَ ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ ، أَعُوْذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ ، أَبُوْءُ لَكَ بِنِعْمَتِكَ عَلَيَّ ، وَأَبُوْءُ بِذَنْبِيْ فَاغْفِرْ لِيْ فَإِنَّهُ لَا يَغْفِرُ الذُّنُوْبَ إِلَّا أَنْتَ",
       urdu: "اے اللہ! تو ہی میرا رب ہے، تیرے سوا کوئی معبود نہیں، تو نے ہی مجھے پیدا کیا اور میں تیرا بندہ ہوں اور اپنی طاقت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔ میں اپنے کیے کے شر سے تیری پناہ مانگتا ہوں، تیرے احسانات کا اعتراف کرتا ہوں اور اپنے گناہوں کا اقرار کرتا ہوں، پس مجھے بخش دے، تیرے سوا کوئی گناہوں کو بخشنے والا نہیں۔",
       reference: "صحیح بخاری: 6306"
@@ -222,6 +264,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "صبح کے وقت کی دعا",
       titleEn: "Morning Adhkar",
       icon: "fa-cloud-sun",
+      topic: "Dawn of New Day",
+      image: "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?w=600&auto=format&fit=crop&q=80",
       arabic: "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلّٰهِ ، وَالْحَمْدُ لِلّٰهِ ، لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيْكَ لَهُ",
       urdu: "ہم نے صبح کی اور ساری بادشاہی نے اللہ کے لیے صبح کی، تمام تعریفیں اللہ کے لیے ہیں، اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے اس کا کوئی شریک نہیں۔",
       reference: "صحیح مسلم: 2723"
@@ -232,6 +276,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "شام کے وقت کی دعا",
       titleEn: "Evening Adhkar",
       icon: "fa-moon",
+      topic: "Evening Peace & Protection",
+      image: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=600&auto=format&fit=crop&q=80",
       arabic: "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلّٰهِ ، وَالْحَمْدُ لِلّٰهِ ، لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيْكَ لَهُ",
       urdu: "ہم نے شام کی اور ساری بادشاہی نے اللہ کے لیے شام کی، تمام تعریفیں اللہ کے لیے ہیں، اللہ کے سوا کوئی معبود نہیں، وہ یکتا ہے اس کا کوئی شریک نہیں۔",
       reference: "صحیح مسلم: 2723"
@@ -239,9 +285,11 @@ window.ISLAMIC_LIBRARY = {
     {
       id: 24,
       category: "protection",
-      titleUrdu: "آیت الکرسی (حفاظت کی عظیم آیت)",
+      titleUrdu: "آیت الکرسی (حفاظت کی عظیم ترین آیت)",
       titleEn: "Ayat al-Kursi (Verse of the Throne)",
       icon: "fa-shield-halved",
+      topic: "Divine Protection",
+      image: "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=600&auto=format&fit=crop&q=80",
       arabic: "اللّٰهُ لَا إِلٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّوْمُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَّلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمٰوٰتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيْهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيْطُوْنَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمٰوٰتِ وَالْأَرْضَ ۖ وَلَا يَئُوْدُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيْمُ",
       urdu: "اللہ جس کے سوا کوئی معبود نہیں، زندہ جاوید ہے، سب کا نگہبان ہے، اسے نہ اونگھ آتی ہے نہ نیند۔ جو کچھ آسمانوں اور زمین میں ہے اسی کا ہے۔ کون ہے جو اس کی اجازت کے بغیر اس کے پاس سفارش کر سکے؟ وہ جانتا ہے جو ان کے آگے ہے اور جو ان کے پیچھے ہے۔ اور وہ اس کے علم میں سے کسی چیز کا احاطہ نہیں کر سکتے مگر جتنا وہ چاہے۔ اس کی کرسی آسمانوں اور زمین پر چھائی ہوئی ہے، اور ان دونوں کی حفاظت اس پر گراں نہیں گزرتی، اور وہ بلند اور عظمت والا ہے۔",
       reference: "سورۃ البقرۃ: 255"
@@ -252,6 +300,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "ہر قسم کے نقصان سے حفاظت کی دعا",
       titleEn: "Protection Against All Harm",
       icon: "fa-shield",
+      topic: "Shield Against Calamity",
+      image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=600&auto=format&fit=crop&q=80",
       arabic: "بِسْمِ اللّٰهِ الَّذِيْ لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيْعُ الْعَلِيْمُ",
       urdu: "اللہ کے نام سے جس کے نام کی برکت سے زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی اور وہی خوب سننے والا اور جاننے والا ہے۔ (صبح و شام 3 بار)",
       reference: "سنن ابو داؤد: 5088، سنن ترمذی: 3388"
@@ -262,6 +312,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "اللہ کے کامل کلمات کے ذریعے پناہ",
       titleEn: "Refuge in Allah's Perfect Words",
       icon: "fa-hand-fist",
+      topic: "Divine Refuge",
+      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&auto=format&fit=crop&q=80",
       arabic: "أَعُوْذُ بِكَلِمَاتِ اللّٰهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
       urdu: "میں اللہ کے کامل کلمات کی پناہ لیتا ہوں اس کی پیدا کردہ تمام چیزوں کے شر سے۔ (ہر منزل و مقام پر پڑھنے کی دعا)",
       reference: "صحیح مسلم: 2708"
@@ -272,6 +324,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "ایمان و سلامتی پر راضی ہونے کی دعا",
       titleEn: "Pleased with Allah as Lord & Islam as Deen",
       icon: "fa-star-and-crescent",
+      topic: "Contentment in Faith",
+      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
       arabic: "رَضِيْتُ بِاللّٰهِ رَبًّا وَبِالْإِسْلَامِ دِيْنًا وَبِمُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا",
       urdu: "میں اللہ کے رب ہونے، اسلام کے دین ہونے اور محمد ﷺ کے نبی ہونے پر راضی اور خوش ہوں۔",
       reference: "سنن ترمذی: 3389"
@@ -282,6 +336,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "عافیت و سلامتی کی جامع دعا",
       titleEn: "Supplication for Well-being & Protection",
       icon: "fa-hand-holding-heart",
+      topic: "Afiyah (Well-being)",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ إِنِّيْ أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ",
       urdu: "اے اللہ! میں تجھ سے دنیا اور آخرت میں معافی اور عافیت کا سوال کرتا ہوں۔",
       reference: "سنن ابو داؤد: 5074"
@@ -292,6 +348,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "نظرِ بد اور ہر شیطان سے بچوں کی حفاظت کی دعا",
       titleEn: "Protection of Children from Evil Eye",
       icon: "fa-baby",
+      topic: "Protecting Children",
+      image: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=600&auto=format&fit=crop&q=80",
       arabic: "أُعِيْذُكَ بِكَلِمَاتِ اللّٰهِ التَّامَّةِ مِنْ كُلِّ شَيْطَانٍ وَّهَامَّةٍ وَّمِنْ كُلِّ عَيْنٍ لَّامَّةٍ",
       urdu: "میں تجھے اللہ کے کامل کلمات کی پناہ میں دیتا ہوں ہر شیطان، زہریلے جانور اور ہر نقصان دہ نظرِ بد سے۔",
       reference: "صحیح بخاری: 3371"
@@ -302,6 +360,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "صبح و شام 100 بار تسبیح",
       titleEn: "Tasbih 100 times Daily",
       icon: "fa-certificate",
+      topic: "Tasbih & Praise",
+      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&auto=format&fit=crop&q=80",
       arabic: "سُبْحَانَ اللّٰهِ وَبِحَمْدِهِ",
       urdu: "اللہ پاک ہے اور تمام تعریفیں اسی کے لیے ہیں۔ (گناہ سمندر کی جھاگ جتنے بھی ہوں معاف کر دیے جاتے ہیں)",
       reference: "صحیح بخاری: 6405"
@@ -314,6 +374,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "غم و پریشانی دور کرنے کی دعا",
       titleEn: "Relief from Anxiety & Grief",
       icon: "fa-face-frown-open",
+      topic: "Relief from Distress",
+      image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ إِنِّيْ أَعُوْذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ ، وَالْعَجْزِ وَالْكَسَلِ ، وَالْبُخْلِ وَالْجُبْنِ ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ",
       urdu: "اے اللہ! میں غم و فکر، بے بسی، سستی، کنجوسی، بزدلی، قرض کے بوجھ اور لوگوں کے غلبے سے تیری پناہ مانگتا ہوں۔",
       reference: "صحیح بخاری: 2893"
@@ -324,6 +386,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "حضرت یونس علیہ السلام کی دعا (دعائے کرب)",
       titleEn: "Dua of Prophet Yunus (In Distress)",
       icon: "fa-water",
+      topic: "Dua in Ocean of Distress",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=80",
       arabic: "لَّا إِلٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّيْ كُنْتُ مِنَ الظَّالِمِيْنَ",
       urdu: "تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ہی قصورواروں میں سے تھا۔",
       reference: "سورۃ الانبیاء: 87"
@@ -334,6 +398,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "قرض کی ادائیگی اور کشادگی کی دعا",
       titleEn: "Dua for Repayment of Debt & Ease",
       icon: "fa-sack-dollar",
+      topic: "Debt Relief & Halal Wealth",
+      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ اكْفِنِيْ بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِيْ بِفَضْلِكَ عَمَّنْ سِوَاكَ",
       urdu: "اے اللہ! مجھے حلال رزق دے کر حرام سے بچا اور اپنے فضل سے مجھے اپنے سوا ہر ایک سے بے نیاز کر دے۔",
       reference: "سنن ترمذی: 3563"
@@ -344,6 +410,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "بیمار کی عیادت کے وقت کی دعا",
       titleEn: "Dua When Visiting the Sick",
       icon: "fa-hand-holding-medical",
+      topic: "Visiting the Sick",
+      image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&auto=format&fit=crop&q=80",
       arabic: "لَا بَأْسَ طَهُوْرٌ إِنْ شَاءَ اللّٰهُ",
       urdu: "کوئی حرج نہیں، اللہ نے چاہا تو یہ بیماری گناہوں سے پاک کرنے والی ہے۔",
       reference: "صحیح بخاری: 3616"
@@ -354,6 +422,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "بیمار کے لیے شفاء کی مسنون دعا",
       titleEn: "Supplication for Complete Healing & Health",
       icon: "fa-notes-medical",
+      topic: "Complete Shifa (Healing)",
+      image: "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=600&auto=format&fit=crop&q=80",
       arabic: "أَسْأَلُ اللّٰهَ الْعَظِيْمَ رَبَّ الْعَرْشِ الْعَظِيْمِ أَنْ يَّشْفِيَكَ",
       urdu: "میں عظمت والے اللہ سے، جو عرشِ عظیم کا رب ہے، سوال کرتا ہوں کہ وہ تمہیں شفا عطا فرمائے۔ (7 مرتبہ)",
       reference: "سنن ابو داؤد: 3106، سنن ترمذی: 2083"
@@ -364,6 +434,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "جسمانی درد دور کرنے کا مسنون دم",
       titleEn: "Dua for Physical Pain Relief",
       icon: "fa-band-aid",
+      topic: "Pain Relief Ruqyah",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&auto=format&fit=crop&q=80",
       arabic: "بِسْمِ اللّٰهِ (3 بار) ، أَعُوْذُ بِاللّٰهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ (7 بار)",
       urdu: "اللہ کے نام سے (3 بار)، میں اللہ اور اس کی قدرت کی پناہ لیتا ہوں اس تکلیف کے شر سے جو میں محسوس کرتا ہوں اور جس سے ڈرتا ہوں (7 بار)۔",
       reference: "صحیح مسلم: 2202"
@@ -374,6 +446,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "غصہ آنے کے وقت کی دعا",
       titleEn: "When Experiencing Anger",
       icon: "fa-face-angry",
+      topic: "Calming Anger",
+      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop&q=80",
       arabic: "أَعُوْذُ بِاللّٰهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ",
       urdu: "میں شیطان مردود سے اللہ کی پناہ مانگتا ہوں۔",
       reference: "صحیح بخاری: 6115"
@@ -384,6 +458,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "مشکل اور کٹھن کام آسان ہونے کی دعا",
       titleEn: "Dua for Overcoming Difficulties",
       icon: "fa-mountain",
+      topic: "Overcoming Hardship",
+      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا",
       urdu: "اے اللہ! کوئی چیز آسان نہیں مگر جسے تو آسان بنا دے، اور تو جب چاہے مشکل اور غم کو آسان بنا دیتا ہے۔",
       reference: "صحیح ابن حبان: 974"
@@ -394,6 +470,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "حضرت ایوب علیہ السلام کی دعا برائے شفاء",
       titleEn: "Dua of Prophet Ayyub for Health",
       icon: "fa-user-nurse",
+      topic: "Patience & Healing",
+      image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=600&auto=format&fit=crop&q=80",
       arabic: "أَنِّيْ مَسَّنِيَ الضُّرُّ وَأَنْتَ أَرْحَمُ الرَّاحِمِيْنَ",
       urdu: "بے شک مجھے بیماری و تکلیف لاحق ہو گئی ہے اور تو سب رحم کرنے والوں سے بڑھ کر رحم فرمانے والا ہے۔",
       reference: "سورۃ الانبیاء: 83"
@@ -404,18 +482,22 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "مصیبت کے وقت صبر کی دعا",
       titleEn: "When Struck by Calamity / Loss",
       icon: "fa-person-falling",
+      topic: "Sabr & Inna Lillahi",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80",
       arabic: "إِنَّا لِلّٰهِ وَإِنَّا إِلَيْهِ رَاجِعُوْنَ ، اَللّٰهُمَّ أْجُرْنِيْ فِيْ مُصِيْبَتِيْ وَأَخْلِفْ لِيْ خَيْرًا مِنْهَا",
       urdu: "بے شک ہم اللہ ہی کے ہیں اور اسی کی طرف لوٹ کر جانے والے ہیں۔ اے اللہ! مجھے میری اس مصیبت پر اجر عطا فرما اور مجھے اس سے بہتر نعم البدل عطا فرما۔",
       reference: "صحیح مسلم: 918"
     },
 
-    // 41-60: QURANIC RABBANA DUAS (قرآنی ربّنا دعائیں)
+    // 41-50: QURANIC RABBANA DUAS (قرآنی ربّنا دعائیں)
     {
       id: 41,
       category: "quranic",
       titleUrdu: "دنیا و آخرت کی بھلائی کی جامع دعا",
       titleEn: "Goodness in This World & the Hereafter",
       icon: "fa-book-quran",
+      topic: "Hasanah in Both Worlds",
+      image: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَّفِي الْآخِرَةِ حَسَنَةً وَّقِنَا عَذَابَ النَّارِ",
       urdu: "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی عطا فرما اور آخرت میں بھی بھلائی عطا فرما اور ہمیں آگ کے عذاب سے بچا۔",
       reference: "سورۃ البقرۃ: 201"
@@ -426,6 +508,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "ایمان پر ثابت قدمی کی دعا",
       titleEn: "Steadfastness in Faith",
       icon: "fa-hand-point-up",
+      topic: "Steadfast Heart",
+      image: "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبَّنَا لَا تُزِغْ قُلُوْبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِنْ لَّدُنْكَ رَحْمَةً ۚ إِنَّكَ أَنْتَ الْوَهَّابُ",
       urdu: "اے ہمارے رب! ہمارے دلوں کو ٹیڑھا نہ ہونے دے بعد اس کے کہ تو نے ہمیں ہدایت عطا فرمائی، اور ہمیں اپنے پاس سے رحمت عطا فرما، بے شک تو ہی سب سے بڑا عطا فرمانے والا ہے۔",
       reference: "سورۃ آل عمران: 8"
@@ -436,6 +520,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "والدین کے لیے رحمت کی دعا",
       titleEn: "Dua for Parents (Mercy & Forgiveness)",
       icon: "fa-hands-holding-child",
+      topic: "Parents & Family Mercy",
+      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرًا",
       urdu: "اے میرے رب! ان دونوں پر رحم فرما جس طرح انہوں نے بچپن میں مجھے پالا۔",
       reference: "سورۃ الاسراء: 24"
@@ -446,6 +532,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "نیک اولاد اور آنکھوں کی ٹھنڈک کی دعا",
       titleEn: "Righteous Family & Children",
       icon: "fa-children",
+      topic: "Righteous Progeny",
+      image: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَّاجْعَلْنَا لِلْمُتَّقِيْنَ إِمَامًا",
       urdu: "اے ہمارے رب! ہمیں ہماری بیویوں اور ہماری اولاد کی طرف سے آنکھوں کی ٹھنڈک عطا فرما اور ہمیں پرہیزگاروں کا پیشوا بنا۔",
       reference: "سورۃ الفرقان: 74"
@@ -456,6 +544,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "حضرت ابراہیم علیہ السلام کی نماز قائم کرنے کی دعا",
       titleEn: "Dua of Prophet Ibrahim for Salah",
       icon: "fa-person-praying",
+      topic: "Establishing Prayer",
+      image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبِّ اجْعَلْنِيْ مُقِيْمَ الصَّلَاةِ وَمِنْ ذُرِّيَّتِيْ ۚ رَبَّنَا وَتَقَبَّلْ دُعَاءِ",
       urdu: "اے میرے رب! مجھے نماز قائم کرنے والا بنا اور میری اولاد میں سے بھی، اے ہمارے رب! اور میری دعا قبول فرما۔",
       reference: "سورۃ ابراہیم: 40"
@@ -466,6 +556,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "یومِ حساب بخشش کی دعا",
       titleEn: "Forgiveness on the Day of Reckoning",
       icon: "fa-scale-balanced",
+      topic: "Day of Judgement Forgiveness",
+      image: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبَّنَا اغْفِرْ لِيْ وَلِوَالِدَيَّ وَلِلْمُؤْمِنِيْنَ يَوْمَ يَقُوْمُ الْحِسَابُ",
       urdu: "اے ہمارے رب! مجھے، میرے والدین کو اور تمام مومنوں کو اس دن بخش دے جس دن حساب قائم ہوگا۔",
       reference: "سورۃ ابراہیم: 41"
@@ -476,6 +568,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "علم میں وسعت و اضافے کی قرآنی دعا",
       titleEn: "Increase in Beneficial Knowledge",
       icon: "fa-graduation-cap",
+      topic: "Beneficial Knowledge",
+      image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبِّ زِدْنِيْ عِلْمًا",
       urdu: "اے میرے رب! میرے علم میں اضافہ فرما۔",
       reference: "سورۃ طہٰ: 114"
@@ -486,6 +580,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "حضرت موسیٰ علیہ السلام کی سینہ کشادہ ہونے کی دعا",
       titleEn: "Dua of Prophet Musa for Confidence & Clarity",
       icon: "fa-comment-dots",
+      topic: "Eloquence & Ease of Task",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبِّ اشْرَحْ لِيْ صَدْرِيْ ۙ وَيَسِّرْ لِيْ أَمْرِيْ ۙ وَاحْلُلْ عُقْدَةً مِّنْ لِّسَانِيْ ۙ يَفْقَهُوْا قَوْلِيْ",
       urdu: "اے میرے رب! میرے لیے میرا سینہ کھول دے، اور میرے لیے میرا کام آسان فرما دے، اور میری زبان کی گرہ کھول دے تاکہ وہ میری بات سمجھ سکیں۔",
       reference: "سورۃ طہٰ: 25-28"
@@ -496,6 +592,8 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "جہنم کے عذاب سے پناہ کی دعا",
       titleEn: "Protection from Hellfire",
       icon: "fa-fire",
+      topic: "Salvation from Fire",
+      image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبَّنَا اصْرِفْ عَنَّا عَذَابَ جَهَنَّمَ ۖ إِنَّ عَذَابَهَا كَانَ غَرَامًا",
       urdu: "اے ہمارے رب! ہم سے جہنم کا عذاب دور فرما، بے شک اس کا عذاب چمٹ جانے والا ہے۔",
       reference: "سورۃ الفرقان: 65"
@@ -506,223 +604,46 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "مغفرت و توبہ کی قرآنی دعا (حضرت آدمؑ و حواؑ)",
       titleEn: "Dua of Adam & Hawwa for Forgiveness",
       icon: "fa-hands-praying",
+      topic: "Tawbah of Prophet Adam",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80",
       arabic: "رَبَّنَا ظَلَمْنَا أَنْفُسَنَا وَإِنْ لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُوْنَنَّ مِنَ الْخَاسِرِيْنَ",
       urdu: "اے ہمارے رب! ہم نے اپنی جانوں پر ظلم کیا اور اگر تو نے ہمیں نہ بخشا اور ہم پر رحم نہ فرمایا تو ہم یقیناً نقصان پانے والوں میں سے ہو جائیں گے۔",
       reference: "سورۃ الاعراف: 23"
     },
-
-    // 51-70: PRAYER, FASTING & ISLAMIC OCCASIONS (نماز، توبہ، روزہ، چاند، بارش)
     {
       id: 51,
-      category: "masjid",
-      titleUrdu: "نماز کا مسنون دعائے ثناء",
-      titleEn: "Opening Supplication in Salah (Thana)",
-      icon: "fa-kaaba",
-      arabic: "سُبْحَانَكَ اللّٰهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ وَلَا إِلٰهَ غَيْرُكَ",
-      urdu: "اے اللہ! تو پاک ہے اپنی تعریف کے ساتھ، تیرا نام بابرکت ہے، تیری شان بلند ہے اور تیرے سوا کوئی معبود نہیں۔",
-      reference: "سنن ابو داؤد: 775، سنن ترمذی: 242"
-    },
-    {
-      id: 52,
-      category: "masjid",
-      titleUrdu: "نماز میں رکوع کی تسبیح",
-      titleEn: "Tasbih in Ruku (Bowing)",
-      icon: "fa-person-praying",
-      arabic: "سُبْحَانَ رَبِّيَ الْعَظِيْمِ",
-      urdu: "پاک ہے میرا رب عظمت والا۔ (3 بار)",
-      reference: "صحیح مسلم: 772"
-    },
-    {
-      id: 53,
-      category: "masjid",
-      titleUrdu: "رکوع سے اٹھنے کی دعا (تسمیع و تحمید)",
-      titleEn: "Rising from Ruku",
-      icon: "fa-person",
-      arabic: "سَمِعَ اللّٰهُ لِمَنْ حَمِدَهُ ، رَبَّنَا وَلَكَ الْحَمْدُ حَمْدًا كَثِيْرًا طَيِّبًا مُّبَارَكًا فِيْهِ",
-      urdu: "اللہ نے اس کی سن لی جس نے اس کی تعریف کی، اے ہمارے رب! تیرے ہی لیے تمام تعریفیں ہیں، بہت زیادہ، پاکیزہ اور برکت والی تعریفیں۔",
-      reference: "صحیح بخاری: 799"
-    },
-    {
-      id: 54,
-      category: "masjid",
-      titleUrdu: "سجدہ کی تسبیح",
-      titleEn: "Tasbih in Sujood (Prostration)",
-      icon: "fa-person-praying",
-      arabic: "سُبْحَانَ رَبِّيَ الْأَعْلَى",
-      urdu: "پاک ہے میرا رب سب سے بلند و بالا۔ (3 بار)",
-      reference: "صحیح مسلم: 772"
-    },
-    {
-      id: 55,
-      category: "masjid",
-      titleUrdu: "دونوں سجدوں کے درمیانی جلسہ کی دعا",
-      titleEn: "Sitting Between Two Prostrations",
-      icon: "fa-hands-praying",
-      arabic: "رَبِّ اغْفِرْ لِيْ ، رَبِّ اغْفِرْ لِيْ ، وَارْحَمْنِيْ وَاجْبُرْنِيْ وَارْزُقْنِيْ وَعَافِنِيْ",
-      urdu: "اے میرے رب! مجھے بخش دے، اے میرے رب! مجھے بخش دے، مجھ پر رحم فرما، میری کمی پوری فرما، مجھے رزق عطا فرما اور مجھے عافیت بخش۔",
-      reference: "سنن ابو داؤد: 874، سنن ابن ماجہ: 898"
-    },
-    {
-      id: 56,
-      category: "masjid",
-      titleUrdu: "درودِ ابراہیمی (نماز میں تلاوت)",
-      titleEn: "Durood-e-Ibrahimi (Salutations on the Prophet ﷺ)",
-      icon: "fa-star-and-crescent",
-      arabic: "اَللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَّعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيْمَ وَعَلَى آلِ إِبْرَاهِيْمَ إِنَّكَ حَمِيْدٌ مَّجِيْدٌ ، اَللّٰهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَّعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيْمَ وَعَلَى آلِ إِبْرَاهِيْمَ إِنَّكَ حَمِيْدٌ مَّجِيْدٌ",
-      urdu: "اے اللہ! رحمت نازل فرما محمد ﷺ پر اور ان کی آل پر جیسا کہ تو نے رحمت نازل فرمائی ابراہیم علیہ السلام پر اور ان کی آل پر، بے شک تو قابل تعریف اور بزرگی والا ہے۔ اے اللہ! برکت نازل فرما محمد ﷺ پر اور ان کی آل پر جیسا کہ تو نے برکت نازل فرمائی ابراہیم علیہ السلام پر اور ان کی آل پر، بے شک تو تعریف کیا گیا اور عظمت والا ہے۔",
-      reference: "صحیح بخاری: 3370"
-    },
-    {
-      id: 57,
-      category: "masjid",
-      titleUrdu: "سلام پھیرنے کے بعد کا استغفار",
-      titleEn: "Istighfar Immediately After Salam",
-      icon: "fa-hand-holding-heart",
-      arabic: "أَسْتَغْفِرُ اللّٰهَ ، أَسْتَغْفِرُ اللّٰهَ ، أَسْتَغْفِرُ اللّٰهَ ، اَللّٰهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",
-      urdu: "میں اللہ سے بخشش مانگتا ہوں (3 بار)، اے اللہ! تو ہی سلامتی والا ہے اور تجھی سے سلامتی ہے، تو بابرکت ہے اے جلال اور عزت والے۔",
-      reference: "صحیح مسلم: 591"
-    },
-    {
-      id: 58,
-      category: "masjid",
-      titleUrdu: "دعائے قنوت (نمازِ وتر)",
-      titleEn: "Dua-e-Qunoot (Witr Prayer)",
-      icon: "fa-hands-praying",
-      arabic: "اَللّٰهُمَّ إِنَّا نَسْتَعِيْنُكَ وَنَسْتَغْفِرُكَ وَنُؤْمِنُ بِكَ وَنَتَوَكَّلُ عَلَيْكَ وَنُثْنِيْ عَلَيْكَ الْخَيْرَ ، وَنَشْكُرُكَ وَلَا نَكْفُرُكَ ، وَنَخْلَعُ وَنَتْرُكُ مَنْ يَّفْجُرُكَ ، اَللّٰهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّيْ وَنَسْجُدُ ، وَإِلَيْكَ نَسْعٰى وَنَحْفِدُ ، وَنَرْجُوْ رَحْمَتَكَ وَنَخْشٰى عَذَابَكَ ، إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ",
-      urdu: "اے اللہ! ہم تجھ ہی سے مدد چاہتے ہیں اور تجھ ہی سے معافی مانگتے ہیں اور تجھ پر ایمان لاتے ہیں اور تجھ پر بھروسا کرتے ہیں اور تیری بہترین تعریف کرتے ہیں اور تیرا شکر ادا کرتے ہیں اور تیری ناشکری نہیں کرتے اور ہم الگ کرتے ہیں اور چھوڑتے ہیں اس شخص کو جو تیری نافرمانی کرے۔ اے اللہ! ہم تیری ہی عبادت کرتے ہیں اور تیرے ہی لیے نماز پڑھتے اور سجدہ کرتے ہیں اور تیری ہی طرف دوڑتے اور حاضر ہوتے ہیں اور ہم تیری رحمت کے امیدوار ہیں اور تیرے عذاب سے ڈرتے ہیں، بے شک تیرا عذاب کافروں کو پہنچنے والا ہے۔",
-      reference: "مصنف ابن ابی شیبہ: 6965"
-    },
-    {
-      id: 59,
-      category: "daily",
-      titleUrdu: "روزہ افطار کرنے کی دعا",
-      titleEn: "Dua for Breaking Fast (Iftar)",
-      icon: "fa-glass-water",
-      arabic: "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوْقُ وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللّٰهُ",
-      urdu: "پیاس چلی گئی، رگیں تر ہو گئیں اور اللہ نے چاہا تو ثواب پکا ہو گیا۔",
-      reference: "سنن ابو داؤد: 2357"
-    },
-    {
-      id: 60,
-      category: "daily",
-      titleUrdu: "نیا چاند دیکھنے کی دعا",
-      titleEn: "Sighting the New Crescent Moon",
-      icon: "fa-moon",
-      arabic: "اَللّٰهُمَّ أَهِلَّهُ عَلَيْنَا بِالْيُمْنِ وَالْإِيْمَانِ وَالسَّلَامَةِ وَالْإِسْلَامِ ، رَبِّيْ وَرَبُّكَ اللّٰهُ",
-      urdu: "اے اللہ! اس چاند کو ہم پر برکت، ایمان، سلامتی اور اسلام کے ساتھ طلوع فرما۔ (اے چاند!) میرا اور تیرا رب اللہ ہے۔",
-      reference: "سنن ترمذی: 3451"
-    },
-
-    // 61-80: SOCIAL MANNERS & OCCASIONS (معاشرت، سلام، چھینک، بارش، استخارہ)
-    {
-      id: 61,
-      category: "daily",
-      titleUrdu: "اسلامی سلام و جواب",
-      titleEn: "Islamic Greeting & Reply",
-      icon: "fa-handshake",
-      arabic: "اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ — وَعَلَيْكُمُ السَّلَامُ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ",
-      urdu: "تم پر سلامتی ہو اور اللہ کی رحمت اور اس کی برکتیں نازل ہوں۔ — اور تم پر بھی سلامتی ہو اور اللہ کی رحمت اور اس کی برکتیں نازل ہوں۔",
-      reference: "سنن ابو داؤد: 5195"
-    },
-    {
-      id: 62,
-      category: "daily",
-      titleUrdu: "چھینک آنے پر اور جواب کی دعا",
-      titleEn: "When Sneezing & Responding",
-      icon: "fa-head-side-cough",
-      arabic: "اَلْحَمْدُ لِلّٰهِ (چھینکنے والا کہے) — يَرْحَمُكَ اللّٰهُ (سننے والا کہے) — يَهْدِيْكُمُ اللّٰهُ وَيُصْلِحُ بَالَكُمْ (چھینکنے والا جواب دے)",
-      urdu: "تمام تعریفیں اللہ کے لیے ہیں۔ — اللہ تم پر رحم فرمائے۔ — اللہ تمہیں ہدایت دے اور تمہارے حالات سنوار دے۔",
-      reference: "صحیح بخاری: 6224"
-    },
-    {
-      id: 63,
-      category: "daily",
-      titleUrdu: "کسی کے احسان کے بدلے شکریہ کی دعا",
-      titleEn: "Thanking Someone (Jazakallahu Khair)",
-      icon: "fa-gift",
-      arabic: "جَزَاكَ اللّٰهُ خَيْرًا",
-      urdu: "اللہ تعالیٰ آپ کو بہترین بدلہ عطا فرمائے۔",
-      reference: "سنن ترمذی: 2035"
-    },
-    {
-      id: 64,
-      category: "daily",
-      titleUrdu: "مجلس سے اٹھتے وقت کا کفارہ",
-      titleEn: "Expiation of a Gathering / Meeting",
-      icon: "fa-users-line",
-      arabic: "سُبْحَانَكَ اللّٰهُمَّ وَبِحَمْدِكَ ، أَشْهَدُ أَنْ لَّا إِلٰهَ إِلَّا أَنْتَ ، أَسْتَغْفِرُكَ وَأَتُوْبُ إِلَيْكَ",
-      urdu: "اے اللہ! تو پاک ہے اپنی تعریف کے ساتھ، میں گواہی دیتا ہوں کہ تیرے سوا کوئی معبود نہیں، میں تجھ سے بخشش مانگتا ہوں اور تیری طرف توبہ کرتا ہوں۔",
-      reference: "سنن ترمذی: 3433"
-    },
-    {
-      id: 65,
       category: "daily",
       titleUrdu: "بارش برستے وقت کی دعا",
-      titleEn: "When it Rains (Beneficial Rain)",
+      titleEn: "When it Rains",
       icon: "fa-cloud-showers-heavy",
+      topic: "Beneficial Rain",
+      image: "https://images.unsplash.com/photo-1519692933481-e162a57d6721?w=600&auto=format&fit=crop&q=80",
       arabic: "اَللّٰهُمَّ صَيِّبًا نَّافِعًا",
       urdu: "اے اللہ! اس بارش کو خوب نفع بخش اور موسلادھار بنا دے۔",
       reference: "صحیح بخاری: 1032"
     },
     {
-      id: 66,
+      id: 52,
       category: "daily",
-      titleUrdu: "بادل گرجنے کی آواز سنتے وقت کی دعا",
-      titleEn: "Hearing Thunder",
-      icon: "fa-bolt",
-      arabic: "سُبْحَانَ الَّذِيْ يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيْفَتِهِ",
-      urdu: "پاک ہے وہ ذات جس کی تسبیح گرج اس کی حمد کے ساتھ اور فرشتے اس کے خوف و ہیبت سے بیان کرتے ہیں۔",
-      reference: "مؤطا امام مالک: 1801"
-    },
-    {
-      id: 67,
-      category: "daily",
-      titleUrdu: "آندھی اور تیز ہوا کے وقت کی دعا",
-      titleEn: "During Strong Winds / Storm",
-      icon: "fa-wind",
-      arabic: "اَللّٰهُمَّ إِنِّيْ أَسْأَلُكَ خَيْرَهَا وَخَيْرَ مَا فِيْهَا وَخَيْرَ مَا أُرْسِلَتْ بِهِ ، وَأَعُوْذُ بِكَ مِنْ شَرِّهَا وَشَرِّ مَا فِيْهَا وَشَرِّ مَا أُرْسِلَتْ بِهِ",
-      urdu: "اے اللہ! میں تجھ سے اس ہوا کی بھلائی، اس چیز کی بھلائی جو اس میں ہے اور اس مقصد کی بھلائی مانگتا ہوں جس کے لیے یہ بھیجی گئی ہے، اور میں اس کے شر، اس چیز کے شر جو اس میں ہے اور اس مقصد کے شر سے تیری پناہ چاہتا ہوں جس کے لیے یہ بھیجی گئی ہے۔",
-      reference: "صحیح مسلم: 899"
-    },
-    {
-      id: 68,
-      category: "relief",
-      titleUrdu: "دعائے استخارہ (رہنمائی اور فیصلے کی دعا)",
-      titleEn: "Dua al-Istikharah (Seeking Guidance in Decisions)",
-      icon: "fa-compass",
-      arabic: "اَللّٰهُمَّ إِنِّيْ أَسْتَخِيْرُكَ بِعِلْمِكَ وَأَسْتَقْدِرُكَ بِقُدْرَتِكَ وَأَسْأَلُكَ مِنْ فَضْلِكَ الْعَظِيْمِ ، فَإِنَّكَ تَقْدِرُ وَلَا أَقْدِرُ وَتَعْلَمُ وَلَا أَعْلَمُ وَأَنْتَ عَلَّامُ الْغُيُوْبِ",
-      urdu: "اے اللہ! میں تیرے علم کی برکت سے خیر طلب کرتا ہوں اور تیری قدرت کے ذریعے تجھ سے طاقت مانگتا ہوں اور تیرے عظیم فضل کا سوال کرتا ہوں، کیونکہ تو قادر ہے اور میں بے بس ہوں، تو جانتا ہے اور میں نہیں جانتا اور تو تمام پوشیدہ باتوں کو خوب جاننے والا ہے۔",
-      reference: "صحیح بخاری: 1162"
-    },
-    {
-      id: 69,
-      category: "daily",
-      titleUrdu: "بازار میں داخل ہونے کی دعا",
-      titleEn: "Entering the Market / Shopping Mall",
-      icon: "fa-cart-shopping",
-      arabic: "لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيْكَ لَهُ ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِيْ وَيُمِيْتُ وَهُوَ حَيٌّ لَّا يَمُوْتُ ، بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ",
-      urdu: "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے اس کا کوئی شریک نہیں، اسی کی بادشاہی ہے اور اسی کے لیے تعریف ہے، وہی زندہ کرتا اور مارتا ہے اور وہ خود ہمیشہ زندہ ہے اسے موت نہیں، تمام بھلائی اسی کے ہاتھ میں ہے اور وہ ہر چیز پر پوری قدرت رکھنے والا ہے۔ (دس لاکھ نیکیاں لکھی جاتی ہیں)",
-      reference: "سنن ترمذی: 3428"
-    },
-    {
-      id: 70,
-      category: "protection",
-      titleUrdu: "کسی مصیبت زدہ کو دیکھ کر پڑھنے کی دعا",
-      titleEn: "Seeing Someone in Affliction / Disease",
-      icon: "fa-eye",
-      arabic: "اَلْحَمْدُ لِلّٰهِ الَّذِيْ عَافَانِيْ مِمَّا ابْتَلَاكَ بِهِ وَفَضَّلَنِيْ عَلَى كَثِيْرٍ مِّمَّنْ خَلَقَ تَفْضِيْلًا",
-      urdu: "تمام تعریفیں اللہ کے لیے ہیں جس نے مجھے اس مصیبت سے محفوظ رکھا جس میں تجھے مبتلا کیا اور اپنی بہت سی مخلوقات پر مجھے فضیلت عطا فرمائی۔ (پڑھنے والا اس مصیبت سے محفوظ رہتا ہے)",
-      reference: "سنن ترمذی: 3432"
+      titleUrdu: "روزہ افطار کرنے کی دعا",
+      titleEn: "Dua for Breaking Fast (Iftar)",
+      icon: "fa-glass-water",
+      topic: "Iftar & Fasting",
+      image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=600&auto=format&fit=crop&q=80",
+      arabic: "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوْقُ وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللّٰهُ",
+      urdu: "پیاس چلی گئی، رگیں تر ہو گئیں اور اللہ نے چاہا تو ثواب پکا ہو گیا۔",
+      reference: "سنن ابو داؤد: 2357"
     }
   ],
 
-  // 40 AUTHENTIC AHADITH OF PROPHET MUHAMMAD ﷺ
+  // 40 AUTHENTIC AHADITH OF PROPHET MUHAMMAD ﷺ WITH TOPIC IMAGES
   hadiths: [
     {
       id: 1,
       titleUrdu: "اعمال کا دارومدار نیتوں پر ہے",
       titleEn: "Actions are by Intentions",
       topic: "Niyyah (Intention)",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80",
       arabic: "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَّا نَوَى",
       urdu: "اعمال کا دارومدار نیتوں پر ہے اور ہر انسان کے لیے وہی ہے جس کی اس نے نیت کی۔",
       reference: "صحیح بخاری: 1 ، صحیح مسلم: 1907"
@@ -731,7 +652,8 @@ window.ISLAMIC_LIBRARY = {
       id: 2,
       titleUrdu: "تم میں سب سے بہتر وہ ہے جو قرآن سیکھے اور سکھائے",
       titleEn: "The Best is One Who Learns & Teaches Quran",
-      topic: "Quran Excellence",
+      topic: "Quran Learning",
+      image: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600&auto=format&fit=crop&q=80",
       arabic: "خَيْرُكُمْ مَّنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
       urdu: "تم میں سے سب سے بہتر وہ شخص ہے جس نے قرآن مجید سیکھا اور دوسروں کو سکھایا۔",
       reference: "صحیح بخاری: 5027"
@@ -740,7 +662,8 @@ window.ISLAMIC_LIBRARY = {
       id: 3,
       titleUrdu: "دین خیر خواہی کا نام ہے",
       titleEn: "Religion is Sincerity",
-      topic: "Sincerity (Naseehah)",
+      topic: "Sincerity & Care",
+      image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&auto=format&fit=crop&q=80",
       arabic: "الدِّيْنُ النَّصِيْحَةُ",
       urdu: "دین سراسر خیر خواہی اور اخلاص کا نام ہے۔",
       reference: "صحیح مسلم: 55"
@@ -749,7 +672,8 @@ window.ISLAMIC_LIBRARY = {
       id: 4,
       titleUrdu: "مسلمان وہ ہے جس کی زبان اور ہاتھ سے دوسرے مسلمان محفوظ رہیں",
       titleEn: "True Muslim Spares Others from Harm",
-      topic: "Peace & Character",
+      topic: "Peace & Safety",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&auto=format&fit=crop&q=80",
       arabic: "الْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُوْنَ مِنْ لِّسَانِهِ وَيَدِهِ",
       urdu: "سچا مسلمان وہ ہے جس کی زبان اور ہاتھ کے شر سے دوسرے مسلمان محفوظ رہیں۔",
       reference: "صحیح بخاری: 10 ، صحیح مسلم: 40"
@@ -758,7 +682,8 @@ window.ISLAMIC_LIBRARY = {
       id: 5,
       titleUrdu: "صفائی اور پاکیزگی آدھا ایمان ہے",
       titleEn: "Purity is Half of Faith",
-      topic: "Purity (Taharah)",
+      topic: "Taharah (Purity)",
+      image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&auto=format&fit=crop&q=80",
       arabic: "الطُّهُوْرُ شَطْرُ الْإِيْمَانِ",
       urdu: "پاکیزگی اور صفائی نصف (آدھا) ایمان ہے۔",
       reference: "صحیح مسلم: 223"
@@ -768,6 +693,7 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "نماز دین کا ستون ہے",
       titleEn: "Prayer is the Pillar of Religion",
       topic: "Salah (Prayer)",
+      image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&auto=format&fit=crop&q=80",
       arabic: "الصَّلَاةُ عِمَادُ الدِّيْنِ",
       urdu: "نماز دین کا ستون ہے، جس نے اسے قائم کیا اس نے دین کو قائم رکھا۔",
       reference: "شعب الایمان للبیہقی: 2550"
@@ -777,6 +703,7 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "سچائی نجات دیتی ہے اور جھوٹ ہلاک کرتا ہے",
       titleEn: "Truthfulness Leads to Righteousness",
       topic: "Truthfulness",
+      image: "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=600&auto=format&fit=crop&q=80",
       arabic: "عَلَيْكُمْ بِالصِّدْقِ فَإِنَّ الصِّدْقَ يَهْدِيْ إِلَى الْبِرِّ",
       urdu: "سچائی کو لازم پکڑو کیونکہ سچائی نیکی کی راہ دکھاتی ہے اور نیکی جنت کی طرف لے جاتی ہے۔",
       reference: "صحیح بخاری: 6094 ، صحیح مسلم: 2607"
@@ -785,7 +712,8 @@ window.ISLAMIC_LIBRARY = {
       id: 8,
       titleUrdu: "کوئی شخص اس وقت تک کامل مومن نہیں ہو سکتا جب تک اپنے بھائی کے لیے وہی پسند نہ کرے جو اپنے لیے کرتا ہے",
       titleEn: "Love for Your Brother What You Love for Yourself",
-      topic: "Brotherhood",
+      topic: "Islamic Brotherhood",
+      image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&auto=format&fit=crop&q=80",
       arabic: "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيْهِ مَا يُحِبُّ لِنَفْسِهِ",
       urdu: "تم میں سے کوئی شخص اس وقت تک کامل مومن نہیں ہو سکتا جب تک وہ اپنے مسلمان بھائی کے لیے بھی وہی پسند نہ کرے جو اپنے لیے پسند کرتا ہے۔",
       reference: "صحیح بخاری: 13 ، صحیح مسلم: 45"
@@ -794,7 +722,8 @@ window.ISLAMIC_LIBRARY = {
       id: 9,
       titleUrdu: "علم حاصل کرنا ہر مسلمان پر فرض ہے",
       titleEn: "Seeking Knowledge is an Obligation",
-      topic: "Seeking Knowledge",
+      topic: "Education & Knowledge",
+      image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&auto=format&fit=crop&q=80",
       arabic: "طَلَبُ الْعِلْمِ فَرِيْضَةٌ عَلَى كُلِّ مُسْلِمٍ",
       urdu: "علم حاصل کرنا ہر مسلمان پر فرض ہے۔",
       reference: "سنن ابن ماجہ: 224"
@@ -803,7 +732,8 @@ window.ISLAMIC_LIBRARY = {
       id: 10,
       titleUrdu: "مسکرا کر ملنا بھی صدقہ ہے",
       titleEn: "Smiling at Your Brother is Charity",
-      topic: "Good Manners",
+      topic: "Smile & Kindness",
+      image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=600&auto=format&fit=crop&q=80",
       arabic: "تَبَسُّمُكَ فِيْ وَجْهِ أَخِيْكَ لَكَ صَدَقَةٌ",
       urdu: "اپنے بھائی کے سامنے تمہارا مسکرا دینا بھی تمہارے لیے صدقہ ہے۔",
       reference: "سنن ترمذی: 1956"
@@ -812,7 +742,8 @@ window.ISLAMIC_LIBRARY = {
       id: 11,
       titleUrdu: "پہلوان وہ نہیں جو پچھاڑ دے، بلکہ وہ ہے جو غصے کے وقت خود پر قابو رکھے",
       titleEn: "True Strength is Self-Control in Anger",
-      topic: "Controlling Anger",
+      topic: "Patience in Anger",
+      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop&q=80",
       arabic: "لَيْسَ الشَّدِيْدُ بِالصُّرَعَةِ ، إِنَّمَا الشَّدِيْدُ الَّذِيْ يَمْلِكُ نَفْسَهُ عِنْدَ الْغَضَبِ",
       urdu: "طاقتور وہ نہیں جو کشتی میں پچھاڑ دے، بلکہ اصل طاقتور وہ ہے جو غصے کے وقت اپنے نفس پر قابو رکھے۔",
       reference: "صحیح بخاری: 6114 ، صحیح مسلم: 2609"
@@ -821,7 +752,8 @@ window.ISLAMIC_LIBRARY = {
       id: 12,
       titleUrdu: "جنت ماؤں کے قدموں تلے ہے",
       titleEn: "Paradise is Beneath the Feet of Mothers",
-      topic: "Parents Rights",
+      topic: "Honoring Mother",
+      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&auto=format&fit=crop&q=80",
       arabic: "الْجَنَّةُ تَحْتَ أَقْدَامِ الْأُمَّهَاتِ",
       urdu: "جنت ماؤں کے قدموں کے نیچے ہے۔ (ماں کی خدمت جنت کی ضامن ہے)",
       reference: "سنن النسائی: 3104 ، مسند احمد: 15538"
@@ -830,7 +762,8 @@ window.ISLAMIC_LIBRARY = {
       id: 13,
       titleUrdu: "جو چھوٹوں پر رحم نہ کرے اور بڑوں کی عزت نہ کرے وہ ہم میں سے نہیں",
       titleEn: "Mercy to the Young & Respect to the Elders",
-      topic: "Respect & Compassion",
+      topic: "Respect & Mercy",
+      image: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=600&auto=format&fit=crop&q=80",
       arabic: "لَيْسَ مِنَّا مَنْ لَّمْ يَرْحَمْ صَغِيْرَنَا وَيَعْرِفْ شَرَفَ كَبِيْرَنَا",
       urdu: "وہ شخص ہم میں سے نہیں جو ہمارے چھوٹوں پر رحم نہ کرے اور ہمارے بڑوں کے شرف و مرتبے کو نہ پہچانے۔",
       reference: "سنن ترمذی: 1919 ، سنن ابو داؤد: 4943"
@@ -839,7 +772,8 @@ window.ISLAMIC_LIBRARY = {
       id: 14,
       titleUrdu: "رحم کرنے والوں پر رحمان رحم فرماتا ہے",
       titleEn: "The Merciful will be Shown Mercy by Allah",
-      topic: "Mercy (Rahmah)",
+      topic: "Mercy to Creation",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&auto=format&fit=crop&q=80",
       arabic: "الرَّاحِمُوْنَ يَرْحَمُهُمُ الرَّحْمٰنُ ، ارْحَمُوْا مَنْ فِي الْأَرْضِ يَرْحَمْكُمْ مَّنْ فِي السَّمَاءِ",
       urdu: "رحم کرنے والوں پر خدائے رحمان رحم فرماتا ہے، تم زمین والوں پر رحم کرو، آسمان والا تم پر رحم فرمائے گا۔",
       reference: "سنن ترمذی: 1924 ، سنن ابو داؤد: 4941"
@@ -848,7 +782,8 @@ window.ISLAMIC_LIBRARY = {
       id: 15,
       titleUrdu: "جو اللہ اور آخرت پر ایمان رکھتا ہے وہ اچھی بات کہے یا خاموش رہے",
       titleEn: "Speak Good or Remain Silent",
-      topic: "Guard the Tongue",
+      topic: "Guarding the Tongue",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80",
       arabic: "مَنْ كَانَ يُؤْمِنُ بِاللّٰهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ",
       urdu: "جو شخص اللہ اور یومِ آخرت پر ایمان رکھتا ہو اسے چاہیے کہ وہ بھلی بات کہے یا پھر خاموش رہے۔",
       reference: "صحیح بخاری: 6018 ، صحیح مسلم: 47"
@@ -857,7 +792,8 @@ window.ISLAMIC_LIBRARY = {
       id: 16,
       titleUrdu: "رشتہ داری کاٹنے والا جنت میں داخل نہیں ہوگا",
       titleEn: "Severing Ties of Kinship",
-      topic: "Family Ties",
+      topic: "Maintaining Family Ties",
+      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&auto=format&fit=crop&q=80",
       arabic: "لَا يَدْخُلُ الْجَنَّةَ قَاطِعُ رَحِمٍ",
       urdu: "رشتہ داری اور قرابت توڑنے والا جنت میں داخل نہیں ہوگا۔",
       reference: "صحیح بخاری: 5984 ، صحیح مسلم: 2556"
@@ -866,7 +802,8 @@ window.ISLAMIC_LIBRARY = {
       id: 17,
       titleUrdu: "دعا عبادت کا مغز اور اصل روح ہے",
       titleEn: "Dua is the Essence of Worship",
-      topic: "Supplication (Dua)",
+      topic: "Essence of Dua",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80",
       arabic: "الدُّعَاءُ هُوَ الْعِبَادَةُ",
       urdu: "دعا ہی اصل عبادت ہے۔ (اللہ سے مانگنا ہی بندگی کا مغز ہے)",
       reference: "سنن ترمذی: 2969 ، سنن ابو داؤد: 1479"
@@ -875,7 +812,8 @@ window.ISLAMIC_LIBRARY = {
       id: 18,
       titleUrdu: "جس نے ملاوٹ کی وہ ہم میں سے نہیں",
       titleEn: "He Who Cheats is Not of Us",
-      topic: "Honesty in Trade",
+      topic: "Honesty in Dealing",
+      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&auto=format&fit=crop&q=80",
       arabic: "مَنْ غَشَّ فَلَيْسَ مِنَّا",
       urdu: "جس نے دھوکہ دیا یا ملاوٹ کی وہ ہم میں سے نہیں۔",
       reference: "صحیح مسلم: 102"
@@ -885,6 +823,7 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "لوگوں میں سب سے بہتر وہ ہے جو لوگوں کو نفع پہنچائے",
       titleEn: "The Best People are Most Beneficial to Others",
       topic: "Service to Humanity",
+      image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&auto=format&fit=crop&q=80",
       arabic: "خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ",
       urdu: "لوگوں میں سب سے بہترین انسان وہ ہے جو دوسرے انسانوں کو سب سے زیادہ فائدہ پہنچائے۔",
       reference: "المعجم الاوسط للطبرانی: 5787"
@@ -893,7 +832,8 @@ window.ISLAMIC_LIBRARY = {
       id: 20,
       titleUrdu: "حیا ایمان کی ایک اہم ترین شاخ ہے",
       titleEn: "Modesty is Part of Faith",
-      topic: "Modesty (Haya)",
+      topic: "Haya (Modesty)",
+      image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&auto=format&fit=crop&q=80",
       arabic: "الْحَيَاءُ شُعْبَةٌ مِّنَ الْإِيْمَانِ",
       urdu: "حیا و شرم ایمان کی ایک اہم ترین شاخ ہے۔",
       reference: "صحیح بخاری: 9 ، صحیح مسلم: 35"
@@ -902,7 +842,8 @@ window.ISLAMIC_LIBRARY = {
       id: 21,
       titleUrdu: "جھوٹ بولنا منافق کی نشانیوں میں سے ہے",
       titleEn: "Signs of a Hypocrite",
-      topic: "Hypocrisy Warning",
+      topic: "Warning Against Hypocrisy",
+      image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=600&auto=format&fit=crop&q=80",
       arabic: "آيَةُ الْمُنَافِقِ ثَلَاثٌ: إِذَا حَدَّثَ كَذَبَ ، وَإِذَا وَعَدَ أَخْلَفَ ، وَإِذَا اؤْتُمِنَ خَانَ",
       urdu: "منافق کی تین نشانیاں ہیں: جب بات کرے تو جھوٹ بولے، جب وعدہ کرے تو خلاف ورزی کرے، اور جب امانت رکھی جائے تو خیانت کرے۔",
       reference: "صحیح بخاری: 33 ، صحیح مسلم: 59"
@@ -911,7 +852,8 @@ window.ISLAMIC_LIBRARY = {
       id: 22,
       titleUrdu: "صدقہ مال میں کمی نہیں کرتا",
       titleEn: "Charity Does Not Decrease Wealth",
-      topic: "Charity (Sadaqah)",
+      topic: "Charity & Blessings",
+      image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&auto=format&fit=crop&q=80",
       arabic: "مَا نَقَصَتْ صَدَقَةٌ مِّنْ مَّالٍ",
       urdu: "صدقہ دینے سے مال میں کبھی کمی واقع نہیں ہوتی۔",
       reference: "صحیح مسلم: 2588"
@@ -921,6 +863,7 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "پڑوسی کا احترام اور حق",
       titleEn: "Rights of the Neighbor",
       topic: "Neighbor Rights",
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=80",
       arabic: "مَا زَالَ جِبْرِيْلُ يُوْصِيْنِيْ بِالْجَارِ حَتَّى ظَنَنْتُ أَنَّهُ سَيُوَرِّثُهُ",
       urdu: "حضرت جبرائیل علیہ السلام مجھے مسلسل پڑوسی کے حقوق کی وصیت کرتے رہے یہاں تک کہ مجھے گمان ہوا کہ وہ اسے وراثت میں حصہ دار بنا دیں گے۔",
       reference: "صحیح بخاری: 6014 ، صحیح مسلم: 2624"
@@ -929,7 +872,8 @@ window.ISLAMIC_LIBRARY = {
       id: 24,
       titleUrdu: "توبہ کرنے والا ایسا ہے جیسے اس نے کوئی گناہ کیا ہی نہ ہو",
       titleEn: "Repentance Cleanses All Sins",
-      topic: "Tawbah (Repentance)",
+      topic: "Sincere Repentance",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80",
       arabic: "التَّائِبُ مِنَ الذَّنْبِ كَمَنْ لَّا ذَنْبَ لَهُ",
       urdu: "گناہ سے سچی توبہ کرنے والا ایسا ہے گویا اس نے کوئی گناہ کیا ہی نہ تھا۔",
       reference: "سنن ابن ماجہ: 4250"
@@ -938,7 +882,8 @@ window.ISLAMIC_LIBRARY = {
       id: 25,
       titleUrdu: "جس نے مجھ پر ایک بار درود بھیجا اللہ اس پر دس رحمتیں نازل فرماتا ہے",
       titleEn: "Virtue of Sending Salawat on the Prophet ﷺ",
-      topic: "Durood Sharif",
+      topic: "Salawat on Prophet ﷺ",
+      image: "https://images.unsplash.com/photo-1590076215667-875d4ef2d7ee?w=600&auto=format&fit=crop&q=80",
       arabic: "مَنْ صَلَّى عَلَيَّ صَلَاةً وَاحِدَةً صَلَّى اللّٰهُ عَلَيْهِ بِهَا عَشْرًا",
       urdu: "جس نے مجھ پر ایک مرتبہ درود بھیجا، اللہ تعالیٰ اس کے بدلے اس پر دس رحمتیں نازل فرماتا ہے۔",
       reference: "صحیح مسلم: 408"
@@ -947,7 +892,8 @@ window.ISLAMIC_LIBRARY = {
       id: 26,
       titleUrdu: "حسد نیکیوں کو ایسے کھا جاتا ہے جیسے آگ لکڑی کو",
       titleEn: "Jealousy Destroys Good Deeds",
-      topic: "Warning Against Envy",
+      topic: "Danger of Jealousy",
+      image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=600&auto=format&fit=crop&q=80",
       arabic: "إِيَّاكُمْ وَالْحَسَدَ ، فَإِنَّ الْحَسَدَ يَأْكُلُ الْحَسَنَاتِ كَمَا تَأْكُلُ النَّارُ الْحَطَبَ",
       urdu: "حسد و جلن سے بچو، کیونکہ حسد نیکیوں کو اس طرح کھا جاتا ہے جیسے آگ سوکھی لکڑیوں کو کھا جاتی ہے۔",
       reference: "سنن ابو داؤد: 4903"
@@ -956,7 +902,8 @@ window.ISLAMIC_LIBRARY = {
       id: 27,
       titleUrdu: "یتیم کی کفالت کرنے والے کا مقام",
       titleEn: "Care of the Orphan in Jannah",
-      topic: "Orphan Care",
+      topic: "Orphan Support",
+      image: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=600&auto=format&fit=crop&q=80",
       arabic: "أَنَا وَكَافِلُ الْيَتِيْمِ فِي الْجَنَّةِ هٰكَذَا (وَأَشَارَ بِالسَّبَّابَةِ وَالْوُسْطَى)",
       urdu: "میں اور یتیم کی کفالت کرنے والا جنت میں اس طرح ہوں گے، اور آپ ﷺ نے شہادت کی انگلی اور بیچ کی انگلی کے اشارے سے ساتھ ملا کر دکھایا۔",
       reference: "صحیح بخاری: 5304"
@@ -965,7 +912,8 @@ window.ISLAMIC_LIBRARY = {
       id: 28,
       titleUrdu: "مومن ایک سوراخ سے دو بار نہیں ڈسا جاتا",
       titleEn: "The Believer is Vigilant & Wise",
-      topic: "Wisdom & Vigilance",
+      topic: "Wisdom of Believer",
+      image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&auto=format&fit=crop&q=80",
       arabic: "لَا يُلْدَغُ الْمُؤْمِنُ مِنْ جُحْرٍ وَّاحِدٍ مَرَّتَيْنِ",
       urdu: "مومن ایک ہی سوراخ سے دو مرتبہ نہیں ڈسا جاتا (ہوشیار اور دانشمند رہتا ہے)۔",
       reference: "صحیح بخاری: 6133 ، صحیح مسلم: 2998"
@@ -975,6 +923,7 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "جو بندوں کا شکر گزار نہیں ہوتا وہ اللہ کا بھی شکر ادا نہیں کرتا",
       titleEn: "Gratitude to People is Gratitude to Allah",
       topic: "Gratitude (Shukr)",
+      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&auto=format&fit=crop&q=80",
       arabic: "مَنْ لَّا يَشْكُرُ النَّاسَ لَا يَشْكُرُ اللّٰهَ",
       urdu: "جو انسان لوگوں کے احسان کا شکر ادا نہیں کرتا وہ اللہ تعالیٰ کا بھی شکر گزار نہیں ہو سکتا۔",
       reference: "سنن ترمذی: 1954 ، سنن ابو داؤد: 4811"
@@ -983,7 +932,8 @@ window.ISLAMIC_LIBRARY = {
       id: 30,
       titleUrdu: "اللہ تعالیٰ کے ہاں سب سے محبوب عمل وہ ہے جو پابندی سے کیا جائے چاہے تھوڑا ہی ہو",
       titleEn: "Most Beloved Deed is Consistent",
-      topic: "Consistency in Good Deeds",
+      topic: "Consistency in Deeds",
+      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&auto=format&fit=crop&q=80",
       arabic: "أَحَبُّ الْأَعْمَالِ إِلَى اللّٰهِ أَدْوَمُهَا وَإِنْ قَلَّ",
       urdu: "اللہ تعالیٰ کے نزدیک سب سے پسندیدہ عمل وہ ہے جس پر مداومت اور ہمیشگی کی جائے چاہے وہ مقدار میں کم ہی ہو۔",
       reference: "صحیح بخاری: 6464 ، صحیح مسلم: 783"
@@ -992,7 +942,8 @@ window.ISLAMIC_LIBRARY = {
       id: 31,
       titleUrdu: "ہر دین کا ایک امتیازی اخلاق ہوتا ہے اور اسلام کا اخلاق حیا ہے",
       titleEn: "Islam's Distinctive Character is Modesty",
-      topic: "Islamic Ethics",
+      topic: "Islam & Modesty",
+      image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&auto=format&fit=crop&q=80",
       arabic: "إِنَّ لِكُلِّ دِيْنٍ خُلُقًا ، وَخُلُقُ الْإِسْلَامِ الْحَيَاءُ",
       urdu: "بے شک ہر دین کا ایک خاص اخلاق و شیوہ ہوتا ہے اور اسلام کا مخصوص اخلاق 'حیا' ہے۔",
       reference: "سنن ابن ماجہ: 4181"
@@ -1001,7 +952,8 @@ window.ISLAMIC_LIBRARY = {
       id: 32,
       titleUrdu: "مسلمان مسلمان کا بھائی ہے، نہ اس پر ظلم کرے اور نہ اسے بے یار و مددگار چھوڑے",
       titleEn: "Muslim Brotherhood & Support",
-      topic: "Muslim Brotherhood",
+      topic: "Brotherhood & Loyalty",
+      image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&auto=format&fit=crop&q=80",
       arabic: "الْمُسْلِمُ أَخُو الْمُسْلِمِ ، لَا يَظْلِمُهُ وَلَا يُسْلِمُهُ",
       urdu: "مسلمان مسلمان کا بھائی ہے، نہ اس پر ظلم کرتا ہے اور نہ اسے تنہا و بے یار و مددگار چھوڑتا ہے۔",
       reference: "صحیح بخاری: 2442 ، صحیح مسلم: 2580"
@@ -1010,7 +962,8 @@ window.ISLAMIC_LIBRARY = {
       id: 33,
       titleUrdu: "جو شخص راستے سے تکلیف دہ چیز ہٹائے وہ صدقہ ہے",
       titleEn: "Removing Harm from the Road",
-      topic: "Civic Duty & Charity",
+      topic: "Removing Road Harm",
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&auto=format&fit=crop&q=80",
       arabic: "إِمَاطَةُ الْأَذَى عَنِ الطَّرِيْقِ صَدَقَةٌ",
       urdu: "راستے سے کسی تکلیف دہ چیز (پتھر، کانٹا، گندگی) کو ہٹا دینا بھی صدقہ ہے۔",
       reference: "صحیح بخاری: 2989 ، صحیح مسلم: 1009"
@@ -1019,7 +972,8 @@ window.ISLAMIC_LIBRARY = {
       id: 34,
       titleUrdu: "سب سے افضل جہاد ظالم حکمران کے سامنے کلمۂ حق کہنا ہے",
       titleEn: "Best Jihad is Speaking Truth",
-      topic: "Speaking Truth",
+      topic: "Speaking Truth for Justice",
+      image: "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=600&auto=format&fit=crop&q=80",
       arabic: "أَفْضَلُ الْجِهَادِ كَلِمَةُ عَدْلٍ عِنْدَ سُلْطَانٍ جَائِرٍ",
       urdu: "سب سے افضل جہاد ظالم بادشاہ و حکمران کے سامنے انصاف اور حق کی بات کہنا ہے۔",
       reference: "سنن ابو داؤد: 4344 ، سنن ترمذی: 2174"
@@ -1028,7 +982,8 @@ window.ISLAMIC_LIBRARY = {
       id: 35,
       titleUrdu: "جس نے کسی بھلائی کی رہنمائی کی اسے نیکی کرنے والے جیسا ہی ثواب ملتا ہے",
       titleEn: "Guiding to Good is Rewarded Like Doing It",
-      topic: "Calling to Good",
+      topic: "Guiding to Good",
+      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
       arabic: "مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ",
       urdu: "جس نے کسی کو نیکی اور بھلائی کی راہ دکھائی، اسے نیکی کرنے والے جتنا ہی ثواب ملے گا۔",
       reference: "صحیح مسلم: 1893"
@@ -1037,16 +992,18 @@ window.ISLAMIC_LIBRARY = {
       id: 36,
       titleUrdu: "کوئی شخص اپنے پیٹ سے برا برتن نہیں بھرتا، انسان کے لیے چند لقمے کافی ہیں",
       titleEn: "Moderation in Eating",
-      topic: "Health & Moderation",
+      topic: "Moderation in Food",
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80",
       arabic: "مَا مَلَأَ آدَمِيٌّ وِعَاءً شَرًّا مِّنْ بَطْنٍ ، بِحَسْبِ ابْنِ آدَمَ أُكُلَاتٌ يُّقِمْنَ صُلْبَهُ",
-      urdu: "انسان نے اپنے پیٹ سے زیادہ برا کوئی برتن نہیں بھرا۔ انسان کے لیے چند لقمے کافی ہیں جو اس کی پیٹھ سیدھی رکھیں۔ اگر زیادہ ہی کھانا ہو تو ایک تہائی کھانے کے لیے، ایک تہائی پینے کے لیے اور ایک تہائی سانس کے لیے رکھے۔",
+      urdu: "انسان نے اپنے پیٹ سے زیادہ برا کوئی برتن نہیں بھرا۔ انسان کے لیے چند لقمے کافی ہیں جو اس کی پیٹھ سیدھی رکھیں۔",
       reference: "سنن ترمذی: 2380"
     },
     {
       id: 37,
       titleUrdu: "مومن نہ طعنہ دینے والا ہوتا ہے نہ لعنت کرنے والا اور نہ بے حیا",
       titleEn: "Characteristics of a Believer",
-      topic: "Pure Speech",
+      topic: "Pure Speech & Character",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80",
       arabic: "لَيْسَ الْمُؤْمِنُ بِالطَّعَّانِ وَلَا اللَّعَّانِ وَلَا الْفَاحِشِ وَلَا الْبَذِيْءِ",
       urdu: "مومن نہ طعنہ زنی کرنے والا ہوتا ہے، نہ لعنت کرنے والا، نہ بے ہودہ گو اور نہ گالی گلوچ کرنے والا۔",
       reference: "سنن ترمذی: 1977"
@@ -1055,7 +1012,8 @@ window.ISLAMIC_LIBRARY = {
       id: 38,
       titleUrdu: "پاکیزہ کلمہ اور اچھی بات بھی صدقہ ہے",
       titleEn: "A Good Word is Charity",
-      topic: "Gentle Speech",
+      topic: "Good Word (Kalimah Tayyibah)",
+      image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=600&auto=format&fit=crop&q=80",
       arabic: "الْكَلِمَةُ الطَّيِّبَةُ صَدَقَةٌ",
       urdu: "اچھی اور میٹھی بات کہنا بھی صدقہ ہے۔",
       reference: "صحیح بخاری: 2989 ، صحیح مسلم: 1009"
@@ -1065,6 +1023,7 @@ window.ISLAMIC_LIBRARY = {
       titleUrdu: "تکبر یہ ہے کہ حق کو جھٹلایا جائے اور لوگوں کو حقیر سمجھا جائے",
       titleEn: "Definition of Arrogance (Kibr)",
       topic: "Humility & Anti-Arrogance",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80",
       arabic: "الْكِبْرُ بَطَرُ الْحَقِّ وَغَمْطُ النَّاسِ",
       urdu: "تکبر یہ ہے کہ انسان حق کو ٹھکرا دے اور لوگوں کو حقیر و کم تر سمجھے۔ (جس کے دل میں رائی کے دانے برابر بھی تکبر ہوگا وہ جنت میں داخل نہ ہوگا)",
       reference: "صحیح مسلم: 91"
@@ -1073,7 +1032,8 @@ window.ISLAMIC_LIBRARY = {
       id: 40,
       titleUrdu: "اللہ تعالیٰ نہ تمہاری صورتوں کو دیکھتا ہے نہ تمہارے مالوں کو، بلکہ تمہارے دلوں اور اعمال کو دیکھتا ہے",
       titleEn: "Allah Looks at Your Hearts & Actions",
-      topic: "Purity of Heart",
+      topic: "Purity of Hearts",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=80",
       arabic: "إِنَّ اللّٰهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ ، وَلٰكِنْ يَّنْظُرُ إِلَى قُلُوْبِكُمْ وَأَعْمَالِكُمْ",
       urdu: "بے شک اللہ تعالیٰ تمہاری صورتوں اور تمہارے مال و دولت کو نہیں دیکھتا، بلکہ وہ تمہارے دلوں (اخلاص) اور تمہارے اعمال کو دیکھتا ہے۔",
       reference: "صحیح مسلم: 2564"
