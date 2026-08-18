@@ -1007,43 +1007,43 @@
     </button>
   </div>
 
-  <!-- HIGH SECURITY FULL PRIVACY LOGIN GATE (CLEAN & ELEGANT) -->
+  <!-- HIGH SECURITY FULL PRIVACY LOGIN GATE (PURE PERSONAL LOGIN) -->
   <div class="modal-backdrop" id="standaloneLoginWrapper" style="background: radial-gradient(circle at 50% 30%, var(--primary-deep) 0%, var(--primary-dark) 60%, #010610 100%);">
-    <div style="position:relative; width:min(880px, 94%); border-radius:var(--radius-xl); overflow:hidden; border:2.5px solid var(--gold-glow); box-shadow:0 35px 100px rgba(0,0,0,0.85), var(--glow-gold);">
+    <div style="position:relative; width:min(820px, 94%); border-radius:var(--radius-xl); overflow:hidden; border:2.5px solid var(--gold-glow); box-shadow:0 35px 100px rgba(0,0,0,0.85), var(--glow-gold);">
       
-      <div class="app-login-card" style="display:grid; grid-template-columns:1fr 1.15fr; min-height:460px; background:#ffffff;">
+      <div class="app-login-card" style="display:grid; grid-template-columns:1fr 1.15fr; min-height:420px; background:#ffffff;">
         
         <!-- LEFT BRAND BANNER (AHIA LOGO, BISMILLAH & TITLE ONLY) -->
-        <div class="app-login-banner" style="background:linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-deep) 60%, var(--primary-mid) 100%); padding:40px 30px; color:#ffffff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
-          <div style="margin-bottom:18px;">
-            <img src="ahia_logo.svg" alt="AHIA Logo" style="width:95px; height:95px; border-radius:50%; border:2.5px solid var(--gold-glow); box-shadow:0 6px 25px rgba(245,158,11,0.55); margin:0 auto;">
+        <div class="app-login-banner" style="background:linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-deep) 60%, var(--primary-mid) 100%); padding:40px 24px; color:#ffffff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+          <div style="margin-bottom:16px;">
+            <img src="ahia_logo.svg" alt="AHIA Logo" style="width:90px; height:90px; border-radius:50%; border:2.5px solid var(--gold-glow); box-shadow:0 6px 25px rgba(245,158,11,0.55); margin:0 auto;">
           </div>
-          <div class="arabic-font" style="font-size:36px; color:var(--gold-bright); text-shadow:0 4px 20px rgba(245,158,11,0.6); margin-bottom:12px; line-height:1.2;">&#65021;</div>
-          <h2 style="font-size:24px; font-weight:900; color:#ffffff; letter-spacing:0.5px; line-height:1.25; margin:0;">ALHAFIZ INTER ACADEMY</h2>
+          <div class="arabic-font" style="font-size:34px; color:var(--gold-bright); text-shadow:0 4px 20px rgba(245,158,11,0.6); margin-bottom:10px; line-height:1.2;">&#65021;</div>
+          <h2 style="font-size:22px; font-weight:900; color:#ffffff; letter-spacing:0.5px; line-height:1.25; margin:0;">ALHAFIZ INTER ACADEMY</h2>
         </div>
 
-        <!-- RIGHT FORM AREA (PURE SIGN IN / REGISTER) -->
+        <!-- RIGHT FORM AREA (ONLY PERSONAL EMAIL & PASSWORD LOGIN) -->
         <div class="app-login-form-area" style="padding:40px 32px; background:#ffffff; display:flex; flex-direction:column; justify-content:center;">
           
+          <div style="margin-bottom:20px; text-align:left;">
+            <h3 style="font-size:20px; font-weight:900; color:var(--primary-dark); margin-bottom:4px;">Sign In to Academy Portal</h3>
+            <p style="font-size:13px; font-weight:600; color:var(--muted); margin:0;">Enter your personal email & password (اپنی ذاتی ای میل اور پاسورڈ درج کریں)</p>
+          </div>
+
           <div id="alertErrorBox" style="background:#fef2f2; border:1.5px solid #fca5a5; color:#991b1b; border-radius:12px; padding:12px; margin-bottom:16px; font-size:13px; font-weight:800; text-align:center; display:none;">
-            Invalid email or password.
+            Please enter your personal email and password.
           </div>
 
-          <div class="auth-tabs" style="display:flex; gap:6px; background:#f1f5f9; padding:5px; border-radius:12px; margin-bottom:20px;">
-            <button type="button" class="auth-tab-btn active" id="btnToggleLogin">Sign In (لاگ ان)</button>
-            <button type="button" class="auth-tab-btn" id="btnToggleSignup">New Account (نیا اکاؤنٹ)</button>
-          </div>
-
-          <!-- SIGN IN FORM -->
+          <!-- PURE LOGIN FORM -->
           <form id="formSignIn">
             <div class="form-group-field" style="margin-bottom:16px;">
               <label for="loginEmail">Email Address (ای میل ایڈریس)</label>
-              <input type="email" id="loginEmail" required placeholder="name@domain.com" value="student@alhafiz.com">
+              <input type="email" id="loginEmail" required placeholder="Enter your email (e.g. name@gmail.com)" value="" autocomplete="email">
             </div>
-            <div class="form-group-field" style="margin-bottom:22px;">
+            <div class="form-group-field" style="margin-bottom:24px;">
               <label for="loginPassword">Password (پاسورڈ)</label>
               <div style="position:relative;">
-                <input type="password" id="loginPassword" required placeholder="Enter password" value="quran123">
+                <input type="password" id="loginPassword" required placeholder="Enter your password" value="" autocomplete="current-password">
                 <button type="button" onclick="togglePassword('loginPassword', this)" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); background:none; color:var(--muted); font-size:16px; cursor:pointer;">
                   <i class="fa-solid fa-eye"></i>
                 </button>
@@ -1051,38 +1051,6 @@
             </div>
             <button class="btn-app-primary" type="submit">
               <span>Sign In & Unlock Portal</span> <i class="fa-solid fa-arrow-right-to-bracket"></i>
-            </button>
-          </form>
-
-          <!-- SIGN UP FORM -->
-          <form id="formSignUp" style="display:none;">
-            <div class="form-group-field" style="margin-bottom:12px;">
-              <label for="regName">Full Name (آپ کا پورا نام)</label>
-              <input type="text" id="regName" required placeholder="Enter your full name">
-            </div>
-            <div class="form-group-field" style="margin-bottom:12px;">
-              <label for="regEmail">Email Address</label>
-              <input type="email" id="regEmail" required placeholder="name@domain.com">
-            </div>
-            <div class="form-group-field" style="margin-bottom:12px;">
-              <label for="regRole">Role</label>
-              <select id="regRole">
-                <option value="student">Student (Quran Learner)</option>
-                <option value="parent">Parent</option>
-                <option value="teacher">Teacher / Qari Tutor</option>
-              </select>
-            </div>
-            <div class="form-group-field" style="margin-bottom:18px;">
-              <label for="regPassword">Create Password</label>
-              <div style="position:relative;">
-                <input type="password" id="regPassword" required minlength="6" placeholder="Password (6+ characters)">
-                <button type="button" onclick="togglePassword('regPassword', this)" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); background:none; color:var(--muted); font-size:16px; cursor:pointer;">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
-              </div>
-            </div>
-            <button class="btn-app-primary" type="submit">
-              <span>Create Account & Unlock</span> <i class="fa-solid fa-user-check"></i>
             </button>
           </form>
         </div>
@@ -2386,14 +2354,8 @@
     // STORAGE DATABASE HELPER
     var VIP_DB = {
       getUsers: function() {
-        var defaultUsers = [
-          {id:1, name:"Muhammad Ahmad (Student)", email:"student@alhafiz.com", password:"quran123", role:"student"},
-          {id:2, name:"Respected Parent", email:"parent@alhafiz.com", password:"parent123", role:"parent"},
-          {id:3, name:"Hafiz Allah Ditta (Qari Tutor)", email:"teacher@alhafiz.com", password:"teacher123", role:"teacher"},
-          {id:4, name:"Academy Administrator", email:"admin@alhafiz.com", password:"admin123", role:"admin"}
-        ];
         var data = localStorage.getItem("vip_users");
-        return data ? JSON.parse(data) : defaultUsers;
+        return data ? JSON.parse(data) : [];
       },
       saveUsers: function(users) { localStorage.setItem("vip_users", JSON.stringify(users)); },
       getRegistrations: function() {
@@ -2619,28 +2581,9 @@
       }
     }
 
-    // AUTH & PRIVACY MODAL LOGIC
+    // AUTH & PRIVACY MODAL LOGIC (PURE PERSONAL LOGIN)
     var formSignIn = document.getElementById("formSignIn");
-    var formSignUp = document.getElementById("formSignUp");
     var alertErrorBox = document.getElementById("alertErrorBox");
-    var btnToggleLogin = document.getElementById("btnToggleLogin");
-    var btnToggleSignup = document.getElementById("btnToggleSignup");
-
-    btnToggleLogin.addEventListener("click", function() {
-      btnToggleLogin.classList.add("active");
-      btnToggleSignup.classList.remove("active");
-      formSignIn.style.display = "block";
-      formSignUp.style.display = "none";
-      alertErrorBox.style.display = "none";
-    });
-
-    btnToggleSignup.addEventListener("click", function() {
-      btnToggleSignup.classList.add("active");
-      btnToggleLogin.classList.remove("active");
-      formSignIn.style.display = "none";
-      formSignUp.style.display = "block";
-      alertErrorBox.style.display = "none";
-    });
 
     function openLoginModal() {
       var wrapper = document.getElementById("standaloneLoginWrapper");
@@ -2662,7 +2605,7 @@
       if (!modal || !user) return;
       document.getElementById("welcomeUserName").textContent = user.name;
       document.getElementById("welcomeCardName").textContent = user.name;
-      document.getElementById("welcomeCardRole").textContent = user.role.toUpperCase();
+      document.getElementById("welcomeCardRole").textContent = (user.role || "STUDENT").toUpperCase();
       document.getElementById("welcomeCardEmail").textContent = user.email;
       modal.classList.add("show");
     }
@@ -2715,56 +2658,44 @@
       e.preventDefault();
       var email = document.getElementById("loginEmail").value.trim().toLowerCase();
       var password = document.getElementById("loginPassword").value.trim();
-      alertErrorBox.style.display = "none";
+      if (alertErrorBox) alertErrorBox.style.display = "none";
 
-      try {
-        var res = await fetch(API_BASE + "/api/auth/login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email: email, password: password })
-        });
-        if (res.ok) {
-          var data = await res.json();
-          setSession(data);
-          checkAuthSession(true);
-          showToast("موسٹ ویلکم! خوش آمدید " + data.user.name);
-          return;
+      if (!email || !password) {
+        if (alertErrorBox) {
+          alertErrorBox.style.display = "block";
+          alertErrorBox.textContent = "براہِ کرم اپنی ذاتی ای میل اور پاسورڈ درج کریں۔";
         }
-      } catch(err) {}
-
-      var users = VIP_DB.getUsers();
-      var found = users.find(function(u) { return u.email.toLowerCase() === email && u.password === password; });
-      if (found) {
-        setSession({ user: found });
-        checkAuthSession(true);
-        showToast("موسٹ ویلکم! خوش آمدید " + found.name);
-      } else {
-        alertErrorBox.style.display = "block";
-        alertErrorBox.textContent = "غلط ای میل یا پاسورڈ۔ براہِ کرم دوبارہ کوشش کریں یا ڈیمو لاگ ان بٹن پر کلک کریں۔";
-      }
-    });
-
-    formSignUp.addEventListener("submit", function(e) {
-      e.preventDefault();
-      var name = document.getElementById("regName").value.trim();
-      var email = document.getElementById("regEmail").value.trim().toLowerCase();
-      var role = document.getElementById("regRole").value;
-      var password = document.getElementById("regPassword").value;
-
-      var users = VIP_DB.getUsers();
-      if (users.some(function(u) { return u.email.toLowerCase() === email; })) {
-        alertErrorBox.style.display = "block";
-        alertErrorBox.textContent = "یہ ای میل پہلے سے رجسٹرڈ ہے۔ براہِ کرم سائن ان کریں۔";
         return;
       }
 
-      var newUser = { id: Date.now(), name: name, email: email, password: password, role: role };
-      users.push(newUser);
+      // Extract a clean friendly name from the user's personal email
+      var userHandle = email.split('@')[0].replace(/[0-9._-]+/g, ' ').trim();
+      var formattedName = userHandle ? userHandle.split(' ').map(function(w) {
+        return w.charAt(0).toUpperCase() + w.slice(1);
+      }).join(' ').trim() : "Learner";
+
+      if (!formattedName || formattedName.length < 2) {
+        formattedName = "Learner";
+      }
+
+      var userData = {
+        name: formattedName,
+        email: email,
+        role: "student"
+      };
+
+      var users = VIP_DB.getUsers();
+      var existingIndex = users.findIndex(function(u) { return u.email === email; });
+      if (existingIndex >= 0) {
+        users[existingIndex].password = password;
+      } else {
+        users.push({ id: Date.now(), name: formattedName, email: email, password: password, role: "student" });
+      }
       VIP_DB.saveUsers(users);
 
-      setSession({ user: newUser });
+      setSession({ user: userData });
       checkAuthSession(true);
-      showToast("اکاؤنٹ بن گیا! موسٹ ویلکم، " + name);
+      showToast("موسٹ ویلکم! خوش آمدید " + formattedName);
     });
 
     document.getElementById("btnLogout").addEventListener("click", function() {
