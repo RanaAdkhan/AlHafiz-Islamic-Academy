@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" itemscope itemtype="https://schema.org/EducationalOrganization">
+<html lang="en" dir="ltr" itemscope itemtype="https://schema.org/EducationalOrganization" data-theme="navy">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,7 +10,7 @@
   <meta name="keywords" content="ALHAFIZ INTER ACADEMY, AHIA, AlHafiz Academy, Learn Quran Online, Online Quran Classes for Kids, Female Quran Tutor, Tajweed Classes, Hifz Online, Noorani Qaida Course, Quran Memorization, Ijazah with Sanad, Learn Quran in USA UK Australia Canada">
   <meta name="author" content="ALHAFIZ INTER ACADEMY (AHIA)">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#03201c">
+  <meta name="theme-color" content="#061224">
   <link rel="canonical" href="https://ranaadkhan.github.io/AlHafiz-Islamic-Academy/">
   <link rel="icon" type="image/svg+xml" href="ahia_logo.svg">
 
@@ -133,38 +133,87 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    :root {
-      --bg-dark: #020f0d;
-      --bg-surface: #062823;
-      --emerald-dark: #02231e;
-      --emerald-deep: #032e27;
-      --emerald-mid: #095950;
-      --emerald-light: #0d9488;
-      --emerald-bright: #14b8a6;
-      --emerald-subtle: #f0fdf4;
+    /* DYNAMIC COLOR PALETTES (DEFAULT: ROYAL NAVY SAPPHIRE & RADIANT GOLD) */
+    :root, [data-theme="navy"] {
+      --primary-dark: #061224;
+      --primary-deep: #0a192f;
+      --primary-mid: #1e3a8a;
+      --primary-bright: #2563eb;
+      --primary-subtle: #eff6ff;
+      --hero-radial-1: rgba(30, 58, 138, 0.7);
+      --hero-radial-2: rgba(10, 25, 47, 0.95);
+      --hero-base: #030a16;
       --gold-dark: #92400e;
       --gold: #d97706;
       --gold-glow: #f59e0b;
       --gold-light: #fbbf24;
       --gold-bright: #fef08a;
-      --gold-bg: #fffbeb;
       --ink: #0f172a;
       --ink-bold: #020617;
-      --ink-muted: #334155;
       --muted: #475569;
       --bg: #f8fafc;
       --white: #ffffff;
       --line: #cbd5e1;
-      --line-strong: #94a3b8;
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-      --shadow-md: 0 10px 25px rgba(2, 25, 22, 0.1);
-      --shadow-lg: 0 20px 45px rgba(2, 25, 22, 0.15);
-      --shadow-app: 0 25px 60px rgba(2, 25, 22, 0.35);
+      --shadow-md: 0 10px 25px rgba(6, 18, 36, 0.1);
+      --shadow-lg: 0 20px 45px rgba(6, 18, 36, 0.15);
       --glow-gold: 0 0 35px rgba(245, 158, 11, 0.5);
       --radius-xl: 24px;
       --radius-lg: 16px;
       --radius-md: 12px;
-      --radius-sm: 8px;
+    }
+
+    [data-theme="emerald"] {
+      --primary-dark: #02231e;
+      --primary-deep: #032e27;
+      --primary-mid: #095950;
+      --primary-bright: #0d9488;
+      --primary-subtle: #f0fdf4;
+      --hero-radial-1: rgba(13, 92, 83, 0.7);
+      --hero-radial-2: rgba(3, 32, 28, 0.95);
+      --hero-base: #020f0d;
+      --gold-dark: #92400e;
+      --gold: #d97706;
+      --gold-glow: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-bright: #fef08a;
+      --shadow-md: 0 10px 25px rgba(2, 35, 30, 0.1);
+      --shadow-lg: 0 20px 45px rgba(2, 35, 30, 0.15);
+    }
+
+    [data-theme="maroon"] {
+      --primary-dark: #2a0812;
+      --primary-deep: #3b0d1a;
+      --primary-mid: #701a2e;
+      --primary-bright: #9f1239;
+      --primary-subtle: #fff1f2;
+      --hero-radial-1: rgba(112, 26, 46, 0.7);
+      --hero-radial-2: rgba(59, 13, 26, 0.95);
+      --hero-base: #1a040a;
+      --gold-dark: #92400e;
+      --gold: #d97706;
+      --gold-glow: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-bright: #fef08a;
+      --shadow-md: 0 10px 25px rgba(42, 8, 18, 0.1);
+      --shadow-lg: 0 20px 45px rgba(42, 8, 18, 0.15);
+    }
+
+    [data-theme="purple"] {
+      --primary-dark: #1e1035;
+      --primary-deep: #2e1065;
+      --primary-mid: #581c87;
+      --primary-bright: #7e22ce;
+      --primary-subtle: #faf5ff;
+      --hero-radial-1: rgba(88, 28, 135, 0.7);
+      --hero-radial-2: rgba(46, 16, 101, 0.95);
+      --hero-base: #130724;
+      --gold-dark: #92400e;
+      --gold: #d97706;
+      --gold-glow: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-bright: #fef08a;
+      --shadow-md: 0 10px 25px rgba(30, 16, 53, 0.1);
+      --shadow-lg: 0 20px 45px rgba(30, 16, 53, 0.15);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -177,6 +226,7 @@
       overflow-x: hidden;
       min-width: 320px;
       padding-bottom: 70px;
+      transition: background 0.3s, color 0.3s;
     }
     @media(min-width: 992px) { body { padding-bottom: 0; } }
 
@@ -192,14 +242,14 @@
     .section-padding { padding: 80px 0; }
     .bg-light { background: #f1f5f9; }
     .bg-white { background: #ffffff; }
-    .bg-dark { background: var(--emerald-dark); color: #ffffff; }
+    .bg-dark { background: var(--primary-dark); color: #ffffff; }
 
     /* SECTION TITLES (BOLD & SHARP) */
     .section-header { text-align: center; margin-bottom: 50px; }
     .section-tag {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(9, 89, 80, 0.12); color: var(--emerald-mid);
-      border: 1.5px solid rgba(9, 89, 80, 0.25);
+      background: var(--primary-subtle); color: var(--primary-mid);
+      border: 1.5px solid var(--primary-mid);
       padding: 6px 18px; border-radius: 999px; font-size: 12.5px; font-weight: 900;
       text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
     }
@@ -207,7 +257,7 @@
       background: rgba(245, 158, 11, 0.15); color: #92400e; border-color: rgba(245, 158, 11, 0.4);
     }
     .section-title {
-      font-size: 34px; font-weight: 900; color: #02231e; margin-bottom: 12px; line-height: 1.3;
+      font-size: 34px; font-weight: 900; color: var(--primary-dark); margin-bottom: 12px; line-height: 1.3;
       letter-spacing: -0.5px;
     }
     .bg-dark .section-title { color: #ffffff; }
@@ -216,22 +266,38 @@
     }
     .bg-dark .section-subtitle { color: #cbd5e1; font-weight: 500; }
     .title-underline {
-      width: 80px; height: 5px; background: linear-gradient(90deg, var(--emerald-mid), var(--gold-glow));
+      width: 80px; height: 5px; background: linear-gradient(90deg, var(--primary-mid), var(--gold-glow));
       margin: 16px auto 0; border-radius: 999px;
     }
 
-    /* TOP CONTACT & ANNOUNCEMENT BAR */
+    /* TOP CONTACT & THEME PALETTE BAR */
     .top-bar-shell {
-      background: #021210; color: #cbd5e1; font-size: 12.5px; font-weight: 700;
+      background: #020817; color: #cbd5e1; font-size: 12.5px; font-weight: 700;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 0;
     }
     .top-bar-content {
       display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
     }
-    .top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
     .top-info-item { display: inline-flex; align-items: center; gap: 6px; color: #ffffff; transition: color 0.2s; white-space: nowrap; font-weight: 700; }
     .top-info-item:hover { color: var(--gold-glow); }
     .top-info-item i { color: var(--gold-glow); font-size: 14px; }
+    
+    /* THEME SWATCH PICKER */
+    .theme-picker-wrap {
+      display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.1);
+      padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.2);
+    }
+    .theme-swatch {
+      width: 18px; height: 18px; border-radius: 50%; cursor: pointer; border: 1.5px solid #ffffff;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .theme-swatch:hover, .theme-swatch.active { transform: scale(1.25); box-shadow: 0 0 8px #ffffff; }
+    .swatch-navy { background: #1e3a8a; }
+    .swatch-emerald { background: #095950; }
+    .swatch-maroon { background: #701a2e; }
+    .swatch-purple { background: #581c87; }
+
     .social-circle {
       width: 28px; height: 28px; border-radius: 50%; background: rgba(255, 255, 255, 0.12);
       display: grid; place-items: center; color: #cbd5e1; font-size: 13px; transition: all 0.2s;
@@ -240,7 +306,7 @@
 
     /* RUNNING MARQUEE TICKER */
     .marquee-strip {
-      background: linear-gradient(90deg, #02231e 0%, #095950 50%, #02231e 100%);
+      background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-mid) 50%, var(--primary-dark) 100%);
       color: #fbbf24; font-size: 13.5px; font-weight: 800; height: 40px;
       overflow: hidden; display: flex; align-items: center; border-bottom: 2px solid rgba(251, 191, 36, 0.4);
     }
@@ -255,7 +321,7 @@
       padding: 2px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 900;
     }
 
-    /* AHIA LUXURY LOGO & NAVBAR BRANDING (REQUEST 3 & 1) */
+    /* AHIA LUXURY LOGO & NAVBAR BRANDING */
     header.app-navbar {
       background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(16px);
       position: sticky; top: 0; z-index: 1000;
@@ -279,7 +345,7 @@
     
     .brand-title-block { display: flex; flex-direction: column; }
     .brand-primary-name {
-      font-size: 18.5px; font-weight: 900; color: #02231e; line-height: 1.15;
+      font-size: 18.5px; font-weight: 900; color: var(--primary-dark); line-height: 1.15;
       letter-spacing: 0.3px; white-space: nowrap; display: flex; align-items: center; gap: 5px;
       font-family: 'Plus Jakarta Sans', 'Cinzel', sans-serif;
     }
@@ -289,7 +355,7 @@
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .brand-tagline-text {
-      font-size: 10.5px; font-weight: 800; color: #095950; text-transform: uppercase;
+      font-size: 10.5px; font-weight: 800; color: var(--primary-mid); text-transform: uppercase;
       letter-spacing: 0.8px; line-height: 1.3; white-space: nowrap; display: flex; align-items: center; gap: 5px;
     }
     .brand-tagline-text .bullet { color: #d97706; font-size: 9px; }
@@ -306,7 +372,7 @@
       border-radius: 8px; transition: all 0.2s ease; display: inline-block; white-space: nowrap !important;
     }
     .nav-menu a:hover, .nav-menu a.active {
-      color: var(--emerald-mid); background: #f0fdf4;
+      color: var(--primary-mid); background: var(--primary-subtle);
     }
 
     .nav-actions {
@@ -320,13 +386,13 @@
     }
     .btn-trial-nav:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(245, 158, 11, 0.55); }
     .btn-login-nav {
-      background: #02231e; color: #ffffff; border: 1.5px solid var(--gold-glow);
+      background: var(--primary-dark); color: #ffffff; border: 1.5px solid var(--gold-glow);
       padding: 8px 14px; border-radius: 10px; font-size: 13px; font-weight: 800;
       display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; transition: all 0.2s;
     }
-    .btn-login-nav:hover { background: #053b33; border-color: var(--gold-bright); }
+    .btn-login-nav:hover { background: var(--primary-deep); border-color: var(--gold-bright); }
     .user-auth-badge {
-      background: #f0fdf4; border: 1.5px solid #86efac; color: #166534;
+      background: #eff6ff; border: 1.5px solid #93c5fd; color: #1d4ed8;
       padding: 6px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 800;
       display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
       max-width: 170px; overflow: hidden; text-overflow: ellipsis;
@@ -334,8 +400,9 @@
 
     /* HERO MASTER SECTION */
     .hero-master-section {
-      background: radial-gradient(circle at 80% 20%, rgba(13, 92, 83, 0.6) 0%, rgba(3, 32, 28, 0.95) 50%, #020f0d 100%);
-      padding: 60px 0 70px; color: #ffffff; position: relative; overflow: hidden;
+      background: radial-gradient(circle at 80% 20%, var(--hero-radial-1) 0%, var(--hero-radial-2) 50%, var(--hero-base) 100%);
+      padding: 65px 0 75px; color: #ffffff; position: relative; overflow: hidden;
+      transition: background 0.3s;
     }
     .hero-master-grid {
       display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center;
@@ -383,7 +450,7 @@
     .kids-carousel-box {
       position: relative; border-radius: var(--radius-xl); overflow: hidden;
       border: 3px solid var(--gold-glow); box-shadow: 0 25px 70px rgba(0,0,0,0.6), var(--glow-gold);
-      background: #062823;
+      background: var(--primary-deep);
     }
     .kids-slider-stage {
       position: relative; width: 100%; aspect-ratio: 16/10; min-height: 340px; overflow: hidden;
@@ -396,7 +463,7 @@
     .kid-slide-item img { width: 100%; height: 100%; object-fit: cover; }
     .kids-slide-caption-bar {
       position: absolute; bottom: 0; left: 0; right: 0;
-      background: linear-gradient(0deg, rgba(2, 18, 16, 0.95) 0%, rgba(2, 18, 16, 0.7) 70%, transparent 100%);
+      background: linear-gradient(0deg, rgba(2, 8, 23, 0.95) 0%, rgba(2, 8, 23, 0.7) 70%, transparent 100%);
       padding: 24px 20px 16px; color: #ffffff; display: flex; justify-content: space-between; align-items: flex-end;
     }
     .kid-caption-tag {
@@ -416,7 +483,7 @@
 
     .kids-nav-arrow {
       position: absolute; top: 50%; transform: translateY(-50%); z-index: 5;
-      width: 42px; height: 42px; border-radius: 50%; background: rgba(2, 35, 30, 0.9);
+      width: 42px; height: 42px; border-radius: 50%; background: rgba(6, 18, 36, 0.9);
       border: 2px solid var(--gold-glow); color: #ffffff; font-size: 16px;
       display: grid; place-items: center; cursor: pointer; transition: all 0.2s;
     }
@@ -433,7 +500,7 @@
     }
     .kids-dot-pill.active { width: 22px; border-radius: 999px; background: var(--gold-glow); }
 
-    /* 9 FEATURED COURSES SECTION (EXTRA BOLD, SHARP & ULTRA CLEAR) */
+    /* 9 FEATURED COURSES SECTION (EXTRA BOLD & SHARP) */
     .courses-grid-9 {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
     }
@@ -446,7 +513,7 @@
       transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--gold-glow);
     }
     .course-card-header {
-      background: linear-gradient(135deg, #02231e 0%, #095950 100%);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-mid) 100%);
       padding: 24px 22px; color: #ffffff; position: relative;
     }
     .course-icon-badge {
@@ -471,12 +538,12 @@
     }
     .course-meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
     .meta-tag {
-      background: #e0f2fe; color: #0369a1; font-size: 12px; font-weight: 800;
-      padding: 5px 10px; border-radius: 8px; border: 1px solid #bae6fd;
+      background: var(--primary-subtle); color: var(--primary-mid); font-size: 12px; font-weight: 800;
+      padding: 5px 10px; border-radius: 8px; border: 1px solid var(--line);
     }
     .btn-course-enroll {
       width: 100%; padding: 12px; border-radius: 10px;
-      background: #02231e; border: 1.5px solid var(--gold-glow); color: #ffffff;
+      background: var(--primary-dark); border: 1.5px solid var(--gold-glow); color: #ffffff;
       font-weight: 900; font-size: 14px; display: flex; align-items: center; justify-content: center;
       gap: 8px; transition: all 0.2s;
     }
@@ -485,7 +552,7 @@
       box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
     }
 
-    /* 6 KEY FEATURES 3D FLIP CARDS (EXTRA BOLD & SHARP - REQUEST 2) */
+    /* 6 KEY FEATURES 3D FLIP CARDS */
     .features-grid-6 {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
     }
@@ -519,7 +586,7 @@
       flex-direction: column;
       justify-content: space-between;
     }
-    /* FRONT FACE (BOLD & CRISP) */
+    /* FRONT FACE */
     .flip-card-front {
       background: #ffffff;
       border: 2px solid var(--line);
@@ -528,23 +595,23 @@
     }
     .feature-icon-circle {
       width: 56px; height: 56px; border-radius: 16px;
-      background: #f0fdf4; border: 2px solid #86efac; color: var(--emerald-mid);
+      background: var(--primary-subtle); border: 2px solid var(--line); color: var(--primary-mid);
       display: grid; place-items: center; font-size: 24px; margin-bottom: 14px;
     }
     .flip-card-front h3 {
-      font-size: 19px; font-weight: 900; color: #02231e; margin-bottom: 10px; letter-spacing: -0.3px;
+      font-size: 19px; font-weight: 900; color: var(--primary-dark); margin-bottom: 10px; letter-spacing: -0.3px;
     }
     .flip-card-front p {
       font-size: 14.5px; font-weight: 600; color: #334155; line-height: 1.65;
     }
     .flip-hint-badge {
       display: inline-flex; align-items: center; gap: 6px;
-      font-size: 12px; font-weight: 900; color: #095950; background: #f0fdf4;
-      border: 1px solid #bbf7d0; padding: 5px 12px; border-radius: 999px; width: fit-content; margin-top: 12px;
+      font-size: 12px; font-weight: 900; color: var(--primary-mid); background: var(--primary-subtle);
+      border: 1px solid var(--line); padding: 5px 12px; border-radius: 999px; width: fit-content; margin-top: 12px;
     }
-    /* BACK FACE (RICH LUXURY GREEN/GOLD GRADIENT) */
+    /* BACK FACE */
     .flip-card-back {
-      background: radial-gradient(circle at 70% 30%, #063831, #021210);
+      background: radial-gradient(circle at 70% 30%, var(--primary-deep), var(--primary-dark));
       color: #ffffff;
       border: 2.5px solid var(--gold-glow);
       transform: rotateY(180deg);
@@ -567,9 +634,9 @@
       display: inline-flex; align-items: center; justify-content: center; gap: 6px;
     }
 
-    /* ANIMATED STATS COUNTER BAR (0 TO TARGET WITH SMOOTH EASING) */
+    /* ANIMATED STATS COUNTER BAR */
     .stats-section-bar {
-      background: linear-gradient(135deg, #021210 0%, #02231e 50%, #063831 100%);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-deep) 50%, #030a16 100%);
       padding: 60px 0; color: #ffffff; border-top: 2px solid rgba(255, 255, 255, 0.12);
       border-bottom: 2px solid rgba(255, 255, 255, 0.12);
     }
@@ -591,14 +658,14 @@
       box-shadow: var(--shadow-lg); border: 2px solid var(--line);
       display: grid; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: center;
     }
-    .welcome-text h3 { font-size: 28px; font-weight: 900; color: #02231e; margin-bottom: 16px; line-height: 1.3; }
+    .welcome-text h3 { font-size: 28px; font-weight: 900; color: var(--primary-dark); margin-bottom: 16px; line-height: 1.3; }
     .welcome-text p { color: #334155; font-size: 15.5px; font-weight: 600; margin-bottom: 14px; line-height: 1.7; }
     .welcome-features-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
     .welcome-feature-item { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 800; color: #0f172a; }
     .welcome-feature-item i { color: #10b981; font-size: 16px; }
     .welcome-media-box {
       border-radius: var(--radius-lg); overflow: hidden; position: relative;
-      background: linear-gradient(135deg, #02231e, #063831); border: 2.5px solid var(--gold-glow);
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-deep)); border: 2.5px solid var(--gold-glow);
       padding: 26px; color: #ffffff; box-shadow: var(--shadow-md);
     }
 
@@ -619,11 +686,11 @@
       box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4); text-transform: uppercase;
     }
     .step-icon-wrap {
-      width: 62px; height: 62px; border-radius: 50%; background: #f0fdf9;
-      border: 2.5px solid var(--emerald-bright); color: var(--emerald-mid);
+      width: 62px; height: 62px; border-radius: 50%; background: var(--primary-subtle);
+      border: 2.5px solid var(--primary-bright); color: var(--primary-mid);
       display: grid; place-items: center; font-size: 24px; margin: 12px auto 16px;
     }
-    .step-card-modern h3 { font-size: 19px; font-weight: 900; color: #02231e; margin-bottom: 10px; }
+    .step-card-modern h3 { font-size: 19px; font-weight: 900; color: var(--primary-dark); margin-bottom: 10px; }
     .step-card-modern p { font-size: 14.5px; font-weight: 600; color: #475569; line-height: 1.6; margin-bottom: 14px; }
 
     /* MULTI-CURRENCY PRICING */
@@ -636,8 +703,8 @@
       transition: all 0.2s; cursor: pointer;
     }
     .btn-currency-pill.active {
-      background: var(--emerald-dark); border-color: var(--gold-glow); color: var(--gold-bright);
-      box-shadow: 0 4px 15px rgba(2, 35, 30, 0.3);
+      background: var(--primary-dark); border-color: var(--gold-glow); color: var(--gold-bright);
+      box-shadow: 0 4px 15px rgba(6, 18, 36, 0.3);
     }
     .pricing-grid-4 {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
@@ -657,9 +724,9 @@
       padding: 4px 18px; border-radius: 999px; font-size: 11.5px; font-weight: 900;
       text-transform: uppercase; letter-spacing: 0.5px;
     }
-    .pricing-plan-name { font-size: 20px; font-weight: 900; color: #02231e; margin-bottom: 5px; }
+    .pricing-plan-name { font-size: 20px; font-weight: 900; color: var(--primary-dark); margin-bottom: 5px; }
     .pricing-classes-count { font-size: 13px; color: #475569; font-weight: 700; margin-bottom: 16px; }
-    .pricing-price-display { font-size: 36px; font-weight: 900; color: var(--emerald-mid); margin-bottom: 4px; line-height: 1; }
+    .pricing-price-display { font-size: 36px; font-weight: 900; color: var(--primary-mid); margin-bottom: 4px; line-height: 1; }
     .pricing-card-box.popular .pricing-price-display { color: #b45309; }
     .pricing-price-period { font-size: 12.5px; color: #64748b; margin-bottom: 20px; font-weight: 700; }
     .pricing-features-list { list-style: none; margin-bottom: 22px; text-align: left; }
@@ -667,7 +734,7 @@
     .pricing-features-list li i { color: #10b981; font-size: 14px; }
     .btn-select-plan {
       width: 100%; padding: 12px; border-radius: 10px;
-      background: #02231e; color: #ffffff; font-weight: 900; font-size: 13.5px;
+      background: var(--primary-dark); color: #ffffff; font-weight: 900; font-size: 13.5px;
       display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;
     }
     .pricing-card-box.popular .btn-select-plan {
@@ -689,10 +756,10 @@
     .faculty-details { padding: 24px 20px; display: flex; flex-direction: column; justify-content: space-between; }
     .faculty-role-badge {
       display: inline-flex; align-items: center; gap: 6px;
-      background: #f0fdf4; border: 1.5px solid #86efac; color: #166534;
+      background: var(--primary-subtle); border: 1.5px solid var(--line); color: var(--primary-mid);
       padding: 4px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 900; margin-bottom: 8px;
     }
-    .faculty-name-title { font-size: 20px; font-weight: 900; color: #02231e; margin-bottom: 4px; }
+    .faculty-name-title { font-size: 20px; font-weight: 900; color: var(--primary-dark); margin-bottom: 4px; }
     .faculty-qualification { font-size: 13px; color: var(--gold-dark); font-weight: 800; margin-bottom: 12px; }
     .faculty-bio-text { font-size: 13.5px; font-weight: 600; color: #334155; line-height: 1.65; margin-bottom: 16px; }
 
@@ -702,15 +769,15 @@
       background: #ffffff; border-radius: var(--radius-lg); padding: 24px;
       border: 2px solid var(--line); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;
     }
-    .dua-card-title { font-size: 16px; font-weight: 900; color: #02231e; margin-bottom: 12px; }
-    .dua-arabic-text { font-size: 22px; font-weight: 700; color: #064e3b; text-align: right; line-height: 1.8; margin-bottom: 10px; }
+    .dua-card-title { font-size: 16px; font-weight: 900; color: var(--primary-dark); margin-bottom: 12px; }
+    .dua-arabic-text { font-size: 22px; font-weight: 700; color: var(--primary-mid); text-align: right; line-height: 1.8; margin-bottom: 10px; }
     .dua-urdu-translation { font-size: 14px; font-weight: 600; color: #334155; text-align: right; line-height: 1.7; margin-bottom: 16px; }
     .btn-dua-listen {
-      width: 100%; padding: 11px; border-radius: 8px; background: #f0fdf4;
-      border: 1.5px solid #86efac; color: #166534; font-size: 13px; font-weight: 800;
+      width: 100%; padding: 11px; border-radius: 8px; background: var(--primary-subtle);
+      border: 1.5px solid var(--line); color: var(--primary-mid); font-size: 13px; font-weight: 800;
       display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;
     }
-    .btn-dua-listen:hover { background: #dcfce7; }
+    .btn-dua-listen:hover { background: #dbeafe; }
 
     /* TESTIMONIALS */
     .testimonials-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -722,28 +789,28 @@
     .testimonial-text { font-size: 14px; font-weight: 600; color: #1e293b; line-height: 1.7; margin-bottom: 18px; font-style: italic; }
     .testimonial-author-row { display: flex; align-items: center; gap: 12px; }
     .author-avatar-circle {
-      width: 44px; height: 44px; border-radius: 50%; background: #02231e;
+      width: 44px; height: 44px; border-radius: 50%; background: var(--primary-dark);
       border: 2px solid var(--gold-glow); color: var(--gold-bright); display: grid; place-items: center;
       font-weight: 900; font-size: 16px; flex-shrink: 0;
     }
-    .author-info-wrap h4 { font-size: 14.5px; font-weight: 900; color: #02231e; margin-bottom: 2px; }
+    .author-info-wrap h4 { font-size: 14.5px; font-weight: 900; color: var(--primary-dark); margin-bottom: 2px; }
     .author-info-wrap p { font-size: 12px; color: #64748b; font-weight: 700; }
 
     /* FAQ ACCORDION */
     .faq-accordion-container { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
     .faq-item-card { background: #ffffff; border-radius: var(--radius-md); border: 2px solid var(--line); overflow: hidden; transition: all 0.3s; }
-    .faq-item-card.active { border-color: var(--emerald-mid); box-shadow: var(--shadow-md); }
+    .faq-item-card.active { border-color: var(--primary-mid); box-shadow: var(--shadow-md); }
     .faq-header-btn {
       width: 100%; padding: 18px 22px; background: transparent; text-align: left;
       display: flex; justify-content: space-between; align-items: center; gap: 16px;
-      font-size: 16px; font-weight: 900; color: #02231e; cursor: pointer;
+      font-size: 16px; font-weight: 900; color: var(--primary-dark); cursor: pointer;
     }
     .faq-arrow-icon {
       width: 30px; height: 30px; border-radius: 50%; background: #f1f5f9;
-      display: grid; place-items: center; color: var(--emerald-mid); font-size: 13px; transition: transform 0.3s;
+      display: grid; place-items: center; color: var(--primary-mid); font-size: 13px; transition: transform 0.3s;
       flex-shrink: 0;
     }
-    .faq-item-card.active .faq-arrow-icon { transform: rotate(180deg); background: var(--emerald-mid); color: #ffffff; }
+    .faq-item-card.active .faq-arrow-icon { transform: rotate(180deg); background: var(--primary-mid); color: #ffffff; }
     .faq-body-content {
       max-height: 0; overflow: hidden; transition: max-height 0.35s ease;
       padding: 0 22px; color: #334155; font-size: 14.5px; font-weight: 600; line-height: 1.7;
@@ -757,12 +824,12 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 36px;
     }
     .trial-info-panel {
-      background: linear-gradient(135deg, #02231e 0%, #063831 60%, #095950 100%);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-deep) 60%, var(--primary-mid) 100%);
       border-radius: var(--radius-lg); padding: 30px; color: #ffffff; border: 2.5px solid var(--gold-glow);
       display: flex; flex-direction: column; justify-content: space-between;
     }
     .form-group-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; text-align: left; }
-    .form-group-field label { font-size: 13.5px; font-weight: 800; color: #02231e; }
+    .form-group-field label { font-size: 13.5px; font-weight: 800; color: var(--primary-dark); }
     .form-group-field input, .form-group-field select {
       width: 100%; background: #f8fafc; border: 2px solid var(--line);
       border-radius: var(--radius-md); padding: 12px 14px; font-size: 14px; font-weight: 600;
@@ -774,7 +841,7 @@
 
     /* FOOTER */
     footer.app-footer {
-      background: #020f0d; color: #cbd5e1; padding: 65px 0 24px;
+      background: var(--primary-dark); color: #cbd5e1; padding: 65px 0 24px;
       border-top: 2.5px solid rgba(245, 158, 11, 0.4);
     }
     .footer-grid-4 {
@@ -815,7 +882,7 @@
     }
     .app-login-card { display: grid; grid-template-columns: 1fr 1.15fr; min-height: 520px; background: #ffffff; }
     .app-login-banner {
-      background: linear-gradient(135deg, #021210 0%, #062823 60%, #095950 100%);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-deep) 60%, var(--primary-mid) 100%);
       padding: 36px 30px; color: #ffffff; display: flex; flex-direction: column; justify-content: space-between;
       border-right: 1px solid rgba(214, 168, 59, 0.2);
     }
@@ -836,7 +903,7 @@
       flex: 1; padding: 8px; text-align: center; border-radius: 8px; font-size: 13px; font-weight: 800;
       color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s;
     }
-    .auth-tab-btn.active { background: #ffffff; color: #02231e; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .auth-tab-btn.active { background: #ffffff; color: var(--primary-dark); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
     .btn-app-primary {
       width: 100%; padding: 13px; border-radius: 12px;
       background: linear-gradient(135deg, var(--gold-glow), #d97706); color: #021210;
@@ -849,7 +916,7 @@
     /* AI VOICE FLOATING BANNER */
     .ai-voice-banner {
       position: fixed; top: 85px; right: 24px; z-index: 10000;
-      background: linear-gradient(135deg, rgba(2, 35, 30, 0.96), rgba(6, 40, 35, 0.96));
+      background: linear-gradient(135deg, rgba(6, 18, 36, 0.96), rgba(10, 25, 47, 0.96));
       backdrop-filter: blur(20px); border: 2px solid var(--gold-glow); border-radius: 999px;
       padding: 10px 20px 10px 12px; display: none; align-items: center; gap: 12px;
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), var(--glow-gold); max-width: 460px;
@@ -871,7 +938,7 @@
     /* MOBILE APP BOTTOM DOCK */
     .mobile-app-dock {
       position: fixed; bottom: 0; left: 0; right: 0; height: 60px;
-      background: #021210; border-top: 1.5px solid rgba(245, 158, 11, 0.4);
+      background: #020817; border-top: 1.5px solid rgba(245, 158, 11, 0.4);
       display: none; justify-content: space-around; align-items: center; z-index: 9990;
     }
     .dock-tab {
@@ -884,7 +951,7 @@
     /* TOAST */
     #toastMsg {
       position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
-      background: #021210; color: #ffffff; border: 1.5px solid var(--gold-glow);
+      background: #020817; color: #ffffff; border: 1.5px solid var(--gold-glow);
       padding: 10px 22px; border-radius: 999px; font-size: 13px; font-weight: 800;
       z-index: 999999; display: none; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
@@ -941,7 +1008,7 @@
   </div>
 
   <!-- HIGH SECURITY FULL PRIVACY LOGIN GATE -->
-  <div class="modal-backdrop" id="standaloneLoginWrapper" style="background: radial-gradient(circle at 50% 30%, #063831 0%, #031c18 60%, #010a09 100%);">
+  <div class="modal-backdrop" id="standaloneLoginWrapper" style="background: radial-gradient(circle at 50% 30%, var(--primary-deep) 0%, var(--primary-dark) 60%, #010610 100%);">
     <div style="position:relative; width:min(960px, 96%); border-radius:var(--radius-xl); overflow:hidden; border:2px solid var(--gold-glow); box-shadow:0 35px 100px rgba(0,0,0,0.8), var(--glow-gold);">
       
       <div class="app-login-card">
@@ -980,7 +1047,7 @@
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
             <img src="ahia_logo.svg" alt="AHIA Logo" style="width:48px; height:48px; border-radius:50%; border:1.5px solid var(--gold-glow);">
             <div>
-              <h2 style="font-size:19px; font-weight:900; color:#02231e; margin-bottom:2px;">ALHAFIZ INTER ACADEMY</h2>
+              <h2 style="font-size:19px; font-weight:900; color:var(--primary-dark); margin-bottom:2px;">ALHAFIZ INTER ACADEMY</h2>
               <p style="font-size:12px; color:var(--muted); font-weight:700;">Secure Privacy Access (AHIA Portal)</p>
             </div>
           </div>
@@ -995,13 +1062,13 @@
             <button type="button" class="btn-demo-pill btn-demo-student" id="btnFillStudent">
               <i class="fa-solid fa-user-graduate"></i> Student
             </button>
-            <button type="button" class="btn-demo-pill btn-demo-parent" id="btnFillParent">
+            <button type="button" class="btn-demo-parent" id="btnFillParent">
               <i class="fa-solid fa-users"></i> Parent
             </button>
-            <button type="button" class="btn-demo-pill btn-demo-teacher" id="btnFillTeacher">
+            <button type="button" class="btn-demo-teacher" id="btnFillTeacher">
               <i class="fa-solid fa-chalkboard-user"></i> Teacher
             </button>
-            <button type="button" class="btn-demo-pill btn-demo-admin" id="btnFillAdmin">
+            <button type="button" class="btn-demo-admin" id="btnFillAdmin">
               <i class="fa-solid fa-user-shield"></i> Admin
             </button>
           </div>
@@ -1069,7 +1136,7 @@
 
   <!-- GRAND MOST WELCOME CELEBRATION MODAL -->
   <div class="modal-backdrop" id="welcomeCelebrationModal">
-    <div style="max-width: 640px; width: 100%; text-align: center; background: radial-gradient(circle at 50% 20%, #063831 0%, #031c18 60%, #020f0d 100%); color: #ffffff; border: 2.5px solid var(--gold-glow); box-shadow: 0 30px 90px rgba(0,0,0,0.8), var(--glow-gold); border-radius: var(--radius-xl); padding: 36px 30px; position: relative;">
+    <div style="max-width: 640px; width: 100%; text-align: center; background: radial-gradient(circle at 50% 20%, var(--primary-deep) 0%, var(--primary-dark) 60%, #010610 100%); color: #ffffff; border: 2.5px solid var(--gold-glow); box-shadow: 0 30px 90px rgba(0,0,0,0.8), var(--glow-gold); border-radius: var(--radius-xl); padding: 36px 30px; position: relative;">
       
       <button class="btn-close-modal" onclick="closeWelcomeCelebrationModal()" style="background: rgba(255,255,255,0.15); color: #fff;" aria-label="Close Welcome Screen">
         <i class="fa-solid fa-xmark"></i>
@@ -1103,7 +1170,7 @@
         </div>
         <div>
           <span style="font-size: 11px; color: var(--gold-glow); font-weight: 800; text-transform: uppercase; display: block;">Assigned Role:</span>
-          <strong id="welcomeCardRole" style="font-size: 13px; color: #6ee7b7; font-weight: 900; text-transform: uppercase; display: block;">STUDENT</strong>
+          <strong id="welcomeCardRole" style="font-size: 13px; color: #93c5fd; font-weight: 900; text-transform: uppercase; display: block;">STUDENT</strong>
         </div>
         <div>
           <span style="font-size: 11px; color: var(--gold-glow); font-weight: 800; text-transform: uppercase; display: block;">Registered Email:</span>
@@ -1130,7 +1197,7 @@
   <!-- MAIN ACADEMY APP CONTAINER -->
   <div id="mainAcademyContainer">
 
-    <!-- TOP BAR (INTERNATIONAL CONTACT & SOCIALS) -->
+    <!-- TOP BAR (INTERNATIONAL CONTACT & THEME PALETTES) -->
     <div class="top-bar-shell">
       <div class="container top-bar-content">
         <div class="top-bar-left">
@@ -1145,7 +1212,14 @@
           </a>
         </div>
         <div class="top-bar-right">
-          <span style="color:#ffffff; font-size:12px; font-weight:700; white-space:nowrap;"><i class="fa-solid fa-globe" style="color:var(--gold-glow);"></i> Serving USA, UK, Canada, Australia, UAE & Europe</span>
+          <!-- LIVE THEME PICKER -->
+          <div class="theme-picker-wrap" title="Change Theme Color">
+            <span style="font-size:11px; font-weight:800; color:#cbd5e1;"><i class="fa-solid fa-palette" style="color:var(--gold-glow);"></i> Color:</span>
+            <div class="theme-swatch swatch-navy active" onclick="applyTheme('navy')" title="Royal Navy & Gold (Default)"></div>
+            <div class="theme-swatch swatch-emerald" onclick="applyTheme('emerald')" title="Deep Emerald & Gold"></div>
+            <div class="theme-swatch swatch-maroon" onclick="applyTheme('maroon')" title="Imperial Maroon & Gold"></div>
+            <div class="theme-swatch swatch-purple" onclick="applyTheme('purple')" title="Royal Purple & Gold"></div>
+          </div>
           <div style="display:flex; gap:6px;">
             <a href="https://wa.me/923047809156" target="_blank" class="social-circle" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="mailto:ranaallahditta7347@gmail.com" class="social-circle" title="Email"><i class="fa-solid fa-envelope"></i></a>
@@ -1164,7 +1238,7 @@
       </div>
     </div>
 
-    <!-- MAIN NAVBAR WITH AHIA EMBLEM & ALHAFIZ INTER ACADEMY (REQUEST 3) -->
+    <!-- MAIN NAVBAR WITH AHIA EMBLEM & ALHAFIZ INTER ACADEMY -->
     <header class="app-navbar">
       <div class="container nav-container">
         
@@ -1575,7 +1649,7 @@
       </div>
     </section>
 
-    <!-- KEY ACADEMY FEATURES (6 3D INTERACTIVE FLIP CARDS - EXTRA BOLD) -->
+    <!-- KEY ACADEMY FEATURES (6 3D INTERACTIVE FLIP CARDS) -->
     <section class="section-padding bg-light" id="features">
       <div class="container">
         <div class="section-header">
@@ -1763,7 +1837,7 @@
             <div class="step-icon-wrap"><i class="fa-solid fa-file-pen"></i></div>
             <h3>Fill Out Free Trial Form</h3>
             <p>Fill out our simple trial registration form with your name, preferred course, and convenient timing.</p>
-            <a href="#trial" style="color:var(--emerald-mid); font-weight:900; font-size:13.5px; text-decoration:underline;">Fill Form Now →</a>
+            <a href="#trial" style="color:var(--primary-mid); font-weight:900; font-size:13.5px; text-decoration:underline;">Fill Form Now →</a>
           </div>
 
           <div class="step-card-modern">
@@ -1930,7 +2004,7 @@
                 <div class="faculty-qualification">Hafiz-e-Quran | Wifaq-ul-Madaris Certified | 8+ Yrs Exp</div>
                 <p class="faculty-bio-text">Specialist in Nazra Quran, classical Tajweed rules, and complete Hifz memorization for young students and adults worldwide.</p>
               </div>
-              <a href="https://wa.me/923047809156" target="_blank" style="color:var(--emerald-mid); font-weight:900; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">
+              <a href="https://wa.me/923047809156" target="_blank" style="color:var(--primary-mid); font-weight:900; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">
                 <i class="fa-brands fa-whatsapp"></i> Chat with Hafiz Allah Ditta →
               </a>
             </div>
@@ -1948,7 +2022,7 @@
                 <div class="faculty-qualification">Alima & Qaria | Islamic Scholar | 6+ Yrs Exp</div>
                 <p class="faculty-bio-text">Dedicated to providing a comfortable, patient, and engaging Quran learning environment for sisters, teenage girls, and young kids.</p>
               </div>
-              <a href="https://wa.me/923047809156" target="_blank" style="color:var(--emerald-mid); font-weight:900; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">
+              <a href="https://wa.me/923047809156" target="_blank" style="color:var(--primary-mid); font-weight:900; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">
                 <i class="fa-brands fa-whatsapp"></i> Book with Qaria Fatima →
               </a>
             </div>
@@ -2174,7 +2248,7 @@
 
           <div>
             <div style="margin-bottom:18px;">
-              <h3 style="font-size:20px; font-weight:900; color:#02231e; margin-bottom:3px;">Book 3-Day Free Trial</h3>
+              <h3 style="font-size:20px; font-weight:900; color:var(--primary-dark); margin-bottom:3px;">Book 3-Day Free Trial</h3>
               <p style="font-size:13px; font-weight:600; color:var(--muted);">Please provide the student details below:</p>
             </div>
 
@@ -2336,6 +2410,23 @@
   <script>
     var API_BASE = window.location.origin;
 
+    // THEME SWITCHER FUNCTION
+    function applyTheme(themeName) {
+      document.documentElement.setAttribute('data-theme', themeName);
+      localStorage.setItem('ahia_color_theme', themeName);
+
+      document.querySelectorAll('.theme-swatch').forEach(function(swatch) {
+        swatch.classList.remove('active');
+        if (swatch.classList.contains('swatch-' + themeName)) {
+          swatch.classList.add('active');
+        }
+      });
+      showToast("Color theme updated: " + themeName.toUpperCase());
+    }
+
+    var savedTheme = localStorage.getItem('ahia_color_theme') || 'navy';
+    applyTheme(savedTheme);
+
     // STORAGE DATABASE HELPER
     var VIP_DB = {
       getUsers: function() {
@@ -2413,11 +2504,9 @@
         if (!startTime) startTime = currentTime;
         var progress = Math.min((currentTime - startTime) / durationMs, 1);
         
-        // Ease-out cubic formula for smooth slowdown
         var easeProgress = 1 - Math.pow(1 - progress, 3);
         var currentNumber = Math.floor(easeProgress * targetValue);
 
-        // Format with thousands comma separators
         var formatted = currentNumber.toLocaleString();
         element.textContent = formatted + suffix;
 
@@ -2439,7 +2528,6 @@
         entries.forEach(function(entry) {
           if (entry.isIntersecting && !statsAnimated) {
             statsAnimated = true;
-            // Trigger 0 to Target Count Up
             animateCountUp("counterStat1", 26, 2000, "+");
             animateCountUp("counterStat2", 150, 2200, "+");
             animateCountUp("counterStat3", 3500, 2500, "+");
