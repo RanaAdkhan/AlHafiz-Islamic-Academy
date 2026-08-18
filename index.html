@@ -876,6 +876,72 @@
       font-size: 14px; font-weight: 700; color: #1e293b; text-align: right;
       line-height: 1.8; margin-bottom: 16px; font-family: 'Noto Nastaliq Urdu', serif;
     }
+    .dua-card-box.is-reciting {
+      border-color: var(--gold-glow) !important;
+      box-shadow: 0 16px 40px rgba(245, 158, 11, 0.35), 0 0 25px rgba(245, 158, 11, 0.25) !important;
+      transform: translateY(-6px) scale(1.015);
+    }
+    .reciting-soundwave-badge {
+      display: none; align-items: center; gap: 3px; background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #021210; padding: 3px 9px; border-radius: 999px; font-size: 10.5px; font-weight: 900;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    }
+    .dua-card-box.is-reciting .reciting-soundwave-badge {
+      display: inline-flex;
+    }
+    .wave-bar {
+      width: 2.5px; height: 10px; background: #021210; border-radius: 999px;
+      animation: soundWaveAnim 0.7s infinite alternate ease-in-out;
+    }
+    .wave-bar:nth-child(2) { animation-delay: 0.2s; height: 14px; }
+    .wave-bar:nth-child(3) { animation-delay: 0.4s; height: 8px; }
+    @keyframes soundWaveAnim { 0% { transform: scaleY(0.4); } 100% { transform: scaleY(1.4); } }
+
+    .btn-hover-audio-toggle {
+      background: #ffffff; border: 1.5px solid var(--line); color: var(--ink);
+      padding: 7px 16px; border-radius: 999px; font-size: 12.5px; font-weight: 900;
+      cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 7px;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-hover-audio-toggle:hover { border-color: var(--gold-glow); }
+    .btn-hover-audio-toggle.active {
+      background: #ecfdf5; border-color: #10b981; color: #047857;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+    }
+    .btn-hover-audio-toggle.active i { color: #10b981; }
+
+    .lib-result-badge {
+      display: inline-block; font-size: 12.5px; font-weight: 800; color: var(--primary-mid);
+      background: var(--primary-subtle); border: 1px solid var(--line); padding: 4px 12px; border-radius: 999px;
+    }
+
+    /* LANGUAGE SWITCHER BUTTON */
+    .lang-switcher-pill {
+      display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.15);
+      border: 1.5px solid rgba(255, 255, 255, 0.3); border-radius: 999px; padding: 2px;
+      cursor: pointer; transition: all 0.2s; backdrop-filter: blur(8px);
+    }
+    .lang-opt-btn {
+      padding: 4px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 900;
+      color: #cbd5e1; transition: all 0.2s; display: inline-flex; align-items: center; gap: 4px;
+    }
+    .lang-opt-btn.active {
+      background: var(--gold-glow); color: #021210; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.5);
+    }
+
+    /* RTL OVERRIDES FOR URDU MODE */
+    html[dir="rtl"] body {
+      font-family: 'Noto Nastaliq Urdu', 'Plus Jakarta Sans', sans-serif;
+      text-align: right;
+    }
+    html[dir="rtl"] .top-bar-content { flex-direction: row-reverse; }
+    html[dir="rtl"] .top-bar-left, html[dir="rtl"] .top-bar-right { flex-direction: row-reverse; }
+    html[dir="rtl"] .nav-container { direction: rtl; }
+    html[dir="rtl"] .hero-text-side { text-align: right; }
+    html[dir="rtl"] .hero-btn-actions { justify-content: flex-start; }
+    html[dir="rtl"] .lib-search-icon { right: auto; left: 18px; }
+    html[dir="rtl"] .lib-search-input-box input { padding: 14px 18px 14px 48px; text-align: right; }
+    html[dir="rtl"] .faq-header-btn { text-align: right; flex-direction: row-reverse; }
     .dua-footer-row {
       display: flex; justify-content: space-between; align-items: center; gap: 8px;
       border-top: 1px solid #f1f5f9; padding-top: 14px;
@@ -1192,6 +1258,12 @@
           </a>
         </div>
         <div class="top-bar-right">
+          <!-- LANGUAGE SWITCHER (ENGLISH / اردو) -->
+          <div class="lang-switcher-pill" title="Switch Language / زبان تبدیل کریں">
+            <span class="lang-opt-btn active" id="langBtnEn" onclick="setLanguage('en')">English</span>
+            <span class="lang-opt-btn" id="langBtnUr" onclick="setLanguage('ur')">اردو</span>
+          </div>
+
           <!-- LIVE THEME PICKER -->
           <div class="theme-picker-wrap" title="Change Theme Color">
             <span style="font-size:11px; font-weight:800; color:#cbd5e1;"><i class="fa-solid fa-palette" style="color:var(--gold-glow);"></i> Color:</span>
@@ -1243,22 +1315,22 @@
 
         <!-- CLEAN NAV MENU (STRICT NO WRAP) -->
         <ul class="nav-menu">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Fee Plans</a></li>
-          <li><a href="#howItWorks">How It Works</a></li>
-          <li><a href="#faculty">Faculty</a></li>
-          <li><a href="#duas">Duas & Audio</a></li>
-          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#home" class="active" data-i18n="nav-home">Home</a></li>
+          <li><a href="#courses" data-i18n="nav-courses">Courses</a></li>
+          <li><a href="#features" data-i18n="nav-features">Features</a></li>
+          <li><a href="#pricing" data-i18n="nav-pricing">Fee Plans</a></li>
+          <li><a href="#howItWorks" data-i18n="nav-how">How It Works</a></li>
+          <li><a href="#faculty" data-i18n="nav-faculty">Faculty</a></li>
+          <li><a href="#duas" data-i18n="nav-duas">Duas & Audio</a></li>
+          <li><a href="#faqs" data-i18n="nav-faqs">FAQs</a></li>
         </ul>
 
         <div class="nav-actions">
           <a href="#trial" class="btn-trial-nav">
-            <i class="fa-solid fa-calendar-check"></i> <span>Free Trial</span>
+            <i class="fa-solid fa-calendar-check"></i> <span data-i18n="nav-trial">Free Trial</span>
           </a>
           <button type="button" class="btn-login-nav" id="btnOpenLoginModal" onclick="openLoginModal()">
-            <i class="fa-solid fa-lock"></i> <span>Sign In</span>
+            <i class="fa-solid fa-lock"></i> <span data-i18n="nav-signin">Sign In</span>
           </button>
           <div id="userBadgeLabel" class="user-auth-badge" style="display:none;"></div>
           <button type="button" id="btnLogout" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; padding:6px 12px; border-radius:8px; font-size:12px; font-weight:900; display:none; cursor:pointer; white-space:nowrap;">
@@ -1278,18 +1350,18 @@
           <div class="hero-badge-pill">
             <i class="fa-solid fa-star"></i> ALHAFIZ INTER ACADEMY (AHIA)
           </div>
-          <h1 class="hero-main-heading">
+          <h1 class="hero-main-heading" data-i18n="hero-heading">
             Learn Holy Quran Online with <span>Certified Expert Tutors</span>
           </h1>
-          <p class="hero-main-desc">
+          <p class="hero-main-desc" data-i18n="hero-desc">
             Inspiring Muslim children & adults worldwide. One-to-one live interactive classes for <strong>Noorani Qaida, Tajweed, Nazra, Hifz & Islamic Studies</strong> with certified male and female teachers across USA, UK, Canada, Australia, UAE & Pakistan.
           </p>
           <div class="hero-btn-actions">
             <a href="#trial" class="btn-hero-gold">
-              <span>BOOK 3-DAY FREE TRIAL</span> <i class="fa-solid fa-arrow-right"></i>
+              <span data-i18n="hero-btn-trial">BOOK 3-DAY FREE TRIAL</span> <i class="fa-solid fa-arrow-right"></i>
             </a>
             <a href="#courses" class="btn-hero-glass">
-              <i class="fa-solid fa-book-open"></i> BROWSE COURSES
+              <i class="fa-solid fa-book-open"></i> <span data-i18n="hero-btn-courses">BROWSE COURSES</span>
             </a>
             <a href="https://wa.me/923047809156" target="_blank" class="btn-google-rating">
               <i class="fa-brands fa-google" style="color:#ea4335;"></i>
@@ -2033,10 +2105,18 @@
           </button>
         </div>
 
-        <!-- SEARCH & FILTER BAR -->
+        <!-- SEARCH & FILTER CONTROLS -->
         <div class="lib-search-filter-wrap">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
+            <button type="button" class="btn-hover-audio-toggle active" id="btnHoverAudioToggle" onclick="toggleHoverAudio()" title="Toggle Auto-Voice on Hover">
+              <i class="fa-solid fa-volume-high"></i>
+              <span id="hoverAudioBtnLabel">🔊 ماؤس لے جانے پر خودکار تلاوت: آن (Hover Voice: ON)</span>
+            </button>
+            <span id="libMatchCount" class="lib-result-badge"><i class="fa-solid fa-sparkles"></i> 74 Items</span>
+          </div>
+
           <div class="lib-search-input-box">
-            <input type="text" id="libSearchInput" oninput="handleLibrarySearch()" placeholder="🔍 دعا یا حدیث کا نام یا ترجمہ تلاش کریں (Search in Urdu or English)...">
+            <input type="text" id="libSearchInput" oninput="handleLibrarySearch()" placeholder="🔍 کوئی بھی دعا یا حدیث تلاش کریں (Search in Urdu, English or Arabic)...">
             <i class="fa-solid fa-magnifying-glass lib-search-icon"></i>
           </div>
 
@@ -2577,11 +2657,150 @@
       if (!isActive) card.classList.add("active");
     }
 
-    // ISLAMIC DUAS & 40 AHADITH DYNAMIC CONTROLLER WITH TOPIC IMAGES
+    // DUAL LANGUAGE & TRANSLATION SYSTEM (ENGLISH ⇄ اردو)
+    var currentLang = 'en';
+    var I18N_DICTIONARY = {
+      en: {
+        "nav-home": "Home",
+        "nav-courses": "Courses",
+        "nav-features": "Features",
+        "nav-pricing": "Fee Plans",
+        "nav-how": "How It Works",
+        "nav-faculty": "Faculty",
+        "nav-duas": "Duas & Audio",
+        "nav-faqs": "FAQs",
+        "nav-trial": "Free Trial",
+        "nav-signin": "Sign In",
+        "hero-heading": "Learn Holy Quran Online with <span>Certified Expert Tutors</span>",
+        "hero-desc": "Inspiring Muslim children & adults worldwide. One-to-one live interactive classes for <strong>Noorani Qaida, Tajweed, Nazra, Hifz & Islamic Studies</strong> with certified male and female teachers across USA, UK, Canada, Australia, UAE & Pakistan.",
+        "hero-btn-trial": "BOOK 3-DAY FREE TRIAL",
+        "hero-btn-courses": "BROWSE COURSES"
+      },
+      ur: {
+        "nav-home": "ہوم",
+        "nav-courses": "قرآنی کورسز",
+        "nav-features": "خصوصیات",
+        "nav-pricing": "فیس پلانز",
+        "nav-how": "طریقہ کار",
+        "nav-faculty": "اساتذہ کرام",
+        "nav-duas": "دعائیں و احادیث",
+        "nav-faqs": "عمومی سوالات",
+        "nav-trial": "مفت ٹرائل",
+        "nav-signin": "لاگ ان پورٹل",
+        "hero-heading": "مستند اساتذہ کے ساتھ آن لائن قرآن پاک <span>تجوید اور قراءت</span> سے سیکھیں",
+        "hero-desc": "بچوں، بہنوں اور بڑوں کے لیے مستند قراء اور عالمات کے زیرِ نگرانی لائیو 1-on-1 کلاسز۔ 24 گھنٹے لچکدار اوقات اور 3 دن کا بالکل مفت ٹرائل۔",
+        "hero-btn-trial": "3 روزہ مفت ٹرائل حاصل کریں",
+        "hero-btn-courses": "تمام کورسز دیکھیں"
+      }
+    };
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ur') ? 'rtl' : 'ltr';
+      
+      var btnEn = document.getElementById("langBtnEn");
+      var btnUr = document.getElementById("langBtnUr");
+      if (btnEn && btnUr) {
+        if (lang === 'en') {
+          btnEn.classList.add("active");
+          btnUr.classList.remove("active");
+        } else {
+          btnUr.classList.add("active");
+          btnEn.classList.remove("active");
+        }
+      }
+
+      var dict = I18N_DICTIONARY[lang] || I18N_DICTIONARY.en;
+      document.querySelectorAll("[data-i18n]").forEach(function(el) {
+        var key = el.getAttribute("data-i18n");
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+
+      try {
+        localStorage.setItem("ahia_lang", lang);
+      } catch (e) {}
+
+      renderIslamicLibrary();
+      showToast(lang === 'ur' ? "زبان اردو میں تبدیل کر دی گئی ہے۔" : "Language switched to English.");
+    }
+
+    // ISLAMIC DUAS & 40 AHADITH DYNAMIC CONTROLLER WITH TOPIC IMAGES & HOVER AUDIO
     var currentIslamicTab = 'duas'; // 'duas' or 'hadiths'
     var currentDuaCategory = 'all';
     var isLibExpanded = false;
     var libSearchQuery = '';
+    var isHoverAudioEnabled = true;
+    var hoverSpeechTimer = null;
+    var currentRecitingCard = null;
+
+    function toggleHoverAudio() {
+      isHoverAudioEnabled = !isHoverAudioEnabled;
+      var btn = document.getElementById("btnHoverAudioToggle");
+      var label = document.getElementById("hoverAudioBtnLabel");
+      if (btn && label) {
+        if (isHoverAudioEnabled) {
+          btn.classList.add("active");
+          label.innerHTML = "🔊 ماؤس لے جانے پر خودکار تلاوت: آن (Hover Voice: ON)";
+          showToast("ماؤس لے جانے پر خودکار تلاوت فعال ہو گئی۔");
+        } else {
+          btn.classList.remove("active");
+          label.innerHTML = "🔇 ماؤس لے جانے پر خودکار تلاوت: آف (Hover Voice: OFF)";
+          if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+          if (currentRecitingCard) {
+            currentRecitingCard.classList.remove("is-reciting");
+            currentRecitingCard = null;
+          }
+          showToast("ماؤس لے جانے پر خودکار تلاوت بند کر دی گئی۔");
+        }
+      }
+    }
+
+    function handleCardHoverPlay(arabicText, urduText, cardEl) {
+      if (!isHoverAudioEnabled) return;
+      clearTimeout(hoverSpeechTimer);
+
+      hoverSpeechTimer = setTimeout(function() {
+        if (currentRecitingCard && currentRecitingCard !== cardEl) {
+          currentRecitingCard.classList.remove("is-reciting");
+        }
+        currentRecitingCard = cardEl;
+        if (cardEl) cardEl.classList.add("is-reciting");
+
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          var fullSpeech = arabicText + ". " + urduText;
+          var utterance = new SpeechSynthesisUtterance(fullSpeech);
+          utterance.lang = 'ur-PK';
+          utterance.rate = 0.85;  // calm natural reciting speed
+          utterance.pitch = 1.35; // youthful, gentle child voice
+
+          var voices = window.speechSynthesis.getVoices();
+          var childOrFemaleVoice = voices.find(function(v) {
+            var name = v.name.toLowerCase();
+            var lang = v.lang.toLowerCase();
+            return (lang.includes("ur") || lang.includes("hi") || lang.includes("ar") || lang.includes("en-in")) &&
+                   (name.includes("female") || name.includes("girl") || name.includes("child") || name.includes("heera") || name.includes("natural") || name.includes("google"));
+          });
+          if (childOrFemaleVoice) utterance.voice = childOrFemaleVoice;
+
+          utterance.onend = function() {
+            if (cardEl) cardEl.classList.remove("is-reciting");
+          };
+          utterance.onerror = function() {
+            if (cardEl) cardEl.classList.remove("is-reciting");
+          };
+
+          window.speechSynthesis.speak(utterance);
+        }
+      }, 200);
+    }
+
+    function handleCardHoverStop(cardEl) {
+      clearTimeout(hoverSpeechTimer);
+    }
 
     function switchIslamicTab(tabType) {
       currentIslamicTab = tabType;
@@ -2642,6 +2861,7 @@
         var utterance = new SpeechSynthesisUtterance(fullSpeech);
         utterance.lang = 'ur-PK';
         utterance.rate = 0.85;
+        utterance.pitch = 1.35;
         window.speechSynthesis.speak(utterance);
         showToast("🔊 تلاوت و ترجمہ چل رہا ہے (Playing Audio)...");
       }
@@ -2696,6 +2916,11 @@
         });
       }
 
+      var matchBadge = document.getElementById("libMatchCount");
+      if (matchBadge) {
+        matchBadge.innerHTML = '<i class="fa-solid fa-sparkles"></i> ' + dataList.length + (currentIslamicTab === 'duas' ? ' Duas' : ' Hadiths');
+      }
+
       if (dataList.length === 0) {
         grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:40px; background:#fff; border-radius:16px; border:2px solid var(--line); color:var(--muted);"><i class="fa-solid fa-magnifying-glass" style="font-size:32px; color:var(--gold-glow); margin-bottom:10px;"></i><h3 style="font-size:18px; font-weight:800; color:var(--primary-dark);">کوئی نتیجہ نہیں ملا</h3><p style="font-size:14px;">براہِ کرم کوئی دوسرا لفظ تلاش کریں یا کیٹیگری تبدیل کریں۔</p></div>';
         return;
@@ -2710,12 +2935,16 @@
         var topicName = item.topic || (currentIslamicTab === 'duas' ? 'Dua' : 'Hadith');
         var topicImage = item.image || "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600&auto=format&fit=crop&q=80";
 
-        html += '<div class="dua-card-box">';
+        html += '<div class="dua-card-box" onmouseenter="handleCardHoverPlay(\'' + item.arabic.replace(/'/g, "\\'") + '\', \'' + item.urdu.replace(/'/g, "\\'") + '\', this)" onmouseleave="handleCardHoverStop(this)">';
         html += '  <div>';
         html += '    <div class="dua-card-img-wrap">';
         html += '      <img src="' + topicImage + '" alt="' + topicName + '" loading="lazy" onerror="this.src=\'https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600&auto=format&fit=crop&q=80\'">';
         html += '      <div class="dua-card-img-overlay">';
         html += '        <span class="topic-floating-pill"><i class="fa-solid ' + iconClass + '"></i> ' + topicName + '</span>';
+        html += '        <span class="reciting-soundwave-badge">';
+        html += '          <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span>';
+        html += '          <span style="margin-left:3px;">تلاوت</span>';
+        html += '        </span>';
         html += '        <span class="dua-id-badge" style="background:rgba(255,255,255,0.92); font-weight:900;">#' + item.id + '</span>';
         html += '      </div>';
         html += '    </div>';
@@ -2883,10 +3112,15 @@
       window.speechSynthesis.onvoiceschanged = function() { window.speechSynthesis.getVoices(); };
     }
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    var yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
     setCurrency('USD');
     initStatsCounterObserver();
-    renderIslamicLibrary();
+
+    var savedLang = 'en';
+    try { savedLang = localStorage.getItem("ahia_lang") || 'en'; } catch(e) {}
+    if (savedLang === 'ur') { setLanguage('ur'); }
+    else { renderIslamicLibrary(); }
     checkAuthSession();
   </script>
 </body>
