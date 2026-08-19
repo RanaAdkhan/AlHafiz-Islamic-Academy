@@ -2954,6 +2954,9 @@
                   </button>
                 </div>
                 <div id="idVerificationMsg" style="font-size:11.5px; font-weight:800; margin-top:8px; display:none;"></div>
+                <div style="font-size:10px; color:var(--muted); margin-top:8px; line-height:1.4;">
+                  <i class="fa-solid fa-lock" style="color:var(--gold-glow);"></i> <b>Note:</b> You will be required to send a photo of your ID on WhatsApp for final biometric matching.
+                </div>
               </div>
 
               <div class="form-group-field" style="margin-top:12px;">
@@ -4223,7 +4226,7 @@
 
       showToast("Secure admission request received! Redirecting to WhatsApp...");
       
-      var waMsg = "Assalam-o-Alaikum! I have submitted my secure admission form for ALHAFIZ INTERNATIONAL ACADEMY.%0A%0A*Name:* " + encodeURIComponent(name) + "%0A*Father:* " + encodeURIComponent(fname) + "%0A*ID/CNIC:* " + encodeURIComponent(idCard) + " (Verified)%0A*Phone:* " + encodeURIComponent(phone) + "%0A*Course:* " + encodeURIComponent(course) + "%0A*Address:* " + encodeURIComponent(address) + "%0A*Country:* " + encodeURIComponent(country);
+      var waMsg = "Assalam-o-Alaikum! I have submitted my secure admission form for ALHAFIZ INTERNATIONAL ACADEMY.%0A%0A*Name:* " + encodeURIComponent(name) + "%0A*Father:* " + encodeURIComponent(fname) + "%0A*ID/CNIC:* " + encodeURIComponent(idCard) + " (Format Verified)%0A*Phone:* " + encodeURIComponent(phone) + "%0A*Course:* " + encodeURIComponent(course) + "%0A*Address:* " + encodeURIComponent(address) + "%0A*Country:* " + encodeURIComponent(country) + "%0A%0A⚠️ *SECURITY REQUIREMENT:*%0AI am attaching a clear photo of my ID Card / CNIC below for final identity verification as requested.";
       
       setTimeout(function() {
         window.open("https://wa.me/923047809156?text=" + waMsg, "_blank");
