@@ -6,32 +6,35 @@ using System.Drawing.Imaging;
 public class ImageProcessor {
     public static void CleanAndCropLogo(string srcPath, string outPath) {
         using (Bitmap src = new Bitmap(srcPath)) {
-            int minX = src.Width, minY = src.Height, maxX = 0, maxY = 0;
-            
-            // Background thresholding & finding bounding box
             Bitmap dest = new Bitmap(src.Width, src.Height, PixelFormat.Format32bppArgb);
             
             for (int y = 0; y < src.Height; y++) {
                 for (int x = 0; x < src.Width; x++) {
                     Color c = src.GetPixel(x, y);
-                    int maxC = Math.Max(c.R, Math.Max(c.G, c.B));
-                    int minC = Math.Min(c.R, Math.Min(c.G, c.B));
+                    float hue = c.GetHue();
+                    float sat = c.GetSaturation();
+                    float bri = c.GetBrightness();
                     
-                    if (maxC < 38) {
-                        dest.SetPixel(x, y, Color.FromArgb(0, 0, 0, 0));
-                    } else if (maxC < 75 && (maxC - minC) < 20) {
-                        int alpha = (int)((maxC - 38) / 37.0 * 255.0);
-                        if (alpha > 255) alpha = 255;
-                        if (alpha < 0) alpha = 0;
-                        dest.SetPixel(x, y, Color.FromArgb(alpha, c.R, c.G, c.B));
-                        if (alpha > 40) {
-                            if (x < minX) minX = x;
-                            if (x > maxX) maxX = x;
-                            if (y < minY) minY = y;
-                            if (y > maxY) maxY = y;
+                    bool isLogo = false;
+                    // Keep vibrant cyan, lime green and yellow/cyan highlights of the emblem
+                    if (sat > 0.15 && bri > 0.12) {
+                        if (hue >= 50 && hue <= 235) {
+                            isLogo = true;
                         }
-                    } else {
+                    }
+                    
+                    if (isLogo) {
                         dest.SetPixel(x, y, Color.FromArgb(255, c.R, c.G, c.B));
+                    } else {
+                        dest.SetPixel(x, y, Color.FromArgb(0, 0, 0, 0));
+                    }
+                }
+            }
+            
+            int minX = src.Width, minY = src.Height, maxX = 0, maxY = 0;
+            for (int y = 0; y < src.Height; y++) {
+                for (int x = 0; x < src.Width; x++) {
+                    if (dest.GetPixel(x, y).A > 0) {
                         if (x < minX) minX = x;
                         if (x > maxX) maxX = x;
                         if (y < minY) minY = y;
@@ -40,7 +43,6 @@ public class ImageProcessor {
                 }
             }
             
-            // Add slight padding around bounding box
             int pad = 15;
             minX = Math.Max(0, minX - pad);
             minY = Math.Max(0, minY - pad);
@@ -62,6 +64,6 @@ public class ImageProcessor {
 }
 "@ -ReferencedAssemblies System.Drawing
 
-[ImageProcessor]::CleanAndCropLogo("e:\App istalor\develpment\alhafiz_official_logo.jpg", "e:\App istalor\develpment\alhafiz_logo_transparent.png")
+[ImageProcessor]::CleanAndCropLogo("C:\Users\AD Bhi Creative Stud\.gemini\antigravity\brain\88193d6b-0359-44dc-9922-5e61d0ddd332\.user_uploaded\media_1787144519537.jpg", "e:\App istalor\develpment\alhafiz_logo_transparent.png")
 Copy-Item "e:\App istalor\develpment\alhafiz_logo_transparent.png" "e:\App istalor\develpment\alhafiz_official_logo.png" -Force
 Write-Output "Clean cropped transparent logo created!"
