@@ -1,4 +1,4 @@
-// COMPLETE 114 SURAHS METADATA, 30 PARAS STRUCTURE, AND AUDIO DATA FOR ALHAFIZ INTER ACADEMY
+// COMPLETE 114 SURAHS METADATA, 30 PARAS STRUCTURE, AND AUDIO DATA FOR ALHAFIZ INTERNATIONAL ACADEMY
 window.QURAN_DATA = {
   reciters: [
     { id: "ar.alafasy", name: "Mishary Rashid Alafasy (مشاری راشد العفاسی)", server: "https://server8.mp3quran.net/afs/" },
