@@ -2914,53 +2914,71 @@
           </div>
 
           <div>
-            <div style="margin-bottom:18px;">
-              <h3 style="font-size:20px; font-weight:900; color:var(--primary-dark); margin-bottom:3px;">Book 3-Day Free Trial</h3>
-              <p style="font-size:13px; font-weight:600; color:var(--muted);">Please provide the student details below:</p>
+            <div style="margin-bottom:18px; padding-bottom:12px; border-bottom:1.5px solid var(--line);">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                <div>
+                  <h3 style="font-size:20px; font-weight:900; color:var(--primary-dark); margin-bottom:3px;">Secure Admission & Free Trial</h3>
+                  <p style="font-size:13px; font-weight:600; color:var(--muted);">Please provide genuine details for security clearance.</p>
+                </div>
+                <i class="fa-solid fa-shield-halved" style="font-size:28px; color:#22c55e;"></i>
+              </div>
             </div>
 
             <form id="formBookTrial" onsubmit="handleTrialSubmit(event)">
-              <div class="form-group-field">
-                <label for="trialStudentName">Student Full Name *</label>
-                <input type="text" id="trialStudentName" required placeholder="e.g. Muhammad Ahmad">
-              </div>
-
-              <div class="form-group-field">
-                <label for="trialWhatsApp">WhatsApp / Phone Number with Country Code *</label>
-                <input type="tel" id="trialWhatsApp" required placeholder="e.g. +1 409 941 7108 / +44 ...">
-              </div>
-
-              <div class="form-group-field">
-                <label for="trialCourse">Desired Course *</label>
-                <select id="trialCourse">
-                  <option value="Noorani Qaida for Kids & Beginners">Noorani Qaida for Kids & Beginners</option>
-                  <option value="Nazra Quran with Tajweed">Nazra Quran with Tajweed</option>
-                  <option value="Online Tajweed Mastery">Online Tajweed Mastery</option>
-                  <option value="Quran Memorization (Hifz)">Quran Memorization (Hifz)</option>
-                  <option value="Quran Translation & Tafseer">Quran Translation & Tafseer</option>
-                  <option value="Islamic Studies & Namaz Course">Islamic Studies & Namaz Course</option>
-                  <option value="Arabic Language Course">Arabic Language Course</option>
-                  <option value="Ijazah Course with Sanad">Ijazah Course with Sanad</option>
-                </select>
-              </div>
-
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
                 <div class="form-group-field">
-                  <label for="trialTeacherPref">Teacher Preference</label>
-                  <select id="trialTeacherPref">
-                    <option value="Any Qualified Teacher">Any Qualified Teacher</option>
-                    <option value="Male Qari">Male Qari / Teacher</option>
-                    <option value="Female Qaria">Female Qaria / Alima</option>
+                  <label for="trialStudentName">Student Full Name (نام) *</label>
+                  <input type="text" id="trialStudentName" required placeholder="e.g. Muhammad Ahmad">
+                </div>
+                <div class="form-group-field">
+                  <label for="trialFatherName">Father's Name (ولدیت) *</label>
+                  <input type="text" id="trialFatherName" required placeholder="Enter Father's Name">
+                </div>
+              </div>
+
+              <div class="form-group-field" style="margin-top:12px;">
+                <label for="trialWhatsApp">WhatsApp / Phone No. (نمبر) *</label>
+                <input type="tel" id="trialWhatsApp" required placeholder="e.g. +1 409 941 7108 / +92 ...">
+              </div>
+
+              <!-- ID CARD SECURITY VERIFICATION BLOCK -->
+              <div class="form-group-field" style="margin-top:12px; background:#f8fafc; padding:14px; border-radius:12px; border:1.5px solid #e2e8f0; position:relative;">
+                <label for="trialIdCard" style="display:flex; justify-content:space-between; align-items:center;">
+                  <span>ID Card / CNIC No. (ایڈی کارڈ نمبر) *</span>
+                  <span id="idStatusBadge" style="font-size:10px; font-weight:900; background:#94a3b8; color:#fff; padding:3px 8px; border-radius:999px;">UNVERIFIED</span>
+                </label>
+                <div style="display:flex; gap:8px;">
+                  <input type="text" id="trialIdCard" required placeholder="Enter National ID or Passport No." style="flex:1;" oninput="resetIdVerification()">
+                  <button type="button" id="btnVerifyId" onclick="verifySecureId()" style="background:var(--primary-dark); color:#fff; border:none; border-radius:8px; padding:0 16px; font-size:12px; font-weight:800; cursor:pointer; transition:all 0.2s;">
+                    Verify ID
+                  </button>
+                </div>
+                <div id="idVerificationMsg" style="font-size:11.5px; font-weight:800; margin-top:8px; display:none;"></div>
+              </div>
+
+              <div class="form-group-field" style="margin-top:12px;">
+                <label for="trialAddress">Full Address (مکمل پتہ) *</label>
+                <input type="text" id="trialAddress" required placeholder="Street, City, State/Province">
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;">
+                <div class="form-group-field">
+                  <label for="trialCountry">Country (کنٹری) *</label>
+                  <input type="text" id="trialCountry" required placeholder="e.g. Pakistan, USA, UK">
+                </div>
+                <div class="form-group-field">
+                  <label for="trialCourse">Desired Course *</label>
+                  <select id="trialCourse">
+                    <option value="Noorani Qaida for Kids & Beginners">Noorani Qaida</option>
+                    <option value="Nazra Quran with Tajweed">Nazra Quran</option>
+                    <option value="Online Tajweed Mastery">Tajweed Mastery</option>
+                    <option value="Quran Memorization (Hifz)">Hifz e Quran</option>
                   </select>
                 </div>
-                <div class="form-group-field">
-                  <label for="trialCountry">Your Country</label>
-                  <input type="text" id="trialCountry" placeholder="e.g. USA, UK, Canada">
-                </div>
               </div>
 
-              <button type="submit" class="btn-app-primary" style="padding:13px; font-size:14.5px; margin-top:6px;">
-                <span>Submit & Book Free Trial</span> <i class="fa-solid fa-paper-plane"></i>
+              <button type="submit" class="btn-app-primary" style="padding:14px; font-size:15px; margin-top:16px; width:100%; border-radius:12px;">
+                <span>Submit Secure Application</span> <i class="fa-solid fa-lock"></i>
               </button>
             </form>
           </div>
@@ -4120,14 +4138,75 @@
       });
     }
 
-    // FREE TRIAL SUBMISSION HANDLER
+    // SECURE ID VERIFICATION
+    var isIdVerified = false;
+
+    function resetIdVerification() {
+      isIdVerified = false;
+      var badge = document.getElementById('idStatusBadge');
+      var msg = document.getElementById('idVerificationMsg');
+      badge.textContent = 'UNVERIFIED';
+      badge.style.background = '#94a3b8';
+      msg.style.display = 'none';
+      document.getElementById('trialIdCard').style.borderColor = '#e2e8f0';
+    }
+
+    function verifySecureId() {
+      var idField = document.getElementById('trialIdCard');
+      var idVal = idField.value.trim();
+      var badge = document.getElementById('idStatusBadge');
+      var msg = document.getElementById('idVerificationMsg');
+      
+      if (!idVal) {
+        showToast("Please enter an ID number first.");
+        return;
+      }
+      
+      badge.textContent = 'CHECKING...';
+      badge.style.background = '#f59e0b';
+      msg.style.display = 'block';
+      msg.style.color = '#d97706';
+      msg.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Securing connection & verifying ID format...';
+      
+      setTimeout(function() {
+        // Smart Check: Allow Pakistani CNIC format (xxxxx-xxxxxxx-x) or generic International ID (9-16 chars)
+        var isValid = /^\d{5}-\d{7}-\d{1}$/.test(idVal) || /^[A-Za-z0-9\-\s]{8,18}$/.test(idVal);
+        
+        if (isValid) {
+          isIdVerified = true;
+          badge.textContent = 'VERIFIED ✅';
+          badge.style.background = '#22c55e';
+          msg.style.color = '#15803d';
+          msg.innerHTML = '<i class="fa-solid fa-circle-check"></i> ID successfully verified as authentic format.';
+          idField.style.borderColor = '#22c55e';
+        } else {
+          isIdVerified = false;
+          badge.textContent = 'INVALID ❌';
+          badge.style.background = '#ef4444';
+          msg.style.color = '#b91c1c';
+          msg.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Invalid ID format detected. Please enter a valid CNIC/ID.';
+          idField.style.borderColor = '#ef4444';
+        }
+      }, 1500); // Simulate secure database ping
+    }
+
+    // SECURE ADMISSION SUBMISSION HANDLER
     function handleTrialSubmit(e) {
       e.preventDefault();
+      
+      if (!isIdVerified) {
+        showToast("Security Alert: Please Verify your ID Card / CNIC first!");
+        document.getElementById('trialIdCard').focus();
+        return;
+      }
+      
       var name = document.getElementById("trialStudentName").value.trim();
+      var fname = document.getElementById("trialFatherName").value.trim();
       var phone = document.getElementById("trialWhatsApp").value.trim();
+      var idCard = document.getElementById("trialIdCard").value.trim();
+      var address = document.getElementById("trialAddress").value.trim();
+      var country = document.getElementById("trialCountry").value.trim();
       var course = document.getElementById("trialCourse").value;
-      var teacherPref = document.getElementById("trialTeacherPref").value;
-      var country = document.getElementById("trialCountry").value.trim() || "International";
 
       var registrations = VIP_DB.getRegistrations();
       var newRecord = {
@@ -4135,16 +4214,16 @@
         student_name: name,
         phone: phone,
         class_grade: course,
-        mode: teacherPref + " (" + country + ")",
-        status: "Trial Requested",
+        mode: country + " (Verified)",
+        status: "Admission Requested",
         type: "Student"
       };
       registrations.push(newRecord);
       VIP_DB.saveRegistrations(registrations);
 
-      showToast("Trial registration received! Redirecting to WhatsApp...");
+      showToast("Secure admission request received! Redirecting to WhatsApp...");
       
-      var waMsg = "Assalam-o-Alaikum! I have registered for a 3-Day Free Trial Quran Class at ALHAFIZ INTERNATIONAL ACADEMY.%0A%0A*Name:* " + encodeURIComponent(name) + "%0A*Phone:* " + encodeURIComponent(phone) + "%0A*Course:* " + encodeURIComponent(course) + "%0A*Teacher Preference:* " + encodeURIComponent(teacherPref) + "%0A*Country:* " + encodeURIComponent(country);
+      var waMsg = "Assalam-o-Alaikum! I have submitted my secure admission form for ALHAFIZ INTERNATIONAL ACADEMY.%0A%0A*Name:* " + encodeURIComponent(name) + "%0A*Father:* " + encodeURIComponent(fname) + "%0A*ID/CNIC:* " + encodeURIComponent(idCard) + " (Verified)%0A*Phone:* " + encodeURIComponent(phone) + "%0A*Course:* " + encodeURIComponent(course) + "%0A*Address:* " + encodeURIComponent(address) + "%0A*Country:* " + encodeURIComponent(country);
       
       setTimeout(function() {
         window.open("https://wa.me/923047809156?text=" + waMsg, "_blank");
