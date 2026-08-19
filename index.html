@@ -1413,10 +1413,23 @@
       .faculty-grid-showcase, .trial-form-wrapper { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
+      html, body { width: 100%; overflow-x: hidden; } /* Strict prevention of horizontal overflow */
+      .mobile-app-dock { display: flex; }
+      header.app-navbar { height: 68px; }
+      .nav-container { height: 68px; }
+      .ahia-vector-logo { height: 46px; }
+      .brand-primary-name { font-size: 19px; }
+      .brand-tagline-text { font-size: 9.5px; letter-spacing: 0.5px; }
+      
       .section-padding { padding: 45px 0; }
       .section-title { font-size: 26px; }
-      .hero-main-heading { font-size: 28px; }
-      .hero-main-desc { font-size: 14.5px; }
+      
+      .hero-master-grid > div { min-width: 0; } /* Fix CSS Grid auto min-width blowout */
+      .hero-main-heading { font-size: 28px; line-height: 1.25; }
+      .hero-main-desc { font-size: 14.5px; word-wrap: break-word; }
+      .btn-hero-gold, .btn-hero-glass { padding: 11px 18px; font-size: 13px; } /* Scale buttons to fit mobile screens and wrap nicely */
+      .hero-btn-actions { gap: 10px; }
+      
       .courses-grid-9, .features-grid-6, .steps-grid-3, .pricing-grid-4, .duas-grid-layout, .testimonials-grid-3, .footer-grid-4 {
         grid-template-columns: 1fr;
       }
@@ -1428,8 +1441,10 @@
       .app-login-banner { padding: 24px 16px; } /* Keep branding visible on mobile, just reduce padding */
       .app-login-banner img { width: 70px !important; height: 70px !important; } /* Slightly smaller logo on mobile login */
       .demo-btn-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
-      .floating-wa-btn { bottom: 72px; right: 16px; width: 50px; height: 50px; font-size: 26px; }
+      .floating-wa-btn { right: 16px; width: 50px; height: 50px; font-size: 26px; }
       .ai-voice-banner { max-width: 92%; right: 4%; top: 60px; }
+      
+      .player-reciter-select { max-width: 100%; text-overflow: ellipsis; } /* Prevent wide selects from blowing out layout */
     }
   </style>
 </head>
