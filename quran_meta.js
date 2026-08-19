@@ -1,4 +1,4 @@
-// COMPLETE 114 SURAHS METADATA AND AUDIO DATA FOR ALHAFIZ INTER ACADEMY
+// COMPLETE 114 SURAHS METADATA, 30 PARAS STRUCTURE, AND AUDIO DATA FOR ALHAFIZ INTER ACADEMY
 window.QURAN_DATA = {
   reciters: [
     { id: "ar.alafasy", name: "Mishary Rashid Alafasy (مشاری راشد العفاسی)", server: "https://server8.mp3quran.net/afs/" },
@@ -8,6 +8,41 @@ window.QURAN_DATA = {
     { id: "ar.husary", name: "Mahmoud Khalil Al-Husary (محمود خلیل الحصری)", server: "https://server13.mp3quran.net/husr/" },
     { id: "ar.minshawi", name: "Mohamed Siddiq Al-Minshawi (محمد صدیق المنشاوی)", server: "https://server10.mp3quran.net/minsh/" }
   ],
+
+  // 30 PARAS (JUZ) COMPREHENSIVE MAPPING WITH EXACT SURAHS CONTAINED
+  paras: [
+    { id: 1, nameAr: "الم", nameUr: "پارہ ۱: الم", nameEn: "Juz 1: Alif-Lam-Meem", surahSpan: "سورۃ الفاتحہ تا سورۃ البقرہ (۱۴۱)", surahIds: [1, 2] },
+    { id: 2, nameAr: "سَيَقُولُ", nameUr: "پارہ ۲: سیقول", nameEn: "Juz 2: Sayaqool", surahSpan: "سورۃ البقرہ (۱۴۲ تا ۲۵۲)", surahIds: [2] },
+    { id: 3, nameAr: "تِلْكَ الرُّسُلُ", nameUr: "پارہ ۳: تلک الرسل", nameEn: "Juz 3: Tilka-r-Rusul", surahSpan: "سورۃ البقرہ (۲۵۳) تا آل عمران (۹۲)", surahIds: [2, 3] },
+    { id: 4, nameAr: "لَنْ تَنَالُوا", nameUr: "پارہ ۴: لن تنالوا", nameEn: "Juz 4: Lan Tanaaloo", surahSpan: "سورۃ آل عمران (۹۳) تا النساء (۲۳)", surahIds: [3, 4] },
+    { id: 5, nameAr: "وَالمُحْصَنَاتُ", nameUr: "پارہ ۵: والمحصنات", nameEn: "Juz 5: Wal-Muhsanat", surahSpan: "سورۃ النساء (۲۴ تا ۱۴۷)", surahIds: [4] },
+    { id: 6, nameAr: "لَا يُحِبُّ اللّٰهُ", nameUr: "پارہ ۶: لا یحب اللہ", nameEn: "Juz 6: La Yuhibbullah", surahSpan: "سورۃ النساء (۱۴۸) تا المائدہ (۸۱)", surahIds: [4, 5] },
+    { id: 7, nameAr: "وَإِذَا سَمِعُوا", nameUr: "پارہ ۷: واذا سمعوا", nameEn: "Juz 7: Wa Iza Sami'oo", surahSpan: "سورۃ المائدہ (۸۲) تا الانعام (۱۱۰)", surahIds: [5, 6] },
+    { id: 8, nameAr: "وَلَوْ أَنَّنَا", nameUr: "پارہ ۸: ولو اننا", nameEn: "Juz 8: Wa Law Annana", surahSpan: "سورۃ الانعام (۱۱۱) تا الاعراف (۸۷)", surahIds: [6, 7] },
+    { id: 9, nameAr: "قَالَ المَلَأُ", nameUr: "پارہ ۹: قال الملاء", nameEn: "Juz 9: Qalal-Mala'o", surahSpan: "سورۃ الاعراف (۸۸) تا الانفال (۴۰)", surahIds: [7, 8] },
+    { id: 10, nameAr: "وَاعْلَمُوا", nameUr: "پارہ ۱۰: واعلموا", nameEn: "Juz 10: Wa'lamoo", surahSpan: "سورۃ الانفال (۴۱) تا التوبہ (۹۲)", surahIds: [8, 9] },
+    { id: 11, nameAr: "يَعْتَذِرُونَ", nameUr: "پارہ ۱۱: یعتذرون", nameEn: "Juz 11: Ya'taziroon", surahSpan: "سورۃ التوبہ (۹۳)، یونس، تا ہود (۵)", surahIds: [9, 10, 11] },
+    { id: 12, nameAr: "وَمَا مِنْ دَابَّةٍ", nameUr: "پارہ ۱۲: وما من دابۃ", nameEn: "Juz 12: Wa Ma Min Dabbah", surahSpan: "سورۃ ہود (۶) تا یوسف (۵۲)", surahIds: [11, 12] },
+    { id: 13, nameAr: "وَمَا أُبَرِّئُ", nameUr: "پارہ ۱۳: وما ابریٔ", nameEn: "Juz 13: Wa Ma Ubarri'u", surahSpan: "سورۃ یوسف (۵۳)، الرعد، تا ابراہیم", surahIds: [12, 13, 14] },
+    { id: 14, nameAr: "رُبَمَا", nameUr: "پارہ ۱۴: ربما", nameEn: "Juz 14: Rubama", surahSpan: "سورۃ الحجر تا النحل", surahIds: [15, 16] },
+    { id: 15, nameAr: "سُبْحَانَ الَّذِي", nameUr: "پارہ ۱۵: سبحان الذی", nameEn: "Juz 15: Subhan-Allazi", surahSpan: "سورۃ الاسراء تا الکہف (۷۴)", surahIds: [17, 18] },
+    { id: 16, nameAr: "قَالَ أَلَمْ", nameUr: "پارہ ۱۶: قال الم", nameEn: "Juz 16: Qala Alam", surahSpan: "سورۃ الکہف (۷۵)، مریم، تا طہٰ", surahIds: [18, 19, 20] },
+    { id: 17, nameAr: "اقْتَرَبَ لِلنَّاسِ", nameUr: "پارہ ۱۷: اقترب للناس", nameEn: "Juz 17: Iqtaraba Lin-Nas", surahSpan: "سورۃ الانبیاء تا الحج", surahIds: [21, 22] },
+    { id: 18, nameAr: "قَدْ أَفْلَحَ", nameUr: "پارہ ۱۸: قد افلح", nameEn: "Juz 18: Qad Aflaha", surahSpan: "سورۃ المؤمنون، النور، تا الفرقان (۲۰)", surahIds: [23, 24, 25] },
+    { id: 19, nameAr: "وَقَالَ الَّذِينَ", nameUr: "پارہ ۱۹: وقال الذین", nameEn: "Juz 19: Wa Qalal-Lazeena", surahSpan: "سورۃ الفرقان (۲۱)، الشعراء، تا النمل (۵۵)", surahIds: [25, 26, 27] },
+    { id: 20, nameAr: "أَمَّنْ خَلَقَ", nameUr: "پارہ ۲۰: امن خلق", nameEn: "Juz 20: Amman Khalaqa", surahSpan: "سورۃ النمل (۵۶)، القصص، تا العنکبوت (۴۵)", surahIds: [27, 28, 29] },
+    { id: 21, nameAr: "اتْلُ مَا أُوحِيَ", nameUr: "پارہ ۲۱: اتل ما اوحی", nameEn: "Juz 21: Utlu Ma Oohiya", surahSpan: "العنکبوت (۴۶)، الروم، لقمان، السجدہ، الاحزاب (۳۰)", surahIds: [29, 30, 31, 32, 33] },
+    { id: 22, nameAr: "وَمَنْ يَّقْنُتْ", nameUr: "پارہ ۲۲: ومن یقنت", nameEn: "Juz 22: Wa Man Yaqnut", surahSpan: "الاحزاب (۳۱)، سبا، فاطر، تا یٰسٓ (۲۷)", surahIds: [33, 34, 35, 36] },
+    { id: 23, nameAr: "وَمَا لِيَ", nameUr: "پارہ ۲۳: وما لی", nameEn: "Juz 23: Wa Maliya", surahSpan: "سورۃ یٰسٓ (۲۸)، الصافات، صٓ، تا الزمر (۳۱)", surahIds: [36, 37, 38, 39] },
+    { id: 24, nameAr: "فَمَنْ أَظْلَمُ", nameUr: "پارہ ۲۴: فمن اظلم", nameEn: "Juz 24: Fa-Man Azlamu", surahSpan: "سورۃ الزمر (۳۲)، غافر، تا فصلت (۴۶)", surahIds: [39, 40, 41] },
+    { id: 25, nameAr: "إِلَيْهِ يُرَدُّ", nameUr: "پارہ ۲۵: الیہ یرد", nameEn: "Juz 25: Ilaihi Yuraddu", surahSpan: "فصلت (۴۷)، الشوریٰ، الزخرف، الدخان، الجاثیہ", surahIds: [41, 42, 43, 44, 45] },
+    { id: 26, nameAr: "حـم", nameUr: "پارہ ۲۶: حٰمٓ", nameEn: "Juz 26: Ha-Meem", surahSpan: "الاحقاف، محمد، الفتح، الحجرات، قٓ، الذاریات (۳۰)", surahIds: [46, 47, 48, 49, 50, 51] },
+    { id: 27, nameAr: "قَالَ فَمَا خَطْبُكُمْ", nameUr: "پارہ ۲۷: قال فما خطبکم", nameEn: "Juz 27: Qala Fama Khatbukum", surahSpan: "الذاریات (۳۱)، الطور، النجم، القمر، الرحمٰن، الواقعہ، الحدید", surahIds: [51, 52, 53, 54, 55, 56, 57] },
+    { id: 28, nameAr: "قَدْ سَمِعَ اللّٰهُ", nameUr: "پارہ ۲۸: قد سمع اللہ", nameEn: "Juz 28: Qad Sami'allahu", surahSpan: "المجادلہ، الحشر، الممتحنہ، الصف، الجمعہ، المنافقون، التغابن، الطلاق، التحریم", surahIds: [58, 59, 60, 61, 62, 63, 64, 65, 66] },
+    { id: 29, nameAr: "تَبَارَكَ الَّذِي", nameUr: "پارہ ۲۹: تبارک الذی", nameEn: "Juz 29: Tabarakallazi", surahSpan: "الملک، القلم، الحاقہ، المعارج، نوح، الجن، المزمل، المدثر، القیامہ، الانسان، المرسلات", surahIds: [67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77] },
+    { id: 30, nameAr: "عَمَّ يَتَسَاءَلُونَ", nameUr: "پارہ ۳۰: عمّ یتساءلون (آخری پارہ)", nameEn: "Juz 30: 'Amma Yatasa'aloon", surahSpan: "سورۃ النباء تا سورۃ الناس (کل ۳۷ سورتیں)", surahIds: [78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114] }
+  ],
+
   surahs: [
     { id: 1, nameAr: "الفَاتِحَة", nameEn: "Al-Fatihah", nameUr: "سورۃ الفاتحہ", meaning: "The Opening", type: "Makki", verses: 7, juz: 1, audioNum: "001" },
     { id: 2, nameAr: "البَقَرَة", nameEn: "Al-Baqarah", nameUr: "سورۃ البقرہ", meaning: "The Cow", type: "Madani", verses: 286, juz: 1, audioNum: "002" },
@@ -125,7 +160,7 @@ window.QURAN_DATA = {
     { id: 114, nameAr: "النَّاس", nameEn: "An-Nas", nameUr: "سورۃ الناس", meaning: "Mankind", type: "Makki", verses: 6, juz: 30, audioNum: "114" }
   ],
 
-  // PRE-CACHED FAMOUS SURAHS VERSES WITH ARABIC & URDU TRANSLATIONS
+  // PRE-CACHED POPULAR SURAHS VERSES WITH ARABIC & URDU TRANSLATIONS
   sampleSurahs: {
     1: {
       name: "سورة الفاتحة",
