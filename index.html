@@ -218,6 +218,78 @@
       --shadow-lg: 0 20px 45px rgba(30, 16, 53, 0.15);
     }
 
+    [data-theme="ocean"] {
+      --primary-dark: #082f49;
+      --primary-deep: #0369a1;
+      --primary-mid: #0284c7;
+      --primary-bright: #0ea5e9;
+      --primary-subtle: #f0f9ff;
+      --hero-radial-1: rgba(2, 132, 199, 0.7);
+      --hero-radial-2: rgba(3, 105, 161, 0.95);
+      --hero-base: #041b2d;
+      --gold-dark: #92400e;
+      --gold: #d97706;
+      --gold-glow: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-bright: #fef08a;
+      --shadow-md: 0 10px 25px rgba(8, 47, 73, 0.1);
+      --shadow-lg: 0 20px 45px rgba(8, 47, 73, 0.15);
+    }
+
+    [data-theme="bronze"] {
+      --primary-dark: #451a03;
+      --primary-deep: #78350f;
+      --primary-mid: #92400e;
+      --primary-bright: #b45309;
+      --primary-subtle: #fffbeb;
+      --hero-radial-1: rgba(146, 64, 14, 0.7);
+      --hero-radial-2: rgba(120, 53, 15, 0.95);
+      --hero-base: #2e1001;
+      --gold-dark: #b45309;
+      --gold: #d97706;
+      --gold-glow: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-bright: #fef08a;
+      --shadow-md: 0 10px 25px rgba(69, 26, 3, 0.1);
+      --shadow-lg: 0 20px 45px rgba(69, 26, 3, 0.15);
+    }
+
+    [data-theme="slate"] {
+      --primary-dark: #0f172a;
+      --primary-deep: #1e293b;
+      --primary-mid: #334155;
+      --primary-bright: #475569;
+      --primary-subtle: #f8fafc;
+      --hero-radial-1: rgba(51, 65, 85, 0.7);
+      --hero-radial-2: rgba(30, 41, 59, 0.95);
+      --hero-base: #090e1a;
+      --gold-dark: #92400e;
+      --gold: #d97706;
+      --gold-glow: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-bright: #fef08a;
+      --shadow-md: 0 10px 25px rgba(15, 23, 42, 0.1);
+      --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.15);
+    }
+
+    [data-theme="olive"] {
+      --primary-dark: #14532d;
+      --primary-deep: #166534;
+      --primary-mid: #15803d;
+      --primary-bright: #16a34a;
+      --primary-subtle: #f0fdf4;
+      --hero-radial-1: rgba(21, 128, 61, 0.7);
+      --hero-radial-2: rgba(22, 101, 52, 0.95);
+      --hero-base: #0f3d20;
+      --gold-dark: #92400e;
+      --gold: #d97706;
+      --gold-glow: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-bright: #fef08a;
+      --shadow-md: 0 10px 25px rgba(20, 83, 45, 0.1);
+      --shadow-lg: 0 20px 45px rgba(20, 83, 45, 0.15);
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
     html { background: var(--bg); }
     body {
@@ -299,6 +371,10 @@
     .swatch-emerald { background: #095950; }
     .swatch-maroon { background: #701a2e; }
     .swatch-purple { background: #581c87; }
+    .swatch-ocean { background: #0284c7; }
+    .swatch-bronze { background: #92400e; }
+    .swatch-slate { background: #334155; }
+    .swatch-olive { background: #15803d; }
 
     .social-circle {
       width: 28px; height: 28px; border-radius: 50%; background: rgba(255, 255, 255, 0.12);
@@ -342,9 +418,16 @@
       box-shadow: none; border: none; flex-shrink: 0;
       background: transparent; padding: 0; object-fit: contain;
       filter: drop-shadow(0 2px 8px rgba(2, 132, 199, 0.35));
-      transition: transform 0.3s;
+      transition: filter 0.3s;
+      animation: spinLogo3D 8s linear infinite;
+      transform-style: preserve-3d;
     }
-    .ahia-vector-logo:hover { transform: scale(1.06); }
+    .ahia-vector-logo:hover { filter: drop-shadow(0 4px 15px var(--gold-glow)); animation-play-state: paused; }
+    
+    @keyframes spinLogo3D { 
+      0% { transform: rotateY(0deg); } 
+      100% { transform: rotateY(360deg); } 
+    }
     
     .brand-title-block { display: flex; flex-direction: column; justify-content: center; }
     .brand-primary-name {
@@ -1463,7 +1546,7 @@
         <!-- LEFT BRAND BANNER -->
         <div class="app-login-banner" style="background:linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-deep) 60%, var(--primary-mid) 100%); padding:36px 20px; color:#ffffff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
           <div style="margin-bottom:14px;">
-            <img src="alhafiz_official_logo.png" alt="ALHAFIZ INTERNATIONAL ACADEMY Logo" style="width:85px; height:85px; object-fit:contain; margin:0 auto; filter:drop-shadow(0 4px 12px rgba(6, 182, 212, 0.5));">
+            <img src="alhafiz_official_logo.png" alt="ALHAFIZ INTERNATIONAL ACADEMY Logo" class="ahia-vector-logo" style="width:85px; height:85px; object-fit:contain; margin:0 auto; filter:drop-shadow(0 4px 12px rgba(6, 182, 212, 0.5));">
           </div>
           <div class="arabic-font" style="font-size:28px; color:var(--gold-bright); margin-bottom:6px; line-height:1.2;">&#65021;</div>
           <h2 style="font-size:18px; font-weight:900; color:#00e5ff; letter-spacing:0.5px; line-height:1.25; margin:0;">ALHAFIZ</h2>
@@ -1538,6 +1621,10 @@
             <div class="theme-swatch swatch-emerald" onclick="applyTheme('emerald')" title="Deep Emerald & Gold"></div>
             <div class="theme-swatch swatch-maroon" onclick="applyTheme('maroon')" title="Imperial Maroon & Gold"></div>
             <div class="theme-swatch swatch-purple" onclick="applyTheme('purple')" title="Royal Purple & Gold"></div>
+            <div class="theme-swatch swatch-ocean" onclick="applyTheme('ocean')" title="Ocean Blue & Gold"></div>
+            <div class="theme-swatch swatch-bronze" onclick="applyTheme('bronze')" title="Desert Bronze & Gold"></div>
+            <div class="theme-swatch swatch-slate" onclick="applyTheme('slate')" title="Slate Gray & Gold"></div>
+            <div class="theme-swatch swatch-olive" onclick="applyTheme('olive')" title="Olive Green & Gold"></div>
           </div>
           <div style="display:flex; gap:6px;">
             <a href="https://wa.me/923047809156" target="_blank" class="social-circle" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
@@ -2889,7 +2976,7 @@
           <!-- COL 1: ABOUT ACADEMY -->
           <div class="footer-col">
             <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px;">
-              <img src="alhafiz_official_logo.png" alt="ALHAFIZ INTERNATIONAL ACADEMY" style="width:68px; height:68px; border-radius:0; border:none; background:transparent; padding:0; object-fit:contain; filter:drop-shadow(0 4px 12px rgba(6, 182, 212, 0.45)); flex-shrink:0;">
+              <img src="alhafiz_official_logo.png" alt="ALHAFIZ INTERNATIONAL ACADEMY" class="ahia-vector-logo" style="width:68px; height:68px; filter:drop-shadow(0 4px 12px rgba(6, 182, 212, 0.45));">
               <div>
                 <strong style="color:#00e5ff; font-size:20px; font-weight:900; display:block; line-height:1.2;">ALHAFIZ</strong>
                 <span style="font-size:12px; font-weight:900; color:#a3e635; display:block; text-transform:uppercase; letter-spacing:1px; margin-top:2px;">INTERNATIONAL ACADEMY</span>
