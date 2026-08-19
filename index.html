@@ -1381,7 +1381,7 @@
     }
     .dock-tab {
       display: flex; flex-direction: column; align-items: center; gap: 3px;
-      color: #94a3b8; font-size: 10px; font-weight: 800;
+      color: #94a3b8; font-size: 10px; font-weight: 800; text-decoration: none;
     }
     .dock-tab i { font-size: 18px; }
     .dock-tab.active, .dock-tab:hover { color: var(--gold-glow); }
@@ -1400,7 +1400,11 @@
       .hero-master-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
     }
     @media (max-width: 1080px) {
+      body { padding-bottom: 60px; } /* Prevent footer/content hiding behind mobile dock */
       .nav-menu { display: none; }
+      .nav-actions { display: none; } /* Hide right-side buttons to avoid clutter, since they are in dock */
+      .mobile-app-dock { display: flex; } /* Show dock earlier to cover tablet users */
+      .floating-wa-btn { bottom: 84px; } /* Lift WhatsApp button above dock */
       .hero-master-grid { grid-template-columns: 1fr; gap: 36px; }
       .welcome-intro-card { grid-template-columns: 1fr; }
       .courses-grid-9, .features-grid-6 { grid-template-columns: repeat(2, 1fr); }
@@ -1409,7 +1413,6 @@
       .faculty-grid-showcase, .trial-form-wrapper { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
-      .mobile-app-dock { display: flex; }
       .section-padding { padding: 45px 0; }
       .section-title { font-size: 26px; }
       .hero-main-heading { font-size: 28px; }
@@ -1422,7 +1425,8 @@
       .faculty-card-modern { grid-template-columns: 1fr; }
       .faculty-img-wrapper { min-height: 220px; }
       .app-login-card { grid-template-columns: 1fr; }
-      .app-login-banner { display: none; }
+      .app-login-banner { padding: 24px 16px; } /* Keep branding visible on mobile, just reduce padding */
+      .app-login-banner img { width: 70px !important; height: 70px !important; } /* Slightly smaller logo on mobile login */
       .demo-btn-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
       .floating-wa-btn { bottom: 72px; right: 16px; width: 50px; height: 50px; font-size: 26px; }
       .ai-voice-banner { max-width: 92%; right: 4%; top: 60px; }
