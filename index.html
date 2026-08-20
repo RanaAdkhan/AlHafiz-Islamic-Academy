@@ -1419,6 +1419,7 @@
     .btn-demo-teacher { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
     .btn-demo-admin { background: #fffbeb; color: #b45309; border-color: #fde68a; }
 
+    .form-split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .auth-tabs { display: flex; gap: 6px; background: #f1f5f9; padding: 4px; border-radius: 12px; margin-bottom: 16px; }
     .auth-tab-btn {
       flex: 1; padding: 8px; text-align: center; border-radius: 8px; font-size: 13px; font-weight: 800;
@@ -1513,7 +1514,7 @@
       .btn-hero-gold, .btn-hero-glass { padding: 11px 18px; font-size: 13px; } /* Scale buttons to fit mobile screens and wrap nicely */
       .hero-btn-actions { gap: 10px; }
       
-      .courses-grid-9, .features-grid-6, .steps-grid-3, .pricing-grid-4, .duas-grid-layout, .testimonials-grid-3, .footer-grid-4 {
+      .courses-grid-9, .features-grid-6, .steps-grid-3, .pricing-grid-4, .duas-grid-layout, .testimonials-grid-3, .footer-grid-4, .form-split-grid, .quran-mode-switch-grid, .welcome-features-list {
         grid-template-columns: 1fr;
       }
       .stats-grid-4 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -1541,7 +1542,7 @@
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <div class="app-login-card" style="display:grid; grid-template-columns:1fr 1.2fr; min-height:400px; background:#ffffff;">
+      <div class="app-login-card">
         
         <!-- LEFT BRAND BANNER -->
         <div class="app-login-banner" style="background:linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-deep) 60%, var(--primary-mid) 100%); padding:36px 20px; color:#ffffff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
@@ -2925,7 +2926,7 @@
             </div>
 
             <form id="formBookTrial" onsubmit="handleTrialSubmit(event)">
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="form-split-grid">
                 <div class="form-group-field">
                   <label for="trialStudentName">Student Full Name (نام) *</label>
                   <input type="text" id="trialStudentName" required placeholder="e.g. Muhammad Ahmad">
@@ -2964,7 +2965,7 @@
                 <input type="text" id="trialAddress" required placeholder="Street, City, State/Province">
               </div>
 
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;">
+              <div class="form-split-grid" style="margin-top:12px;">
                 <div class="form-group-field">
                   <label for="trialCountry">Country (کنٹری) *</label>
                   <input type="text" id="trialCountry" required placeholder="e.g. Pakistan, USA, UK">
