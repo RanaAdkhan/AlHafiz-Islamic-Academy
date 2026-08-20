@@ -3931,6 +3931,35 @@
       }
     }
 
+    function downloadIslamicImage(url, id) {
+      showToast("⏳ تصویر ڈاؤنلوڈ ہو رہی ہے... (Downloading...)");
+      fetch(url, { mode: 'cors' })
+        .then(function(response) { return response.blob(); })
+        .then(function(blob) {
+          var blobUrl = window.URL.createObjectURL(blob);
+          var a = document.createElement("a");
+          a.style.display = "none";
+          a.href = blobUrl;
+          a.download = "AHIA_Islamic_Post_" + id + ".jpg";
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(blobUrl);
+          document.body.removeChild(a);
+          showToast("✅ تصویر ڈاؤنلوڈ ہو گئی! (Downloaded Successfully)");
+        })
+        .catch(function(err) {
+          // Fallback if CORS prevents blob download
+          var a = document.createElement("a");
+          a.href = url;
+          a.target = "_blank";
+          a.download = "AHIA_Islamic_Post_" + id + ".jpg";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          showToast("✅ تصویر نئی ٹیب میں کھل گئی ہے۔ (Opened image for download)");
+        });
+    }
+
     function copyIslamicItem(encodedText) {
       var text = decodeURIComponent(encodedText);
       if (navigator.clipboard) {
@@ -4014,7 +4043,10 @@
         html += '    </div>';
         html += '    <div class="dua-card-header">';
         html += '      <h3 class="dua-card-title">' + item.titleUrdu + '</h3>';
-        html += '      <button type="button" class="btn-dua-copy" title="Copy Text" onclick="copyIslamicItem(\'' + copyPayload + '\')"><i class="fa-regular fa-copy"></i> کاپی</button>';
+        html += '      <div style="display:flex; gap:6px; flex-shrink:0;">';
+        html += '        <button type="button" class="btn-dua-copy" title="Download Image" onclick="downloadIslamicImage(\'' + topicImage + '\', \'' + item.id + '\')"><i class="fa-solid fa-download"></i> تصویر</button>';
+        html += '        <button type="button" class="btn-dua-copy" title="Copy Text" onclick="copyIslamicItem(\'' + copyPayload + '\')"><i class="fa-regular fa-copy"></i> کاپی</button>';
+        html += '      </div>';
         html += '    </div>';
         html += '    <div class="dua-en-title">' + (item.titleEn || '') + '</div>';
         html += '    <div class="arabic-font dua-arabic-text">' + item.arabic + '</div>';
