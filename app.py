@@ -13,18 +13,19 @@ except ImportError:
     USE_FLASK = False
 
 if USE_FLASK:
-    app = Flask(__name__, static_folder=".")
+    BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+    app = Flask(__name__, static_folder=BASE_DIR)
     CORS(app)
 
     @app.route("/")
     def index():
-        return send_from_directory(".", "index.html")
+        return send_from_directory(BASE_DIR, "index.html")
 
     @app.route("/<path:path>")
     def static_proxy(path):
-        if os.path.exists(os.path.join(".", path)):
-            return send_from_directory(".", path)
-        return send_from_directory(".", "index.html")
+        if os.path.exists(os.path.join(BASE_DIR, path)):
+            return send_from_directory(BASE_DIR, path)
+        return send_from_directory(BASE_DIR, "index.html")
 
     # High Security Auth Endpoints
     @app.route("/api/auth/login", methods=["POST"])
@@ -144,6 +145,10 @@ else:
     from urllib.parse import parse_qs, urlparse
 
     class QuranAcademyHandler(SimpleHTTPRequestHandler):
+        def __init__(self, *args, **kwargs):
+            BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+            super().__init__(*args, directory=BASE_DIR, **kwargs)
+
         def _send_json(self, data, code=200):
             self.send_response(code)
             self.send_header("Content-Type", "application/json")

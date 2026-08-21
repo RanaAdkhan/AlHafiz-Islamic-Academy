@@ -131,6 +131,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;700;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="islamic_data.js"></script>
   <script src="quran_meta.js"></script>
 
@@ -923,8 +924,8 @@
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
     }
     .dua-card-box {
-      background: #ffffff; border-radius: var(--radius-xl); padding: 20px;
-      border: 2px solid var(--line); box-shadow: var(--shadow-md);
+      background: #ffffff; border-radius: var(--radius-xl); padding: 22px;
+      border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 15px 40px rgba(6, 18, 36, 0.06);
       display: flex; flex-direction: column; justify-content: space-between;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative;
     }
@@ -968,13 +969,15 @@
       font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 12px;
     }
     .dua-arabic-text {
-      font-size: 22px; font-weight: 700; color: var(--primary-mid); text-align: right;
-      line-height: 1.85; margin-bottom: 14px; background: #f8fafc; padding: 14px;
-      border-radius: var(--radius-md); border-right: 3.5px solid var(--gold-glow);
+      font-size: 26px; font-weight: 700; color: var(--primary-mid); text-align: right;
+      line-height: 2.2; margin-bottom: 16px; background: #f4f7fb; padding: 18px 22px;
+      border-radius: var(--radius-lg); border-right: 5px solid var(--gold-glow);
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
     }
     .dua-urdu-translation {
-      font-size: 14px; font-weight: 700; color: #1e293b; text-align: right;
-      line-height: 1.8; margin-bottom: 16px; font-family: 'Noto Nastaliq Urdu', serif;
+      font-size: 16px; font-weight: 700; color: #0f172a; text-align: right;
+      line-height: 2.0; margin-bottom: 16px; font-family: 'Noto Nastaliq Urdu', serif;
+      padding: 0 10px;
     }
     .dua-card-box.is-reciting {
       border-color: var(--gold-glow) !important;
@@ -3956,33 +3959,47 @@
       }
     }
 
-    function downloadIslamicImage(url, id) {
-      showToast("⏳ تصویر ڈاؤنلوڈ ہو رہی ہے... (Downloading...)");
-      fetch(url, { mode: 'cors' })
-        .then(function(response) { return response.blob(); })
-        .then(function(blob) {
-          var blobUrl = window.URL.createObjectURL(blob);
-          var a = document.createElement("a");
-          a.style.display = "none";
-          a.href = blobUrl;
-          a.download = "AHIA_Islamic_Post_" + id + ".jpg";
-          document.body.appendChild(a);
-          a.click();
-          window.URL.revokeObjectURL(blobUrl);
-          document.body.removeChild(a);
-          showToast("✅ تصویر ڈاؤنلوڈ ہو گئی! (Downloaded Successfully)");
-        })
-        .catch(function(err) {
-          // Fallback if CORS prevents blob download
-          var a = document.createElement("a");
-          a.href = url;
-          a.target = "_blank";
-          a.download = "AHIA_Islamic_Post_" + id + ".jpg";
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          showToast("✅ تصویر نئی ٹیب میں کھل گئی ہے۔ (Opened image for download)");
-        });
+    function downloadIslamicCard(id) {
+      showToast("⏳ پوسٹ ڈاؤنلوڈ ہو رہی ہے... (Downloading...)");
+      var cardElement = document.getElementById("dua-card-box-" + id);
+      if (!cardElement) return;
+
+      // Hide the buttons temporarily for a clean screenshot
+      var buttons = cardElement.querySelector('.dua-card-header > div');
+      if (buttons) buttons.style.display = 'none';
+      
+      // Temporarily remove hover transform effects to prevent clipping
+      var originalTransform = cardElement.style.transform;
+      var originalBoxShadow = cardElement.style.boxShadow;
+      cardElement.style.transform = 'none';
+      cardElement.style.boxShadow = 'none';
+
+      html2canvas(cardElement, {
+        useCORS: true,
+        scale: 2,
+        backgroundColor: "#ffffff"
+      }).then(function(canvas) {
+        // Restore styling and buttons
+        if (buttons) buttons.style.display = 'flex';
+        cardElement.style.transform = originalTransform;
+        cardElement.style.boxShadow = originalBoxShadow;
+
+        var blobUrl = canvas.toDataURL("image/jpeg", 0.95);
+        var a = document.createElement("a");
+        a.style.display = "none";
+        a.href = blobUrl;
+        a.download = "AHIA_Islamic_Post_" + id + ".jpg";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast("✅ تصویر ڈاؤنلوڈ ہو گئی! (Downloaded Successfully)");
+      }).catch(function(err) {
+        // Restore in case of error
+        if (buttons) buttons.style.display = 'flex';
+        cardElement.style.transform = originalTransform;
+        cardElement.style.boxShadow = originalBoxShadow;
+        showToast("❌ ڈاؤنلوڈ میں مسئلہ ہوا! (Download Failed)");
+      });
     }
 
     function copyIslamicItem(encodedText) {
@@ -4053,10 +4070,10 @@
         var topicName = item.topic || (currentIslamicTab === 'duas' ? 'Dua' : 'Hadith');
         var topicImage = item.image || "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600&auto=format&fit=crop&q=80";
 
-        html += '<div class="dua-card-box" onmouseenter="handleCardHoverPlay(\'' + item.arabic.replace(/'/g, "\\'") + '\', \'' + item.urdu.replace(/'/g, "\\'") + '\', this)" onmouseleave="handleCardHoverStop(this)">';
+        html += '<div class="dua-card-box" id="dua-card-box-' + item.id + '" onmouseenter="handleCardHoverPlay(\'' + item.arabic.replace(/'/g, "\\'") + '\', \'' + item.urdu.replace(/'/g, "\\'") + '\', this)" onmouseleave="handleCardHoverStop(this)">';
         html += '  <div>';
         html += '    <div class="dua-card-img-wrap">';
-        html += '      <img src="' + topicImage + '" alt="' + topicName + '" loading="lazy" onerror="this.src=\'https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600&auto=format&fit=crop&q=80\'">';
+        html += '      <img src="' + topicImage + '" crossorigin="anonymous" alt="' + topicName + '" loading="lazy" onerror="this.src=\'https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600&auto=format&fit=crop&q=80\'">';
         html += '      <div class="dua-card-img-overlay">';
         html += '        <span class="topic-floating-pill"><i class="fa-solid ' + iconClass + '"></i> ' + topicName + '</span>';
         html += '        <span class="reciting-soundwave-badge">';
@@ -4069,7 +4086,7 @@
         html += '    <div class="dua-card-header">';
         html += '      <h3 class="dua-card-title">' + item.titleUrdu + '</h3>';
         html += '      <div style="display:flex; gap:6px; flex-shrink:0;">';
-        html += '        <button type="button" class="btn-dua-copy" title="Download Image" onclick="downloadIslamicImage(\'' + topicImage + '\', \'' + item.id + '\')"><i class="fa-solid fa-download"></i> تصویر</button>';
+        html += '        <button type="button" class="btn-dua-copy" title="Download Image" onclick="downloadIslamicCard(\'' + item.id + '\')"><i class="fa-solid fa-download"></i> تصویر</button>';
         html += '        <button type="button" class="btn-dua-copy" title="Copy Text" onclick="copyIslamicItem(\'' + copyPayload + '\')"><i class="fa-regular fa-copy"></i> کاپی</button>';
         html += '      </div>';
         html += '    </div>';
