@@ -1537,8 +1537,8 @@
       .btn-hero-gold, .btn-hero-glass { padding: 11px 18px; font-size: 13px; } /* Scale buttons to fit mobile screens and wrap nicely */
       .hero-btn-actions { gap: 10px; }
       
-      .courses-grid-9, .features-grid-6, .steps-grid-3, .pricing-grid-4, .duas-grid-layout, .testimonials-grid-3, .footer-grid-4, .form-split-grid, .quran-mode-switch-grid, .welcome-features-list {
-        grid-template-columns: 1fr;
+      .courses-grid-9, .features-grid-6, .steps-grid-3, .pricing-grid-4, .duas-grid-layout, .testimonials-grid-3, .footer-grid-4, .form-split-grid, .quran-mode-switch-grid, .welcome-features-list, .certificates-grid {
+        grid-template-columns: 1fr !important;
       }
       .stats-grid-4 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
       .stat-number-text { font-size: 36px; }
@@ -1558,6 +1558,90 @@
 <body>
 
   <!-- STUDENT PORTAL LOGIN MODAL (OPENS CLEANLY ON CLICK) -->
+  <!-- SYLLABUS / CURRICULUM MODAL -->
+  <div class="modal-backdrop" id="syllabusModal">
+    <div class="app-auth-modal" style="max-width: 600px; width: 95%;">
+      <button class="btn-close-modal" onclick="closeSyllabusModal()" style="background: rgba(0,0,0,0.5); color: #fff;" aria-label="Close Syllabus">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div style="background: var(--primary-mid); padding: 25px; text-align: center; color: #fff;">
+        <i class="fa-solid fa-book-open-reader" style="font-size: 32px; color: var(--gold-bright); margin-bottom: 10px;"></i>
+        <h2 style="font-size: 22px; font-weight: 900; margin-bottom: 5px;">Detailed Curriculum</h2>
+        <p style="font-size: 13px; opacity: 0.9; margin-bottom: 0;">Step-by-step learning modules</p>
+      </div>
+      <div style="padding: 25px; max-height: 60vh; overflow-y: auto;">
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div style="border-left: 3px solid var(--primary-mid); padding-left: 15px;">
+            <h4 style="font-size: 16px; font-weight: 900; color: var(--primary-dark); margin-bottom: 5px;">Phase 1: Foundation (Noorani Qaida)</h4>
+            <p style="font-size: 13px; color: #475569; margin: 0;">Mastering Arabic alphabets, Makharij (pronunciation), and basic Harakat. Ensuring the student can join letters fluently.</p>
+          </div>
+          <div style="border-left: 3px solid var(--primary-mid); padding-left: 15px;">
+            <h4 style="font-size: 16px; font-weight: 900; color: var(--primary-dark); margin-bottom: 5px;">Phase 2: Nazra & Basic Tajweed</h4>
+            <p style="font-size: 13px; color: #475569; margin: 0;">Reading the Holy Quran with proper flow. Implementation of Ghunna, Ikhfa, Idgham, and Qalqalah rules.</p>
+          </div>
+          <div style="border-left: 3px solid var(--primary-mid); padding-left: 15px;">
+            <h4 style="font-size: 16px; font-weight: 900; color: var(--primary-dark); margin-bottom: 5px;">Phase 3: Hifz (Memorization)</h4>
+            <p style="font-size: 13px; color: #475569; margin: 0;">Structured memorization with daily Sabaq (new lesson), Sabaqi (recent review), and Manzil (old review).</p>
+          </div>
+          <div style="border-left: 3px solid var(--primary-mid); padding-left: 15px;">
+            <h4 style="font-size: 16px; font-weight: 900; color: var(--primary-dark); margin-bottom: 5px;">Phase 4: Islamic Studies & Duas</h4>
+            <p style="font-size: 13px; color: #475569; margin: 0;">Memorizing Masnoon Duas, learning Salah (Namaz) with translation, and basic Islamic manners (Tarbiyah).</p>
+          </div>
+        </div>
+      </div>
+      <div style="padding: 15px 25px; background: #f8fafc; border-top: 1px solid var(--line); text-align: center;">
+        <a href="#trial" onclick="closeSyllabusModal()" class="btn-primary" style="display: inline-block; width: 100%; padding: 12px; font-size: 14px;">Book Free Trial Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STUDENT DASHBOARD MODAL -->
+  <div class="modal-backdrop" id="studentDashboardModal">
+    <div class="app-auth-modal" style="max-width: 700px; width: 95%;">
+      <button class="btn-close-modal" onclick="closeDashboardModal()" style="background: rgba(0,0,0,0.5); color: #fff;" aria-label="Close Dashboard">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div style="background: var(--primary-dark); padding: 30px; text-align: center; color: #fff; position: relative; overflow: hidden;">
+        <div style="position: relative; z-index: 2;">
+          <h2 style="font-size: 24px; font-weight: 900; margin-bottom: 5px;">Student Portal</h2>
+          <p style="font-size: 14px; opacity: 0.8; margin-bottom: 0;">Welcome back to your personalized dashboard</p>
+        </div>
+      </div>
+      <div style="padding: 30px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+          <!-- Next Class Box -->
+          <div style="background: #f8fafc; border: 1px solid var(--line); border-radius: 12px; padding: 20px; text-align: center;">
+            <i class="fa-solid fa-video" style="font-size: 24px; color: #3b82f6; margin-bottom: 10px;"></i>
+            <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 5px; color: var(--primary-dark);">Next Live Class</h4>
+            <p style="font-size: 13px; color: #64748b; margin-bottom: 15px;">Today at 5:00 PM (Your Time)</p>
+            <a href="#" style="display: inline-block; background: #3b82f6; color: #fff; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 99px;"><i class="fa-solid fa-link"></i> Join via Zoom</a>
+          </div>
+          <!-- Progress Box -->
+          <div style="background: #f8fafc; border: 1px solid var(--line); border-radius: 12px; padding: 20px; text-align: center;">
+            <i class="fa-solid fa-chart-line" style="font-size: 24px; color: #10b981; margin-bottom: 10px;"></i>
+            <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 5px; color: var(--primary-dark);">My Progress</h4>
+            <p style="font-size: 13px; color: #64748b; margin-bottom: 15px;">Nazra Quran with Tajweed</p>
+            <div style="background: #e2e8f0; height: 8px; border-radius: 4px; overflow: hidden;">
+              <div style="background: #10b981; width: 65%; height: 100%;"></div>
+            </div>
+            <p style="font-size: 11px; color: #64748b; margin-top: 5px;">65% Completed</p>
+          </div>
+        </div>
+
+        <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <i class="fa-solid fa-file-invoice-dollar" style="font-size: 24px; color: #d97706;"></i>
+            <div>
+              <h4 style="font-size: 14px; font-weight: 800; color: #92400e; margin: 0;">Monthly Fee Status</h4>
+              <p style="font-size: 12px; color: #b45309; margin: 0;">Next due date: 1st of next month</p>
+            </div>
+          </div>
+          <a href="#" style="background: #d97706; color: #fff; padding: 6px 12px; font-size: 12px; font-weight: 700; border-radius: 6px;">Pay Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-backdrop" id="studentLoginModal">
     <div style="position:relative; width:min(760px, 94%); border-radius:var(--radius-xl); overflow:hidden; border:2.5px solid var(--gold-glow); box-shadow:0 35px 100px rgba(0,0,0,0.85), var(--glow-gold);">
       
@@ -1705,7 +1789,8 @@
           <button type="button" class="btn-login-nav" id="btnOpenLoginModal" onclick="openLoginModal()">
             <i class="fa-solid fa-lock"></i> <span data-i18n="nav-signin">Sign In</span>
           </button>
-          <div id="userBadgeLabel" class="user-auth-badge" style="display:none;"></div>
+          <button type="button" class="btn-login-nav" id="userBadgeLabel" style="display:none; background:#0f172a;" onclick="openDashboardModal()">
+          </button>
           <button type="button" id="btnLogout" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; padding:6px 12px; border-radius:8px; font-size:12px; font-weight:900; display:none; cursor:pointer; white-space:nowrap;">
             <i class="fa-solid fa-power-off"></i> Logout
           </button>
@@ -1969,7 +2054,10 @@
                 <span class="meta-tag">Kids Friendly</span>
                 <span class="meta-tag">30 Min/Class</span>
               </div>
-              <a href="#trial" class="btn-course-enroll"><span>Enroll / Free Trial</span> <i class="fa-solid fa-arrow-right"></i></a>
+              <div style="display:flex; gap:10px;">
+                <a href="#trial" class="btn-course-enroll" style="flex:1; text-align:center;">Enroll</a>
+                <button type="button" class="btn-course-enroll" style="flex:1; background:var(--primary-subtle); color:var(--primary-dark); border-color:var(--primary-subtle);" onclick="openSyllabusModal()"><i class="fa-solid fa-file-lines"></i> Syllabus</button>
+              </div>
             </div>
           </div>
 
@@ -1987,7 +2075,10 @@
                 <span class="meta-tag">Fluency</span>
                 <span class="meta-tag">All Ages</span>
               </div>
-              <a href="#trial" class="btn-course-enroll"><span>Enroll / Free Trial</span> <i class="fa-solid fa-arrow-right"></i></a>
+              <div style="display:flex; gap:10px;">
+                <a href="#trial" class="btn-course-enroll" style="flex:1; text-align:center;">Enroll</a>
+                <button type="button" class="btn-course-enroll" style="flex:1; background:var(--primary-subtle); color:var(--primary-dark); border-color:var(--primary-subtle);" onclick="openSyllabusModal()"><i class="fa-solid fa-file-lines"></i> Syllabus</button>
+              </div>
             </div>
           </div>
 
@@ -2005,7 +2096,10 @@
                 <span class="meta-tag">Melodious</span>
                 <span class="meta-tag">Certified Qaris</span>
               </div>
-              <a href="#trial" class="btn-course-enroll"><span>Enroll / Free Trial</span> <i class="fa-solid fa-arrow-right"></i></a>
+              <div style="display:flex; gap:10px;">
+                <a href="#trial" class="btn-course-enroll" style="flex:1; text-align:center;">Enroll</a>
+                <button type="button" class="btn-course-enroll" style="flex:1; background:var(--primary-subtle); color:var(--primary-dark); border-color:var(--primary-subtle);" onclick="openSyllabusModal()"><i class="fa-solid fa-file-lines"></i> Syllabus</button>
+              </div>
             </div>
           </div>
 
@@ -2023,7 +2117,10 @@
                 <span class="meta-tag">Sanad</span>
                 <span class="meta-tag">Flexible Pace</span>
               </div>
-              <a href="#trial" class="btn-course-enroll"><span>Enroll / Free Trial</span> <i class="fa-solid fa-arrow-right"></i></a>
+              <div style="display:flex; gap:10px;">
+                <a href="#trial" class="btn-course-enroll" style="flex:1; text-align:center;">Enroll</a>
+                <button type="button" class="btn-course-enroll" style="flex:1; background:var(--primary-subtle); color:var(--primary-dark); border-color:var(--primary-subtle);" onclick="openSyllabusModal()"><i class="fa-solid fa-file-lines"></i> Syllabus</button>
+              </div>
             </div>
           </div>
 
@@ -2041,7 +2138,10 @@
                 <span class="meta-tag">Deep Context</span>
                 <span class="meta-tag">Adults</span>
               </div>
-              <a href="#trial" class="btn-course-enroll"><span>Enroll / Free Trial</span> <i class="fa-solid fa-arrow-right"></i></a>
+              <div style="display:flex; gap:10px;">
+                <a href="#trial" class="btn-course-enroll" style="flex:1; text-align:center;">Enroll</a>
+                <button type="button" class="btn-course-enroll" style="flex:1; background:var(--primary-subtle); color:var(--primary-dark); border-color:var(--primary-subtle);" onclick="openSyllabusModal()"><i class="fa-solid fa-file-lines"></i> Syllabus</button>
+              </div>
             </div>
           </div>
 
@@ -2059,7 +2159,10 @@
                 <span class="meta-tag">Authorized</span>
                 <span class="meta-tag">Senior Qari</span>
               </div>
-              <a href="#trial" class="btn-course-enroll"><span>Enroll / Free Trial</span> <i class="fa-solid fa-arrow-right"></i></a>
+              <div style="display:flex; gap:10px;">
+                <a href="#trial" class="btn-course-enroll" style="flex:1; text-align:center;">Enroll</a>
+                <button type="button" class="btn-course-enroll" style="flex:1; background:var(--primary-subtle); color:var(--primary-dark); border-color:var(--primary-subtle);" onclick="openSyllabusModal()"><i class="fa-solid fa-file-lines"></i> Syllabus</button>
+              </div>
             </div>
           </div>
 
@@ -2077,7 +2180,10 @@
                 <span class="meta-tag">Advanced</span>
                 <span class="meta-tag">Specialized</span>
               </div>
-              <a href="#trial" class="btn-course-enroll"><span>Enroll / Free Trial</span> <i class="fa-solid fa-arrow-right"></i></a>
+              <div style="display:flex; gap:10px;">
+                <a href="#trial" class="btn-course-enroll" style="flex:1; text-align:center;">Enroll</a>
+                <button type="button" class="btn-course-enroll" style="flex:1; background:var(--primary-subtle); color:var(--primary-dark); border-color:var(--primary-subtle);" onclick="openSyllabusModal()"><i class="fa-solid fa-file-lines"></i> Syllabus</button>
+              </div>
             </div>
           </div>
 
@@ -2095,7 +2201,10 @@
                 <span class="meta-tag">Speaking</span>
                 <span class="meta-tag">Vocabulary</span>
               </div>
-              <a href="#trial" class="btn-course-enroll"><span>Enroll / Free Trial</span> <i class="fa-solid fa-arrow-right"></i></a>
+              <div style="display:flex; gap:10px;">
+                <a href="#trial" class="btn-course-enroll" style="flex:1; text-align:center;">Enroll</a>
+                <button type="button" class="btn-course-enroll" style="flex:1; background:var(--primary-subtle); color:var(--primary-dark); border-color:var(--primary-subtle);" onclick="openSyllabusModal()"><i class="fa-solid fa-file-lines"></i> Syllabus</button>
+              </div>
             </div>
           </div>
 
@@ -2113,7 +2222,10 @@
                 <span class="meta-tag">Namaz & Duas</span>
                 <span class="meta-tag">Seerah</span>
               </div>
-              <a href="#trial" class="btn-course-enroll"><span>Enroll / Free Trial</span> <i class="fa-solid fa-arrow-right"></i></a>
+              <div style="display:flex; gap:10px;">
+                <a href="#trial" class="btn-course-enroll" style="flex:1; text-align:center;">Enroll</a>
+                <button type="button" class="btn-course-enroll" style="flex:1; background:var(--primary-subtle); color:var(--primary-dark); border-color:var(--primary-subtle);" onclick="openSyllabusModal()"><i class="fa-solid fa-file-lines"></i> Syllabus</button>
+              </div>
             </div>
           </div>
         </div>
@@ -2497,6 +2609,71 @@
                 <i class="fa-brands fa-whatsapp"></i> Book with Qaria Fatima →
               </a>
             </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES & IJAZAH SECTION -->
+    <section class="section-padding bg-light" id="certificates">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Authenticity & Accreditation</span>
+          <h2 class="section-title">Verified Certifications & Ijazah</h2>
+          <p class="section-subtitle">We award official completion certificates and traditional Ijazah (Sanad) connecting you to the unbroken chain of Quranic transmission.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="certificates-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 20px;">
+          
+          <div style="background: #ffffff; padding: 40px; border-radius: var(--radius-xl); border: 1px solid var(--line); box-shadow: var(--shadow-md);">
+            <div style="display:flex; align-items:center; gap: 15px; margin-bottom: 25px;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--primary-subtle); display:flex; align-items:center; justify-content:center; color: var(--primary-mid); font-size: 24px;">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <h3 style="font-size: 24px; font-weight: 900; color: var(--primary-dark); margin:0;">Wifaq-ul-Madaris Accredited</h3>
+            </div>
+            <p style="font-size: 16px; color: #475569; line-height: 1.8; margin-bottom: 20px;">
+              Our academy strictly follows the authentic curriculum certified by Wifaq-ul-Madaris Al-Arabia Pakistan. Students who complete the Hifz-ul-Quran or Tajweed courses receive an official certificate signed by leading scholars.
+            </p>
+            <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+              <li style="font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 12px; display:flex; align-items:center; gap:10px;">
+                <i class="fa-solid fa-check-circle" style="color: #10b981;"></i> Globally Recognized Certification
+              </li>
+              <li style="font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 12px; display:flex; align-items:center; gap:10px;">
+                <i class="fa-solid fa-check-circle" style="color: #10b981;"></i> Ijazah with unbroken chain (Sanad)
+              </li>
+              <li style="font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 0; display:flex; align-items:center; gap:10px;">
+                <i class="fa-solid fa-check-circle" style="color: #10b981;"></i> Specialized certificates for Kids & Adults
+              </li>
+            </ul>
+            <a href="#trial" class="btn-primary" style="display:inline-block;">Start Your Journey <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <div style="position: relative;">
+            <div style="background: #0f172a; padding: 10px; border-radius: 12px; box-shadow: 0 25px 50px rgba(0,0,0,0.2); transform: rotate(2deg); transition: transform 0.4s ease;" onmouseover="this.style.transform='rotate(0deg) scale(1.02)'" onmouseout="this.style.transform='rotate(2deg) scale(1)'">
+              <div style="border: 2px dashed #475569; padding: 30px; text-align: center; border-radius: 8px; background: #1e293b;">
+                <i class="fa-solid fa-medal" style="font-size: 50px; color: var(--gold-glow); margin-bottom: 20px;"></i>
+                <h4 style="font-family: 'Cinzel', serif; font-size: 26px; color: #ffffff; margin-bottom: 10px; letter-spacing: 2px;">CERTIFICATE OF COMPLETION</h4>
+                <div style="font-size: 14px; color: #94a3b8; font-style: italic; margin-bottom: 25px;">This certifies that</div>
+                <div style="font-size: 32px; font-weight: 900; color: var(--gold-bright); font-family: 'Amiri', serif; border-bottom: 1px solid #475569; padding-bottom: 10px; margin-bottom: 25px;">[Student Name]</div>
+                <div style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 30px;">has successfully completed the <strong>Nazra Quran with Tajweed</strong> course meeting all the requirements and standards set by the ALHAFIZ INTERNATIONAL ACADEMY.</div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; padding: 0 20px;">
+                  <div style="text-align: center;">
+                    <div style="font-family: 'Satisfy', cursive, serif; font-size: 20px; color: var(--gold-light); margin-bottom: 5px;">Hafiz Allah Ditta</div>
+                    <div style="font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid #475569; padding-top: 5px;">Principal / Head Tutor</div>
+                  </div>
+                  <div style="width: 70px; height: 70px; border: 3px solid var(--gold-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold-glow); transform: rotate(-15deg);">
+                    <i class="fa-solid fa-stamp" style="font-size: 30px;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div style="position: absolute; bottom: -20px; left: -20px; background: var(--gold-glow); color: #020617; font-weight: 900; font-size: 14px; padding: 10px 20px; border-radius: 999px; box-shadow: 0 10px 20px rgba(245,158,11,0.3); z-index: 2;">
+              <i class="fa-solid fa-shield-halved"></i> 100% Authentic
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -4134,6 +4311,24 @@
 
     function closeLoginModal() {
       var modal = document.getElementById("studentLoginModal");
+      if (modal) modal.classList.remove("show");
+    }
+
+    function openDashboardModal() {
+      var modal = document.getElementById("studentDashboardModal");
+      if (modal) modal.classList.add("show");
+    }
+    function closeDashboardModal() {
+      var modal = document.getElementById("studentDashboardModal");
+      if (modal) modal.classList.remove("show");
+    }
+
+    function openSyllabusModal() {
+      var modal = document.getElementById("syllabusModal");
+      if (modal) modal.classList.add("show");
+    }
+    function closeSyllabusModal() {
+      var modal = document.getElementById("syllabusModal");
       if (modal) modal.classList.remove("show");
     }
 
