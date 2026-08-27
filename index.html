@@ -1319,6 +1319,17 @@
 
     /* TESTIMONIALS */
     .testimonials-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .blog-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .blog-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); transition: transform 0.3s; cursor: pointer; }
+    .blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--primary-subtle); }
+    .blog-img-wrap { width: 100%; height: 200px; overflow: hidden; }
+    .blog-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .blog-card:hover .blog-img-wrap img { transform: scale(1.05); }
+    .blog-content { padding: 25px; }
+    .blog-date { font-size: 12px; color: var(--primary-mid); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: block; }
+    .blog-title { font-size: 18px; font-weight: 900; color: var(--primary-dark); margin-bottom: 12px; line-height: 1.4; }
+    .blog-excerpt { font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 20px; }
+    .blog-read-more { font-size: 14px; font-weight: 800; color: var(--gold-dark); display: inline-flex; align-items: center; gap: 5px; }
     .testimonial-card {
       background: #ffffff; border-radius: var(--radius-lg); padding: 28px 24px;
       border: 2px solid var(--line); box-shadow: var(--shadow-md);
@@ -1537,7 +1548,7 @@
       .btn-hero-gold, .btn-hero-glass { padding: 11px 18px; font-size: 13px; } /* Scale buttons to fit mobile screens and wrap nicely */
       .hero-btn-actions { gap: 10px; }
       
-      .courses-grid-9, .features-grid-6, .steps-grid-3, .pricing-grid-4, .duas-grid-layout, .testimonials-grid-3, .footer-grid-4, .form-split-grid, .quran-mode-switch-grid, .welcome-features-list, .certificates-grid {
+      .courses-grid-9, .features-grid-6, .steps-grid-3, .pricing-grid-4, .duas-grid-layout, .testimonials-grid-3, .blog-grid-3, .footer-grid-4, .form-split-grid, .quran-mode-switch-grid, .welcome-features-list, .certificates-grid {
         grid-template-columns: 1fr !important;
       }
       .stats-grid-4 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -1591,6 +1602,35 @@
       </div>
       <div style="padding: 15px 25px; background: #f8fafc; border-top: 1px solid var(--line); text-align: center;">
         <a href="#trial" onclick="closeSyllabusModal()" class="btn-primary" style="display: inline-block; width: 100%; padding: 12px; font-size: 14px;">Book Free Trial Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG ARTICLE MODAL -->
+  <div class="modal-backdrop" id="blogModal">
+    <div class="app-auth-modal" style="max-width: 800px; width: 95%; max-height: 90vh; display: flex; flex-direction: column;">
+      <button class="btn-close-modal" onclick="closeBlogModal()" style="background: rgba(0,0,0,0.5); color: #fff; z-index: 10;" aria-label="Close Blog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div style="width: 100%; height: 250px; position: relative; flex-shrink: 0;">
+        <img id="blogModalImg" src="https://images.unsplash.com/photo-1579685954619-c0201eb0d588?w=800&q=80" style="width:100%; height:100%; object-fit:cover;" alt="Blog Cover">
+        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,0.8), transparent);"></div>
+        <div style="position: absolute; bottom: 20px; left: 30px; right: 30px;">
+          <span id="blogModalDate" style="color: var(--gold-bright); font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; display: block;">March 15, 2026</span>
+          <h2 id="blogModalTitle" style="color: #fff; font-size: 26px; font-weight: 900; line-height: 1.3; margin: 0;">How to Keep Kids Motivated During Online Quran Classes</h2>
+        </div>
+      </div>
+      <div style="padding: 30px; overflow-y: auto; flex-grow: 1; background: #fff;">
+        <div id="blogModalContent" style="font-size: 15px; color: #334155; line-height: 1.8;">
+          <p>This is the full article content. Reading the Quran is an essential part of a Muslim's daily life, and introducing children to it early sets a foundation for a lifetime of spiritual growth. However, keeping them motivated, especially in an online setting, can sometimes be a challenge.</p>
+          <p><strong>1. Set a Consistent Routine</strong><br>Children thrive on routine. Dedicate a specific time each day for their Quran class so it becomes a natural part of their daily schedule.</p>
+          <p><strong>2. Create a Distraction-Free Zone</strong><br>Ensure they have a quiet corner with a comfortable desk, free from toys and TV, which helps them focus completely on their Qari.</p>
+          <p><strong>3. Reward Progress</strong><br>Small rewards for finishing a Surah or perfecting Tajweed rules can significantly boost their morale.</p>
+          <p>At Al-Hafiz International Academy, our teachers are trained to use interactive methods to keep your children engaged and excited about learning the Book of Allah!</p>
+        </div>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--line); text-align: center;">
+          <a href="#trial" onclick="closeBlogModal()" class="btn-primary" style="display: inline-block;">Share Article <i class="fa-solid fa-share-nodes"></i></a>
+        </div>
       </div>
     </div>
   </div>
@@ -3039,6 +3079,59 @@
       </div>
     </section>
 
+    <!-- ISLAMIC BLOG & INSIGHTS -->
+    <section class="section-padding bg-white" id="blog">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Knowledge & Tarbiyah</span>
+          <h2 class="section-title">Islamic Blog & Insights</h2>
+          <p class="section-subtitle">Read our latest articles on Quranic education, Islamic upbringing, and tips for parents and students.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="blog-grid-3">
+          <!-- Blog 1 -->
+          <div class="blog-card" onclick="openBlogModal('blog1')">
+            <div class="blog-img-wrap">
+              <img src="https://images.unsplash.com/photo-1579685954619-c0201eb0d588?w=600&q=80" alt="Quran Learning">
+            </div>
+            <div class="blog-content">
+              <span class="blog-date">March 15, 2026 • Quran Education</span>
+              <h3 class="blog-title">How to Keep Kids Motivated During Online Quran Classes</h3>
+              <p class="blog-excerpt">Discover practical tips for parents to ensure their children remain engaged, focused, and excited about learning the Holy Quran online...</p>
+              <div class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+
+          <!-- Blog 2 -->
+          <div class="blog-card" onclick="openBlogModal('blog2')">
+            <div class="blog-img-wrap">
+              <img src="https://images.unsplash.com/photo-1590130985226-538d6f51beea?w=600&q=80" alt="Islamic Upbringing">
+            </div>
+            <div class="blog-content">
+              <span class="blog-date">April 02, 2026 • Tarbiyah</span>
+              <h3 class="blog-title">The Importance of Tajweed in Recitation</h3>
+              <p class="blog-excerpt">Understanding the science of Tajweed and why reciting the Quran with proper Makharij (pronunciation) is essential for every Muslim...</p>
+              <div class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+
+          <!-- Blog 3 -->
+          <div class="blog-card" onclick="openBlogModal('blog3')">
+            <div class="blog-img-wrap">
+              <img src="https://images.unsplash.com/photo-1578308819266-9eb13303c734?w=600&q=80" alt="Islamic Culture">
+            </div>
+            <div class="blog-content">
+              <span class="blog-date">May 21, 2026 • Daily Life</span>
+              <h3 class="blog-title">5 Sunnahs to Implement in Your Daily Routine</h3>
+              <p class="blog-excerpt">Revive the Sunnah of Prophet Muhammad (PBUH) by incorporating these simple yet highly rewarding habits into your modern daily life...</p>
+              <div class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION) -->
     <section class="section-padding bg-light" id="faqs">
       <div class="container">
@@ -4369,6 +4462,15 @@
     }
     function closeSyllabusModal() {
       var modal = document.getElementById("syllabusModal");
+      if (modal) modal.classList.remove("show");
+    }
+
+    function openBlogModal(blogId) {
+      var modal = document.getElementById("blogModal");
+      if (modal) modal.classList.add("show");
+    }
+    function closeBlogModal() {
+      var modal = document.getElementById("blogModal");
       if (modal) modal.classList.remove("show");
     }
 
